@@ -1,0 +1,23 @@
+{
+  "name": "citizenship-appointment-alpha",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AusDTO/citizenship-appointment-alpha.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AusDTO/citizenship-appointment-alpha/issues"
+  },
+  "homepage": "https://github.com/AusDTO/citizenship-appointment-alpha#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
