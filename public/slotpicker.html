@@ -20,18 +20,14 @@
 <script type="text/html" id="SlotPicker-tmplDay">
   <li class="SlotPicker-day" id="date-{{ slot }}">
     <h2 class="SlotPicker-dayTitle">{{ date }}</h2>
-    {{#oneSlot}}
-      <p class="SlotPicker-dayOneSlot">Only one time is available on this day, select it to continue</p>
-    {{/oneSlot}}
     {{{ slots }}}
   </li>
 </script>
 
 <script type="text/html" id="SlotPicker-tmplTimeSlot">
   <label class="SlotPicker-label" for="slot-{{ slot }}">
-    <input class="SlotPicker-slot" type="checkbox" value="{{ slot }}" id="slot-{{ slot }}">
     <strong class="SlotPicker-time">{{ time }}</strong>
-    <span class="SlotPicker-duration">{{ duration }}</span>
+    <input class="SlotPicker-slot" type="checkbox" value="{{ slot }}" id="slot-{{ slot }}">
   </label>
 </script>
 
@@ -173,11 +169,12 @@
       </ul>
     </div>
 
+    <div style="text-align: center">
+      <a class="button confirmButton" href="confirmation.html">Confirm</a>
+    </div>
+
     <div class="SlotPicker-choices">
       <ul>
-        <div style="text-align: center">
-          <a class="button confirmButton" href="confirmation.html">Confirm</a>
-        </div>
       </ul>
       <p class="SlotPicker-promoteHelp">Use the arrows to put your visit choices in the order that suits you best.</p>
     </div>
@@ -243,6 +240,12 @@
 <script>
 $(function() {
   $('.SlotPicker-input').hide();
+  $('.SlotPicker-choices').hide();
+  $('.SlotPicker-dayTitle').hide();
+  $('.SlotPicker-day--past').hide();
+  $('.SlotPicker-day--unavailable').hide();
+  $('.SlotPicker-day--beyond').hide();
+  $('.SlotPicker-day--leadtime').hide();
 });
 </script>
 

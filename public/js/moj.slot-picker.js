@@ -481,9 +481,9 @@
           mins = time.substr(2),
           out = hrs;
 
-      if (hrs > 12) {
-        out-= 12;
-      }
+      // if (hrs > 12) {
+      //   out-= 12;
+      // }
 
       if (hrs === 0) {
         out = 12;
@@ -491,9 +491,11 @@
 
       if (parseInt(mins)) {
         out+= ':' + mins;
+      } else {
+        out+=':00'
       }
-
-      return out+= (hrs > 11) ? 'pm' : 'am';
+      return out;
+      // return out+= (hrs > 11) ? 'pm' : 'am';
     },
 
     duration: function(start, end) {

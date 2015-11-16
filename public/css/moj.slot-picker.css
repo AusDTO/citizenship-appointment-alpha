@@ -18,8 +18,7 @@
 .BookingCalendar-mask {
   position: relative;
   overflow: hidden;
-  height: 345px;
-  border-bottom: 1px solid #dee0e2; }
+  height: 345px; }
 
 table.BookingCalendar-dates {
   width: 100%;
@@ -35,7 +34,7 @@ table.BookingCalendar-dates {
     width: 14.28571%; }
   table.BookingCalendar-dates tbody td {
     padding: 0;
-    border-color: #dee0e2;
+    border-color: #D7D7D7;
     border-style: solid;
     border-width: 1px; }
 
@@ -54,21 +53,21 @@ a.BookingCalendar-dateLink {
   text-align: center;
   width: 100%;
   height: 100%;
-  color: #dee0e2;
+  color: #D7D7D7;
   text-decoration: none; }
 
 a.BookingCalendar-dateLink p {
   margin: 0; }
 
 p.BookingCalendar-weekday {
-font-size: 16px; }
+font-size: 0.75em; }
 
 p.BookingCalendar-day {
-  font-size: 24px;
+  font-size: 1em;
   font-weight: 700; }
 
 p.BookingCalendar-available {
-  font-size: 14px; }
+  font-size: 0.75em; }
 
 .BookingCalendar-date--bookable a.BookingCalendar-dateLink {
   color: #333333; }
@@ -199,9 +198,7 @@ a.BookingCalendar-nav--next {
 
 .SlotPicker-days {
   overflow: hidden;
-  margin-bottom: 10px;
-  margin-left: 0;
-  padding: 0; }
+  padding: 10px; }
   @media (max-width: 768px) {
     .SlotPicker-days {
       margin-bottom: 0; } }
@@ -212,7 +209,7 @@ a.BookingCalendar-nav--next {
   overflow: hidden;
   padding: 0.5em;
   list-style: none;
-  background: #dee0e2; }
+  background: #F2F2F2; }
   @media (max-width: 640px) {
     .SlotPicker-day {
       border-width: 1px 0; } }
@@ -244,11 +241,13 @@ a.BookingCalendar-nav--next {
   min-width: 120px;
   margin-right: 0.5em;
   margin-bottom: 0.5em;
-  padding: 0.3em 15px 0.3em 46px;
-  font-size: 24px;
-  line-height: 1.2em;
-  border: 2px solid #bfc1c3;
-  background: white url("../images/tick_off.png") 7px 12px no-repeat; }
+  text-align: center;
+  /*padding: 0.3em 15px 0.3em 46px;*/
+  font-size: 16px;
+  line-height: 33px;
+  border: 1px solid #333333;
+  background: white; }
+  /*background: white url("../images/tick_off.png") 7px 12px no-repeat; }*/
   @media (max-width: 640px) {
     .SlotPicker-label {
       width: 100%;
@@ -259,15 +258,21 @@ a.BookingCalendar-nav--next {
         border-color: #2b8cc4;
         background-color: #d5e8f3; } }
   .SlotPicker-label.is-active {
-    background-image: url("../images/tick_on.png"); }
+    color: white;
+    border-color: #0178C6;
+    background: #0178C6; }
+    /*background-image: url("../images/tick_on.png"); }*/
   .SlotPicker-label.is-disabled {
     color: #bfc1c3;
-    background-image: url("../images/tick_disabled.png"); }
+    border-color: #bfc1c3;
+    background: #f2f2f2;}
+    /*background-image: url("../images/tick_disabled.png"); }*/
   .SlotPicker-label:last-child {
     margin-right: 0;
     margin-bottom: 0; }
 
 .SlotPicker-slot {
+  opacity: 0;
   position: absolute;
   top: -99px;
   left: -99px;
