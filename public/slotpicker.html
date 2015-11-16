@@ -45,6 +45,7 @@
   <td class="{{ klass }}">
     <div class="BookingCalendar-content">
       <a class="BookingCalendar-dateLink" data-date="{{ date }}" href="#date-{{ date }}">
+        <span class="BookingCalendar-weekday">{{ weekday }}</span>
         <span class="BookingCalendar-day">{{ day }}</span>
         {{#today}}
           <span class="BookingCalendar-tag BookingCalendar-tag--today">Today</span>
@@ -93,7 +94,9 @@
 </div>
 
 <div class="container">
-  <h1 style="padding-top: 1rem;">Book your citizenship appointment</h1>
+  <p style="padding-top: 0.5em;">This is a new service. If you need any help with using it, please <a href="#">contact us</a></p>
+
+  <h1 style="padding-top: 1em;">Book your citizenship appointment</h1>
 
   <p>
     You will need to bring the following documents to your appointment:
@@ -198,6 +201,9 @@
 
     <div class="SlotPicker-choices">
       <ul>
+        <div style="text-align: center">
+          <a class="button confirmButton" href="confirmation.html">Confirm</a>
+        </div>
       </ul>
       <p class="SlotPicker-promoteHelp">Use the arrows to put your visit choices in the order that suits you best.</p>
     </div>
@@ -263,6 +269,7 @@
 <script>
 $(function() {
   $('.SlotPicker-input').hide();
+  $('.BookingCalendar-legend').hide();
 });
 </script>
 

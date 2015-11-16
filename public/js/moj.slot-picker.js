@@ -447,6 +447,7 @@
         row+= templateDate.render({
           date: curIso,
           day: curDate.getDate(),
+          weekday: this.settings.days[curDate.getDay()].substr(0,3),
           today: curIso === todayIso,
           newMonth: curDate.getDate() === 1,
           monthIso: curIso.substr(0, 7),
