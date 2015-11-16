@@ -299,7 +299,7 @@ a.BookingCalendar-nav--next {
   background: #dee0e2; }
   @media (min-width: 769px) {
     .SlotPicker-choices ul {
-      min-height: 236px; } }
+      min-height: 60px; } }
   .SlotPicker-choices ul li {
     cursor: pointer;
     position: relative;
