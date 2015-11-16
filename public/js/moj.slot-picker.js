@@ -443,11 +443,17 @@
 
       while (curDate <= end) {
         curIso = moj.Helpers.formatIso(curDate);
+        var numTimeSlots = 0,
+            timeSlots = this.settings.bookableTimes[curIso];
+        if(timeSlots) {
+          numTimeSlots = timeSlots.length
+        }
 
         row+= templateDate.render({
           date: curIso,
-          day: curDate.getDate(),
           weekday: this.settings.days[curDate.getDay()].substr(0,3),
+          day: curDate.getDate(),
+          available: numTimeSlots + ' available',
           today: curIso === todayIso,
           newMonth: curDate.getDate() === 1,
           monthIso: curIso.substr(0, 7),

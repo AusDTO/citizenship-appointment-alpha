@@ -45,14 +45,12 @@
   <td class="{{ klass }}">
     <div class="BookingCalendar-content">
       <a class="BookingCalendar-dateLink" data-date="{{ date }}" href="#date-{{ date }}">
-        <span class="BookingCalendar-weekday">{{ weekday }}</span>
-        <span class="BookingCalendar-day">{{ day }}</span>
-        {{#today}}
-          <span class="BookingCalendar-tag BookingCalendar-tag--today">Today</span>
-        {{/today}}
         {{#newMonth}}
-          <span class="BookingCalendar-tag" id="month-{{ monthIso }}">{{ monthShort }}</span>
+          <span class="BookingCalendar-tag" id="month-{{ monthIso }}"></span>
         {{/newMonth}}
+        <p class="BookingCalendar-weekday">{{ weekday }}</p>
+        <p class="BookingCalendar-day">{{ day }}</p>
+        <p class="BookingCalendar-available">{{ available }}</p>
       </a>
     </div>
   </td>
@@ -145,20 +143,6 @@
         <a href="#" class="BookingCalendar-nav BookingCalendar-nav--next"></a>
       </div>
 
-      <table class="BookingCalendar-dates">
-        <thead>
-          <tr>
-            <th>Mon</th>
-            <th>Tue</th>
-            <th>Wed</th>
-            <th>Thu</th>
-            <th>Fri</th>
-            <th>Sat</th>
-            <th>Sun</th>
-          </tr>
-        </thead>
-      </table>
-
       <div class="BookingCalendar-mask">
         <table class="BookingCalendar-dates">
           <tbody class="BookingCalendar-datesBody">
@@ -166,16 +150,6 @@
         </table>
       </div>
 
-      <ul class="BookingCalendar-legend">
-        <li>
-          <div class="BookingCalendar-legendBox"></div>
-          Available
-        </li>
-        <li>
-          <div class="BookingCalendar-legendBox BookingCalendar-legendBox--unavailable"></div>
-          Unavailable
-        </li>
-      </ul>
     </div>
 
     <div class="SlotPicker-timeSlots">
@@ -269,7 +243,6 @@
 <script>
 $(function() {
   $('.SlotPicker-input').hide();
-  $('.BookingCalendar-legend').hide();
 });
 </script>
 

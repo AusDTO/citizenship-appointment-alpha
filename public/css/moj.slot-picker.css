@@ -18,77 +18,80 @@
 .BookingCalendar-mask {
   position: relative;
   overflow: hidden;
-  height: 279px;
+  height: 345px;
   border-bottom: 1px solid #dee0e2; }
 
 table.BookingCalendar-dates {
   width: 100%;
   font-size: 19px;
-  border-width: 0 1px;
+  border-width: 0;
   border-style: solid;
-  border-color: #dee0e2;
-  border-collapse: collapse;
-  background: url("../images/unavailable_tile.png"); }
+  border-color: transparent;
+  border-spacing: 10px;
+  border-collapse: separate;
+  background: white; }
   table.BookingCalendar-dates th,
   table.BookingCalendar-dates td {
     width: 14.28571%; }
-  table.BookingCalendar-dates thead th {
-    padding: 3px 0 0;
-    font-weight: bold;
-    line-height: normal;
-    text-align: center;
-    text-transform: uppercase;
-    background: #f8f8f8;
-    border-bottom: 2px solid #bfc1c3; }
   table.BookingCalendar-dates tbody td {
     padding: 0;
     border-color: #dee0e2;
     border-style: solid;
-    border-width: 0 0 1px 1px; }
-  table.BookingCalendar-dates td:last-child > div {
-    border-right: 1px solid #dee0e2; }
-  table.BookingCalendar-dates tbody tr:last-child td {
-    border-bottom: none; }
+    border-width: 1px; }
 
-a.BookingCalendar-dateLink,
-a.BookingCalendar-dateLink:visited {
+  table.BookingCalendar-dates .BookingCalendar-date--bookable {
+    border-color: #333333;
+    border-style: solid;
+    border-width: 1px; }
+
+  table.BookingCalendar-dates .BookingCalendar-date--bookable.is-active {
+    border-color: #0178C6; }
+
+a.BookingCalendar-dateLink {
   position: absolute;
   top: 0;
+  font-style: normal;
+  text-align: center;
   width: 100%;
   height: 100%;
-  color: #0b0c0c;
+  color: #dee0e2;
   text-decoration: none; }
 
-a.BookingCalendar-dateLink:hover {
-  color: #0b0c0c;
-  text-decoration: underline;
-  background: #d5e8f3; }
-a.BookingCalendar-dateLink.is-chosen {
-  overflow: hidden; }
-  a.BookingCalendar-dateLink.is-chosen:after {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 10px 10px 0;
-    border-color: transparent #2b8cc4 transparent transparent; }
-    @media (min-width: 641px) {
-      a.BookingCalendar-dateLink.is-chosen:after {
-        border-width: 0 15px 15px 0; } }
-a.BookingCalendar-dateLink .BookingCalendar-day {
-  padding-left: 3px; }
+a.BookingCalendar-dateLink p {
+  margin: 0; }
+
+p.BookingCalendar-weekday {
+font-size: 16px; }
+
+p.BookingCalendar-day {
+  font-size: 24px;
+  font-weight: 700; }
+
+p.BookingCalendar-available {
+  font-size: 14px; }
+
+.BookingCalendar-date--bookable a.BookingCalendar-dateLink {
+  color: #333333; }
+
+.BookingCalendar-date--bookable a.BookingCalendar-dateLink:hover {
+  text-decoration: none;
+  background: #DCEEFF; }
+
+.BookingCalendar-date--bookable.is-active a.BookingCalendar-dateLink {
+  color: white;
+  background: #0178C6; }
+
+.BookingCalendar-date--bookable.is-active a.BookingCalendar-dateLink:hover {
+  background: #0178C6; }
 
 .BookingCalendar-date--bookable {
   background: white; }
-  .BookingCalendar-date--bookable.is-active {
-    background: #96c6e2; }
+.BookingCalendar-date--bookable.is-active {
+  background: #0178C6; }
 
 .BookingCalendar-content {
   position: relative;
-  min-height: 55px; }
+  min-height: 100px; }
 
 .BookingCalendar-tag {
   position: absolute;
@@ -122,21 +125,6 @@ ul.BookingCalendar-legend {
         line-height: 1.14286; } }
     ul.BookingCalendar-legend li:last-child {
       margin-right: 0; }
-
-.BookingCalendar-legendBox {
-  float: left;
-  width: 29px;
-  height: 29px;
-  margin: 0 5px 0 0;
-  border: 1px solid #dee0e2; }
-
-.BookingCalendar-legendBox--unavailable {
-  background: url("../images/unavailable_tile.png"); }
-
-.BookingCalendar-header {
-  position: relative;
-  border: 1px solid #dee0e2;
-  background: white; }
 
 .BookingCalendar-currentMonth {
   display: block;
