@@ -5,6 +5,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
+    "dev": "forever --watch server.js",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -19,5 +21,8 @@
   "homepage": "https://github.com/AusDTO/citizenship-appointment-alpha#readme",
   "dependencies": {
     "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "forever": "^0.15.1"
   }
 }
