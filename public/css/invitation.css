@@ -1,0 +1,89 @@
+.grey-outer {
+	background-color: #efefef;
+	padding: 20px;
+}
+
+.inner {
+	background-color: white;
+	padding: 25px;
+}
+
+.text p {
+	font-size:14px;
+	line-height:normal;
+	font-family:'Open Sans', 'Arial';
+	font-weight:400;
+	font-style:normal;
+	font-size:14px;
+	text-decoration:none;
+	color:#333333;
+	margin-bottom: 1rem;
+}
+
+.black-link {
+    color: black;
+    text-decoration: underline;
+}
+
+.blue-link{
+    color: #1658d4;
+    text-decoration: underline;
+}
+
+.black-link:hover {
+    color: #1658d4;
+    text-decoration: underline;
+}
+
+.appointment-time-confirmed {
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.section-header {
+	border-top: 1px solid #e5e5e5;
+	padding-top: 1.5rem; 
+	margin-top: 2rem;
+	font-family: 'Open Sans', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333333;
+}
+
+.text ul {
+	font-family: 'Open Sans', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    text-decoration: none;
+    color: #333333;
+}
+
+.text .disclaimer{
+	font-style:italic;
+}
+
+.book-button{
+    background-color: #0060BD;
+    color: white;
+    text-transform: capitalize;
+    padding: 0 15px;
+
+    font-family: Helvetica, Helvetica;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.column-layout{
+  margin-bottom: 10px;   
+  clear: both;
+}
+
+.middle-column {
+    overflow: hidden;
+    padding-right: 10px;
+}

@@ -3,7 +3,7 @@ p {
 }
 
 ul {
-  list-style: circle outside;
+  list-style: disc outside;
 }
 ol {
   list-style: decimal outside;
