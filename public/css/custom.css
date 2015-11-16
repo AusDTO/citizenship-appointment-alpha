@@ -66,9 +66,8 @@ table {
 
 @media (min-width: 550px) {
   .header {
-      margin-top: 18rem;
+      margin-top: 8rem;
       margin-bottom: 18rem;
-      text-align: center;
   }
 }
 
@@ -85,4 +84,32 @@ table {
 .black-link:hover {
     color: #1658d4;
     text-decoration: underline;
+}
+
+.section-header {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 1.5rem; 
+  margin-top: 2rem;
+  font-family: 'Open Sans', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333333;
+}
+
+label {
+  font-weight: normal;
+}
+
+#button-continue {
+  text-transform: capitalize !important;
+  background-color: #0060BD !important;
+
+  font-family: 'Open Sans', Arial; 
+  font-weight: 400; 
+  font-style: normal; 
+  font-size: 16px; 
+  text-decoration: none; 
+  color: rgb(255, 255, 255);
 }
