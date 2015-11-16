@@ -114,3 +114,33 @@
     text-decoration: underline;
 }
 
+.grey-outer {
+  background-color: #efefef;
+  padding: 20px;
+}
+
+.inner {
+  background-color: white;
+  padding: 25px;
+}
+
+.inner ul, .inner p, .inner div {
+  font-family: 'Open Sans', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    text-decoration: none;
+    color: #333333;
+}
+
+.section-header {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 1.5rem; 
+  margin-top: 2rem;
+  font-family: 'Open Sans', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333333;
+}
