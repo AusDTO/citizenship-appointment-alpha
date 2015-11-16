@@ -23,7 +23,6 @@
 .appointment-time-confirmed {
   text-transform: capitalize;
   font-weight: bold;
-  margin-right: 30px;
 }
 
 .section-header {
@@ -63,12 +62,16 @@
     font-size: 16px;
 }
 
-.column-layout{
-  margin-bottom: 10px;   
-  clear: both;
+.left-column{
+  float: left;
+  width: 90px;
 }
 
 .middle-column {
     overflow: hidden;
     padding-right: 10px;
+}
+
+.right-column {
+  float: right;
 }
