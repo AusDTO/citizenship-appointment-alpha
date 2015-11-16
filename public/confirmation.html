@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/confirmation.css">
 
   <link rel="icon" type="image/png" href="images/coat-of-arms-black-on-white-32x32.png" sizes="32x32">
 </head>
@@ -22,31 +23,75 @@
 </div>
 
 <div class="container">
-  <h1 style="padding-top: 1rem;">Your reservation is confirmed</h1>
+
+  <div class="print-button">
+    <a href="javascript:window.print()"><img src="/images/printer.png" alt="print this page"/> Print this page</a>
+  </div>
+  <h1 class="res-confirmed">Your reservation is confirmed</h1>
 
   <div class="row">
     <div class="eight columns">
-      <p>Your appointment details:</p>
-      <p>What: Citizenship appointment and test</p>
-      <p>Where: 2 Lonsdale Street, Melbourne VIC 3000 <a href="https://www.google.com.au/maps/place/2+Lonsdale+St,+Melbourne+VIC+3000/@-37.8687746,144.951024,11z/data=!3m1!4b1!4m2!3m1!1s0x6ad642cf64f5d103:0x6bae151ef2fd2f4c">Directions</a></p>
-      <p>When: Thursday 26th November, at 13:20 <a href="#">Reschedule</a></p>
+      <div class="column-layout" style="margin-top: 3rem;">
+        <div class="left-column">What:</div>
+        <div class="middle-column">Citizenship appointment and test</div>
+        <div class="cleared"></div>
+      </div>
+      <div class="column-layout">
+        <div class="left-column">What:</div>
+        <div class="appt-det-right">
+          2 Lonsdale Street, Melbourne, VIC 3000
+          <a href="" style="padding-left: 30px" class="blue-link">Directions</a>
+        </div>
+        <div class="cleared"></div>
+      </div>
+      <div class="column-layout">
+        <div class="left-column">When:</div>
+        <div class="middle-column">
+          <span class="appointment-time-confirmed">
+             Thursday 26th November, at 13:20
+          </span>
+          <a href="/flow2/pickDate" class="blue-link">Reschedule</a>
+        </div>
+        <div class="cleared"></div>
+      </div>
+      <div class="column-layout">
+        <div class="left-column">&nbsp;</div>
+        <div class="middle-column">
+          <button type="button" class="calendar-add conf">Add to Calendar</button>
+          <button type="button" class="conf">Book another appointment</button>
+        </div>
+        <div class="cleared"></div>
+      </div>
     </div>
     <div class="four columns">
-      <ul style="list-style: none;">
-        <li style="margin-bottom: 0;"><a class="button" href="#">Add to calendar</a></li>
-        <li style="margin-bottom: 0;"><a class="button" href="#">Send to email</a></li>
-        <li style="margin-bottom: 0;"><a class="button" href="#">Print this page</a></li>
-      </ul>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5301.370905405444!2d144.96749748396877!3d-37.808456171195175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642cf64f5d103%3A0x6bae151ef2fd2f4c!2s2+Lonsdale+St%2C+Melbourne+VIC+3000!5e0!3m2!1sen!2sau!4v1447289196910" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
   </div>
 
-  <h2 style="border-top: 1px solid #ddd; padding-top: 1rem;">Prepare for your appointment</h2>
+  <h2 style="border-top: 1px solid #e5e5e5; padding-top: 1rem; margin-top: 2rem">Send a copy to</h2>
+
+  <div class="row">
+    <div class="eight columns">
+      <div class="column-layout" style="margin-top: 3rem;">
+        <div class="left-column">Your email:</div>
+        <div class="right-column"><button type="button" class="send-button">Send</button></div>
+        <div class="middle-column"><input type="text" style="width:100%"/></div>
+      </div>
+      <div class="column-layout">
+        <div class="left-column">SMS:</div>
+        <div class="right-column"><button type="button" class="send-button">Send</button></div>
+        <div class="middle-column"><input type="text" style="width:100%"/></div>
+      </div>
+    </div>
+  </div>
+
+  <h2 style="border-top: 1px solid #e5e5e5; padding-top: 1rem;">Prepare for your appointment</h2>
   <p>You will need to bring the following documents to your appointment:</p>
   <ul>
-    <li>Collect the originals of all the identity documents that you submitted with your application. Also refer to the <a href="#">Document Checklist</a>.</li>
-    <li>If you lodged your application online, please complete <a href="#">Form 1195 Identity Declaration</a>, with a correctly endorsed recent passport sized photo for all applicants including children.</li>
+    <li>Collect the originals of all the identity documents that you submitted with your application. Also refer to the <a href="#" class="black-link">Document Checklist</a>.</li>
+    <li>If you lodged your application online, please complete <a href="#" class="black-link">Form 1195 Identity Declaration</a>, with a correctly endorsed recent passport sized photo for all applicants including children.</li>
     <li>Prepare for the test:
-      <ul>
+      <ul class="blue-arrows-ul">
         <li><a href="#">Download Our Common Bond booklet</a></li>
         <li><a href="#">Watch Our Common Bond on YouTube</a></li>
         <li><a href="#">Our Common Bond in other languages</a></li>
@@ -55,8 +100,6 @@
       </ul>
     </li>
   </ul>
-  <p>If you need help using the online services, please contact our Citizenship Line on 131 880, Mon-Fri 8:30am-4:30pm Australian Eastern Time.</p>
-
 </div>
 
 </body>
