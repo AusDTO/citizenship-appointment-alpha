@@ -1,10 +1,10 @@
 var express = require('express'),
     app = express(),
+    path = require('path'),
     default_port = (process.env.PORT || 3000);
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
+
+app.use('/', express.static(path.join(__dirname,'public')));
 
 var server = app.listen(default_port, function () {
   var port = server.address().port;

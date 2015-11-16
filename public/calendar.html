@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Citizenship Appointment Service: Calendar</title>
+  <meta name="description" content="Select appointment slot">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/calendar.css">
+
+  <link rel="icon" type="image/png" href="images/coat-of-arms-black-on-white-32x32.png" sizes="32x32">
+</head>
+<body>
+
+<div class="u-full-width" style="background-color: #ddd;">
+  <div class="container" style="height: 7rem; padding: 0.5rem 0;">
+    <img alt="Australian Government" src="images/aust-govt-black-on-transparent-247x60.png" style="max-width: 100%; max-height: 100%;">
+    <!-- <img alt="Australian Government" src="images/dibp-black-on-transparent-392x60.png" style="max-width: 100%; max-height: 100%;"> -->
+  </div>
+</div>
+
+<div class="container">
+  <h1 style="padding-top: 1rem;">Book your citizenship appointment</h1>
+  <p>
+    Appointment venue: <br>
+    Department of Immigration and Border Protection, 2 Lonsdate Street, Melbourne VIC 3000
+  </p>
+
+  <section data-scroll-to="true" class="calendar-panel panel second active ">
+		<div class="date-switcher" style="width: 100%">
+			<button type="button" class="prev">Previous</button>
+			<h3></h3>
+			<button type="button" class="next">Next</button>
+		</div>
+
+		<div class="booking-calendar"></div>
+
+		<div class="booking-time hidden">
+			<ul>
+			</ul>
+		</div>
+
+		<p id="selected-slot" style="display: none;">
+			You have selected <span id="selApptTime" class=""></span>
+			<button type="button" onclick="selectDate();" class="book-button">Book</button>
+		</p>
+
+		<div class="calendar-err" style="display: none;">
+			<p class="error-message">Appointment times could not be loaded.</p>
+			<p>To schedule the appointment, please contact our Citizenship Line on 131 880, Mon-Fri 8:30am-4:30pm Australian Eastern Time.</p>
+		</div>
+	</section>
+
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/calendar.js"></script>
+
+</body>
+</html>

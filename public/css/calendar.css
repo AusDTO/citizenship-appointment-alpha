@@ -1,0 +1,283 @@
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h3, h4 {
+  text-transform: uppercase;
+}
+
+.date-switcher {
+    width: 248px;
+    position: relative;
+    margin: 0 0 10px;
+    border-radius: 5px;
+    padding: 5px 26px 3px;
+    background: #fff
+}
+
+.date-switcher h3 {
+    margin: 0;
+    padding: 0;
+    color: #3f2a2e;
+    font-size: 16px;
+    text-align: center;
+}
+
+.date-switcher button {
+    display: block;
+    width: 100px;
+    height: 1.5em;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 7px;
+    color: white;
+    background-color: #609;
+}
+
+.date-switcher button[disabled] {
+    color: FBFBFB;
+    background-color: #b5b5b5;
+}
+
+.date-switcher button.prev {
+    left: 7px
+}
+
+.date-switcher button.next {
+    right: 58px
+}
+
+.date-switcher button:after {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 5px
+}
+
+.date-switcher button.prev:after {
+    left: 5px;
+    border-style: solid;
+    border-width: 3px 6px 3px 0;
+    border-color: transparent #fff transparent transparent
+}
+
+.date-switcher button.prev[disabled]:after {
+    border-right-color: #dadada
+}
+
+.date-switcher button.next:after {
+    left: 6px;
+    border-style: solid;
+    border-width: 3px 0 3px 6px;
+    border-color: transparent transparent transparent #fff
+}
+
+.date-switcher button.next[disabled]:after {
+    border-left-color: #dadada
+}
+
+.no-feature .panel.active {
+    position: relative
+}
+
+.booking-calendar {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden
+}
+
+.booking-calendar>.inner {
+    width: 500%;
+    position: relative;
+    transition: .5s
+}
+
+.booking-calendar.slide-1>.inner {
+    left: 0
+}
+
+.booking-calendar.slide-2>.inner {
+    left: -100%
+}
+
+.booking-calendar.slide-3>.inner {
+    left: -200%
+}
+
+.booking-calendar.slide-4>.inner {
+    left: -300%
+}
+
+.booking-calendar.slide-5>.inner {
+    left: -400%
+}
+
+.booking-calendar section {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 6.6667%;
+    float: left;
+    padding: 15px 0 0
+}
+
+.booking-calendar section.selected {
+    background: #fff
+}
+
+.booking-calendar h4 {
+    margin: 0 0 14px;
+    color: #3f2a2e;
+    font-size: 13px;
+    text-align: center
+}
+
+.booking-calendar section button[type="button"] {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    width: 90%;
+    height: 90px;
+    overflow: hidden;
+    margin: 0 auto 10px;
+    border-radius: 0;
+    padding: 2px;
+    font-weight: normal;
+    letter-spacing: normal;
+    text-align: center;
+    text-transform: none;
+    background: #fff
+}
+
+.booking-calendar section.selected button[type="button"] {
+    border-color: #f1eeed
+}
+
+.booking-calendar section button[type="button"][disabled] {
+    border-color: #f5f3f2;
+    background: #f5f3f2
+}
+
+.booking-calendar section button[type="button"] h5 {
+    margin: 0 0 3px;
+    color: #3f2a2e;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase
+}
+
+.booking-calendar section button[type="button"] p {
+    margin: 0;
+    color: #3f2a2e;
+    font-size: 11px
+}
+
+.booking-calendar section.selected button[type="button"] {
+    border-color: #f1eeed
+}
+
+.booking-calendar section button[type="button"][disabled] {
+    border-color: #f5f3f2;
+    background: #f5f3f2
+}
+
+.booking-calendar section button[type="button"][disabled] h5,.booking-calendar section button[type="button"][disabled] p {
+    color: #b8aca5
+}
+
+.booking-calendar section button[type="button"] h5 {
+    margin: 0 0 3px;
+    color: #3f2a2e;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase
+}
+
+.booking-calendar section button[type="button"] p {
+    margin: 0;
+    color: #3f2a2e;
+    font-size: 11px
+}
+
+.booking-calendar section button[type="button"]:hover,.booking-calendar section button[type="button"]:focus,.booking-calendar section button[type="button"].selected {
+    border-color: #609;
+    background: #609;
+}
+
+.booking-calendar section button[type="button"][disabled]:hover,.booking-calendar section button[type="button"][disabled]:focus {
+    border-color: #f5f3f2;
+    background: #f5f3f2
+}
+
+.booking-calendar section button[type="button"]:hover *,.booking-calendar section button[type="button"]:focus *,.booking-calendar section button[type="button"].selected * {
+    color: #fff
+}
+
+.booking-time {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    margin-bottom:10px;
+}
+
+.booking-time ul {
+    margin: 0;
+    border: 0;
+    border-top: none;
+}
+
+.booking-time ul a {
+    display: block;
+    border: 1px solid black;
+    padding: 7px;
+    color: #3f2a2e;
+    font-weight: bold
+}
+
+.booking-time ul li{
+    margin: 5px;
+}
+
+.booking-time ul a:hover,.booking-time ul a:focus,.booking-time ul a:active,.booking-time ul a.selected {
+    color: #fff;
+    text-decoration: none;
+    background: #609;
+}
+
+@media all and (min-width: 30em) {
+    .booking-calendar>.inner {
+        width:400%
+    }
+
+    .booking-calendar section {
+        width: 6.25%
+    }
+}
+
+@media all and (min-width: 38em) {
+    .booking-calendar>.inner {
+        width:300%
+    }
+
+    .booking-calendar section {
+        width: 6.6667%
+    }
+}
+
+@media all and (min-width: 54em) {
+    .booking-calendar>.inner {
+        width:200%
+    }
+
+    .booking-calendar section {
+        width: 7.1428%
+    }
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Citizenship Appointment Service: Slot Picker</title>
+  <meta name="description" content="Select appointment slot">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <link rel="stylesheet" href="css/moj.slot-picker.css" />
+  <link rel="stylesheet" href="css/moj.date-slider.css" />
+
+  <link rel="icon" type="image/png" href="images/coat-of-arms-black-on-white-32x32.png" sizes="32x32">
+</head>
+<body>
+
+<script type="text/html" id="SlotPicker-tmplDay">
+  <li class="SlotPicker-day" id="date-{{ slot }}">
+    <h2 class="SlotPicker-dayTitle">{{ date }}</h2>
+    {{#oneSlot}}
+      <p class="SlotPicker-dayOneSlot">Only one time is available on this day, select it to continue</p>
+    {{/oneSlot}}
+    {{{ slots }}}
+  </li>
+</script>
+
+<script type="text/html" id="SlotPicker-tmplTimeSlot">
+  <label class="SlotPicker-label" for="slot-{{ slot }}">
+    <input class="SlotPicker-slot" type="checkbox" value="{{ slot }}" id="slot-{{ slot }}">
+    <strong class="SlotPicker-time">{{ time }}</strong>
+    <span class="SlotPicker-duration">{{ duration }}</span>
+  </label>
+</script>
+
+<script type="text/html" id="BookingCalendar-tmplRow">
+  <tr>
+    {{{ cells }}}
+  </tr>
+</script>
+
+<script type="text/html" id="BookingCalendar-tmplDate">
+  <td class="{{ klass }}">
+    <div class="BookingCalendar-content">
+      <a class="BookingCalendar-dateLink" data-date="{{ date }}" href="#date-{{ date }}">
+        <span class="BookingCalendar-day">{{ day }}</span>
+        {{#today}}
+          <span class="BookingCalendar-tag BookingCalendar-tag--today">Today</span>
+        {{/today}}
+        {{#newMonth}}
+          <span class="BookingCalendar-tag" id="month-{{ monthIso }}">{{ monthShort }}</span>
+        {{/newMonth}}
+      </a>
+    </div>
+  </td>
+</script>
+
+<script type="text/html" id="SlotPicker-tmplChoice">
+  <li>
+    {{#notFirst}}
+      <a class="SlotPicker-icon SlotPicker-icon--promote" href="#">Promote</a>
+    {{/notFirst}}
+    <a class="SlotPicker-icon SlotPicker-icon--remove" href="#">Remove</a>
+    <span class="SlotPicker-position">{{ num }}</span>
+    <p class="SlotPicker-date"></p>
+    <p class="SlotPicker-time"></p>
+    <p class="SlotPicker-prompt">Choose a date and time from the calendar</p>
+  </li>
+</script>
+
+<script type="text/html" id="DateSlider-tmplDay">
+  <li data-date="{{ isoDate }}" class="{{ klass }}">
+    {{#dayLabel}}
+      <small>{{ weekDay }}</small>
+    {{/dayLabel}}
+    {{ day }}
+  </li>
+</script>
+
+<script type="text/html" id="DateSlider-tmplMonth">
+  <span data-date="{{ yearMonth }}">{{ month }}</span>
+</script>
+
+<div class="u-full-width" style="background-color: #ddd;">
+  <div class="container" style="height: 7rem; padding: 0.5rem 0;">
+    <img alt="Australian Government" src="images/aust-govt-black-on-transparent-247x60.png" style="max-width: 100%; max-height: 100%;">
+    <!-- <img alt="Australian Government" src="images/dibp-black-on-transparent-392x60.png" style="max-width: 100%; max-height: 100%;"> -->
+  </div>
+</div>
+
+<div class="container">
+  <h1 style="padding-top: 1rem;">Book your citizenship appointment</h1>
+
+  <p>
+    Appointment venue: <br>
+    Department of Immigration and Border Protection, 2 Lonsdate Street, Melbourne VIC 3000
+  </p>
+</div>
+
+<div class="SlotPicker" data-today="2015-11-19">
+
+  <div class="DateSlider" data-emulatetouch="true" data-selectonload="true">
+    <div class="DateSlider-month"></div>
+
+    <div class="DateSlider-sliders">
+      <a href="#" class="DateSlider-button DateSlider-buttonLeft">&#10094;</a>
+      <a href="#" class="DateSlider-button DateSlider-buttonRight">&#10095;</a>
+
+      <div class="DateSlider-smallDates scroll">
+        <ol class="DateSlider-days"></ol>
+      </div>
+
+      <div class="DateSlider-touch scroll">
+        <ol class="DateSlider-days"></ol>
+      </div>
+
+      <div class="DateSlider-portalFrame"></div>
+
+      <div class="DateSlider-largeDates scroll">
+        <ol class="DateSlider-days"></ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="BookingCalendar">
+
+      <div class="BookingCalendar-header">
+        <a href="#" class="BookingCalendar-nav BookingCalendar-nav--prev"></a>
+        <strong class="BookingCalendar-currentMonth"></strong>
+        <a href="#" class="BookingCalendar-nav BookingCalendar-nav--next"></a>
+      </div>
+
+      <table class="BookingCalendar-dates">
+        <thead>
+          <tr>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            <th>Sun</th>
+          </tr>
+        </thead>
+      </table>
+
+      <div class="BookingCalendar-mask">
+        <table class="BookingCalendar-dates">
+          <tbody class="BookingCalendar-datesBody">
+          </tbody>
+        </table>
+      </div>
+
+      <ul class="BookingCalendar-legend">
+        <li>
+          <div class="BookingCalendar-legendBox"></div>
+          Available
+        </li>
+        <li>
+          <div class="BookingCalendar-legendBox BookingCalendar-legendBox--unavailable"></div>
+          Unavailable
+        </li>
+      </ul>
+    </div>
+
+    <div class="SlotPicker-timeSlots">
+      <ul class="SlotPicker-days">
+        <li class="SlotPicker-day SlotPicker-day--past">
+          <h2 class="SlotPicker-dayTitle"></h2>
+          <p>It is not possible to book a visit in the past.</p>
+        </li>
+        <li class="SlotPicker-day SlotPicker-day--unavailable">
+          <h2 class="SlotPicker-dayTitle"></h2>
+          <p>It is not possible to book a visit on this day.</p>
+        </li>
+        <li class="SlotPicker-day SlotPicker-day--beyond">
+          <h2 class="SlotPicker-dayTitle"></h2>
+          <p>You can only book a visit in the next {{ daysInRange }} days.</p>
+        </li>
+        <li class="SlotPicker-day SlotPicker-day--leadtime">
+          <h2 class="SlotPicker-dayTitle"></h2>
+          <p>You can only book a visit 3 days in advance.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="SlotPicker-choices">
+      <ul>
+      </ul>
+      <p class="SlotPicker-promoteHelp">Use the arrows to put your visit choices in the order that suits you best.</p>
+    </div>
+
+    <select class="SlotPicker-input">
+      <option value="">none</option>
+      <option value="2015-11-19-1415-1500">Thursday, 19 November - 2:15pm</option>
+      <option value="2015-11-19-1500-1545">Thursday, 19 November - 3:00pm</option>
+      <option value="2015-11-19-1545-1630">Thursday, 19 November - 3:45pm</option>
+      <option value="2015-11-20-0900-0945">Friday, 20 November - 9:00am</option>
+      <option value="2015-11-20-0945-1030">Friday, 20 November - 9:45am</option>
+      <option value="2015-11-20-1030-1115">Friday, 20 November - 10:30am</option>
+      <option value="2015-11-20-1115-1200">Friday, 20 November - 11:15am</option>
+      <option value="2015-11-20-1200-1245">Friday, 20 November - 12:00pm</option>
+      <option value="2015-11-20-1245-1330">Friday, 20 November - 12:45pm</option>
+      <option value="2015-11-20-1330-1415">Friday, 20 November - 1:30pm</option>
+      <option value="2015-11-20-1415-1500">Friday, 20 November - 2:15pm</option>
+      <option value="2015-11-20-1500-1545">Friday, 20 November - 3:00pm</option>
+      <option value="2015-11-20-1545-1630">Friday, 20 November - 3:45pm</option>
+      <option value="2015-11-23-0900-0945">Monday, 23 November - 9:00am</option>
+      <option value="2015-11-23-0945-1030">Monday, 23 November - 9:45am</option>
+      <option value="2015-11-23-1030-1115">Monday, 23 November - 10:30am</option>
+      <option value="2015-11-23-1115-1200">Monday, 23 November - 11:15am</option>
+      <option value="2015-11-23-1200-1245">Monday, 23 November - 12:00pm</option>
+      <option value="2015-11-23-1245-1330">Monday, 23 November - 12:45pm</option>
+      <option value="2015-11-23-1330-1415">Monday, 23 November - 1:30pm</option>
+      <option value="2015-11-23-1415-1500">Monday, 23 November - 2:15pm</option>
+      <option value="2015-11-23-1500-1545">Monday, 23 November - 3:00pm</option>
+      <option value="2015-11-23-1545-1630">Monday, 23 November - 3:45pm</option>
+      <option value="2015-11-24-0900-0945">Tuesday, 24 November - 9:00am</option>
+      <option value="2015-11-24-0945-1030">Tuesday, 24 November - 9:45am</option>
+      <option value="2015-11-24-1030-1115">Tuesday, 24 November - 10:30am</option>
+      <option value="2015-11-24-1115-1200">Tuesday, 24 November - 11:15am</option>
+      <option value="2015-11-24-1200-1245">Tuesday, 24 November - 12:00pm</option>
+      <option value="2015-11-24-1245-1330">Tuesday, 24 November - 12:45pm</option>
+      <option value="2015-11-24-1330-1415">Tuesday, 24 November - 1:30pm</option>
+      <option value="2015-11-24-1415-1500">Tuesday, 24 November - 2:15pm</option>
+      <option value="2015-11-24-1500-1545">Tuesday, 24 November - 3:00pm</option>
+      <option value="2015-11-24-1545-1630">Tuesday, 24 November - 3:45pm</option>
+      <option value="2015-11-25-0900-0945">Wednesday, 25 November - 9:00am</option>
+      <option value="2015-11-25-0945-1030">Wednesday, 25 November - 9:45am</option>
+      <option value="2015-11-26-0900-0945">Thursday, 26 November - 9:00am</option>
+      <option value="2015-11-27-0900-0945">Friday, 27 November - 9:00am</option>
+      <option value="2015-11-30-0900-0945">Monday, 30 November - 9:00am</option>
+      <option value="2015-12-01-0900-0945">Tuesday, 1 December - 9:00am</option>
+      <option value="2015-12-03-0900-0945">Thursday, 3 December - 9:00am</option>
+    </select>
+
+  </div>
+
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.2/hogan.min.js"></script>
+
+<script>var moj = moj || { Modules: {}, Helpers: {} };</script>
+<script src="js/moj.slot-picker.js"></script>
+<script src="js/moj.date-slider.js"></script>
+<script>moj.Modules.SlotPicker.init();</script>
+<script>moj.Modules.DateSlider.init();</script>
+
+<script>
+$(function() {
+  $('.SlotPicker-input').hide();
+});
+</script>
+
+</body>
+</html>
