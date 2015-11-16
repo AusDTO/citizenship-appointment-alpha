@@ -71,3 +71,18 @@ table {
       text-align: center;
   }
 }
+
+.black-link {
+    color: black;
+    text-decoration: underline;
+}
+
+.blue-link{
+    color: #1658d4;
+    text-decoration: underline;
+}
+
+.black-link:hover {
+    color: #1658d4;
+    text-decoration: underline;
+}

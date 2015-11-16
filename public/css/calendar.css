@@ -9,7 +9,8 @@ ul {
 }
 
 h3, h4 {
-  text-transform: uppercase;
+  text-transform: capitalize;
+  font-weight: normal;
 }
 
 .date-switcher {
@@ -31,20 +32,25 @@ h3, h4 {
 
 .date-switcher button {
     display: block;
-    width: 100px;
-    height: 1.5em;
     margin: 0;
-    padding: 0;
     overflow: hidden;
     position: absolute;
     top: 7px;
+
+    background-color: #878787;
     color: white;
-    background-color: #609;
+    text-transform: capitalize;
+    padding: 0 15px;
+
+    font-family: Helvetica, Helvetica;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
 }
 
 .date-switcher button[disabled] {
     color: FBFBFB;
-    background-color: #b5b5b5;
+    background-color: #e8e8e8;
 }
 
 .date-switcher button.prev {
@@ -161,8 +167,8 @@ h3, h4 {
 }
 
 .booking-calendar section button[type="button"][disabled] {
-    border-color: #f5f3f2;
-    background: #f5f3f2
+    border-color: #cecece;
+    background: #ffffff;
 }
 
 .booking-calendar section button[type="button"] h5 {
@@ -170,7 +176,6 @@ h3, h4 {
     color: #3f2a2e;
     font-size: 13px;
     font-weight: bold;
-    text-transform: uppercase
 }
 
 .booking-calendar section button[type="button"] p {
@@ -184,8 +189,8 @@ h3, h4 {
 }
 
 .booking-calendar section button[type="button"][disabled] {
-    border-color: #f5f3f2;
-    background: #f5f3f2
+    border-color: #cecece;
+    background: #ffffff;
 }
 
 .booking-calendar section button[type="button"][disabled] h5,.booking-calendar section button[type="button"][disabled] p {
@@ -197,7 +202,6 @@ h3, h4 {
     color: #3f2a2e;
     font-size: 13px;
     font-weight: bold;
-    text-transform: uppercase
 }
 
 .booking-calendar section button[type="button"] p {
@@ -208,16 +212,16 @@ h3, h4 {
 
 .booking-calendar section button[type="button"]:hover,.booking-calendar section button[type="button"]:focus,.booking-calendar section button[type="button"].selected {
     border-color: #609;
-    background: #609;
+    background: #d4e9ff;
 }
 
 .booking-calendar section button[type="button"][disabled]:hover,.booking-calendar section button[type="button"][disabled]:focus {
-    border-color: #f5f3f2;
-    background: #f5f3f2
+    border-color: #cecece;
+    background: #ffffff;
 }
 
 .booking-calendar section button[type="button"]:hover *,.booking-calendar section button[type="button"]:focus *,.booking-calendar section button[type="button"].selected * {
-    color: #fff
+    color: #000000
 }
 
 .booking-time {
@@ -247,9 +251,9 @@ h3, h4 {
 }
 
 .booking-time ul a:hover,.booking-time ul a:focus,.booking-time ul a:active,.booking-time ul a.selected {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
-    background: #609;
+    background: #d4e9ff;
 }
 
 @media all and (min-width: 30em) {
@@ -280,4 +284,21 @@ h3, h4 {
     .booking-calendar section {
         width: 7.1428%
     }
+}
+
+#selApptTime {
+    text-transform: capitalize;
+    font-weight: bold
+}
+
+.book-button{
+    background-color: #0060BD;
+    color: white;
+    text-transform: capitalize;
+    padding: 0 15px;
+
+    font-family: Helvetica, Helvetica;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
 }

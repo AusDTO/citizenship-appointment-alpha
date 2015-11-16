@@ -99,21 +99,6 @@
     font-size: 16px;
 }
 
-.black-link {
-    color: black;
-    text-decoration: underline;
-}
-
-.blue-link{
-    color: #1658d4;
-    text-decoration: underline;
-}
-
-.black-link:hover {
-    color: #1658d4;
-    text-decoration: underline;
-}
-
 .grey-outer {
   background-color: #efefef;
   padding: 20px;
