@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/confirmation.css">
   <link rel="stylesheet" href="css/barcode.css">
+  <link rel="stylesheet" href="css/font-awesome-4.4.0/css/font-awesome.min.css">
 
   <link rel="icon" type="image/png" href="images/coat-of-arms-black-on-white-32x32.png" sizes="32x32">
 </head>
@@ -28,9 +29,11 @@
 <div class="container">
 
   <div class="print-button">
-    <a href="javascript:window.print()"><img src="/images/printer.png" alt="print this page"/> Print this page</a>
+    <a href="javascript:window.print()"><span class="fa fa-print"></span>&nbsp;Print this page</a>
   </div>
-  <h1 class="res-confirmed">Your reservation is confirmed</h1>
+  <h1 class="res-confirmed">
+    <span class="fa fa-check-circle"></span>&nbsp;Your reservation is confirmed
+  </h1>
 
   <div class="row">
     <div class="seven columns">
@@ -60,8 +63,11 @@
       <div class="column-layout">
         <div class="left-column">&nbsp;</div>
         <div class="middle-column">
-          <button type="button" class="calendar-add conf">Add to Calendar</button>
-          <button type="button" class="conf">Book another appointment</button>
+          <button type="button" class="calendar-add conf">
+            <span class="fa fa-calendar"></span>&nbsp;Add to Calendar</button>
+          <button type="button" class="conf">
+            <span class="fa fa-user-plus"></span>&nbsp;Book another appointment
+          </button>
         </div>
         <div class="cleared"></div>
       </div>
