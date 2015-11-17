@@ -46,6 +46,8 @@ h6 { font-size: 1.1rem; line-height: 1.9;  }
   h4 { font-size: 1.5rem; }
   h5 { font-size: 1.3rem; }
   h6 { font-size: 1.1rem; }
+
+  img#clientId-image { max-width: 60%; }
 }
 
 table {
@@ -62,6 +64,7 @@ table {
   .BookingCalendar {
     display: none;
   }
+  img#clientId-image { width: 100%; }
 }
 
 @media (min-width: 550px) {
@@ -114,7 +117,7 @@ label {
   color: rgb(255, 255, 255);
 }
 
-#confirm-button{
+#confirm-button {
   background-color: #0178C6;
   color: white;
   text-transform: capitalize !important;
@@ -125,7 +128,7 @@ label {
 }
 
 .column-layout{
-  margin-bottom: 10px;   
+  margin-bottom: 10px;
   clear: both;
 }
 
