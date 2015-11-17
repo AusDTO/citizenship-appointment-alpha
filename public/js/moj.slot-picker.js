@@ -436,17 +436,26 @@
 
       while (curDate <= end) {
         curIso = moj.Helpers.formatIso(curDate);
-        var numTimeSlots = '',
-            timeSlots = this.settings.bookableTimes[curIso];
-        if(timeSlots) {
-          numTimeSlots = timeSlots.length + ' available';
+
+        var displayAvailable = '',
+            timeSlots = this.settings.bookableTimes[curIso],
+            dayStr = this.settings.days[curDate.getDay()];
+
+        if (curIso < from || dayStr == 'Sunday' || dayStr == 'Saturday') {
+          ;
+        } else if (curIso >= from && curIso <= to && timeSlots) {
+          displayAvailable = timeSlots.length + ' available';
+        } else if (curIso >= from && curIso <= to) {
+          displayAvailable = '0 available';
+        } else if (curIso > to) {
+          displayAvailable = 'No slots available';
         }
 
         row+= templateDate.render({
           date: curIso,
-          weekday: this.settings.days[curDate.getDay()].substr(0,3),
+          weekday: dayStr.substr(0,3),
           day: curDate.getDate(),
-          available: numTimeSlots,
+          available: displayAvailable,
           today: curIso === todayIso,
           newMonth: curDate.getDate() === 1,
           monthIso: curIso.substr(0, 7),

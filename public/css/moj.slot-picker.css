@@ -321,11 +321,10 @@ a.BookingCalendar-nav--next {
     .SlotPicker-choices ul li.is-clicked .SlotPicker-prompt {
       display: block; }
     .SlotPicker-choices ul li.is-chosen {
-      padding-left: 65px;
-      padding-right: 80px; }
+      padding: 0 80px; }
       @media (max-width: 640px) {
         .SlotPicker-choices ul li.is-chosen {
-          padding-left: 55px; } }
+          padding: 0 55px; } }
       .SlotPicker-choices ul li.is-chosen p {
         font-size: 24px; }
       .SlotPicker-choices ul li.is-chosen .SlotPicker-prompt {
