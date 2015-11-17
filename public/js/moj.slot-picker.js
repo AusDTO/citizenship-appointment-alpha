@@ -84,6 +84,9 @@
         self.selectDay($(this));
         self.highlightDate($(this));
         self.$timeSlots.addClass('is-active');
+        $('html, body').animate({
+          scrollTop: $(".SlotPicker-day.is-active").offset().top
+        }, 2000);
       });
 
       this.$_el.on('click', '.BookingCalendar-nav--next', function(e) {
@@ -134,13 +137,13 @@
 
     updateNav: function(i) {
       if (i > 0) {
-        $('.BookingCalendar-nav--prev', this.$_el).addClass('is-active').text("Previous");
+        $('.BookingCalendar-nav--prev', this.$_el).addClass('is-active').text(this.settings.navMonths[i - 1].label);
       } else {
         $('.BookingCalendar-nav--prev', this.$_el).removeClass('is-active');
       }
 
       if (i + 1 < this.settings.navMonths.length) {
-        $('.BookingCalendar-nav--next', this.$_el).addClass('is-active').text("Next");
+        $('.BookingCalendar-nav--next', this.$_el).addClass('is-active').text(this.settings.navMonths[i + 1].label);
       } else {
         $('.BookingCalendar-nav--next', this.$_el).removeClass('is-active');
       }
@@ -328,7 +331,7 @@
     },
 
     showSlotChoices: function() {
-      $('.SlotPicker-choices').show();
+      $('.SlotPicker-choices').slideDown("fast");;
     },
 
     checkSlot: function(el) {
