@@ -37,8 +37,8 @@ h3, h4 {
     position: absolute;
     top: 7px;
 
-    background-color: #878787;
-    color: white;
+    background-color: #ffffff;
+    color: #535353;
     text-transform: capitalize;
     padding: 0 15px;
 
@@ -46,6 +46,10 @@ h3, h4 {
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
+}
+
+.date-switcher button:hover {
+    background-color: #efefef;
 }
 
 .date-switcher button[disabled] {
@@ -193,7 +197,7 @@ h3, h4 {
 
 .booking-calendar section button[type="button"] h5 {
     margin: 0 0 3px;
-    color: #3f2a2e;
+    color: #ffffff;
     font-size: 13px;
     font-weight: bold;
 }
@@ -230,7 +234,14 @@ h3, h4 {
     font-size: 11px
 }
 
-.booking-calendar section button[type="button"]:hover,.booking-calendar section button[type="button"]:focus,.booking-calendar section button[type="button"].selected {
+.booking-calendar section button[type="button"]:focus,.booking-calendar section button[type="button"].selected {
+    border-color: #609;
+    background: #0178C6;
+    color: #ffffff;
+
+}
+
+.booking-calendar section button[type="button"]:hover {
     border-color: #609;
     background: #d4e9ff;
 }
@@ -240,7 +251,11 @@ h3, h4 {
     background: #ffffff;
 }
 
-.booking-calendar section button[type="button"]:hover *,.booking-calendar section button[type="button"]:focus *,.booking-calendar section button[type="button"].selected * {
+.booking-calendar section button[type="button"]:focus *,.booking-calendar section button[type="button"].selected * {
+    color: #ffffff
+}
+
+.booking-calendar section button[type="button"]:hover *{
     color: #000000
 }
 
@@ -270,7 +285,13 @@ h3, h4 {
     margin: 5px;
 }
 
-.booking-time ul a:hover,.booking-time ul a:focus,.booking-time ul a:active,.booking-time ul a.selected {
+.booking-time ul a:focus,.booking-time ul a:active,.booking-time ul a.selected {
+    color: #ffffff;
+    text-decoration: none;
+    background: #0178C6;
+}
+
+.booking-time ul a:hover {
     color: #000000;
     text-decoration: none;
     background: #d4e9ff;
@@ -320,20 +341,26 @@ h3, h4 {
 
 #selApptTime {
     text-transform: capitalize;
-    font-weight: bold;
     margin-right: 20px;
+
+    font-family:'Open Sans', 'Arial';
+    font-weight:700;
+    font-style:normal;
+    font-size:18px;
+    text-decoration:none;
+    color:#333333;
 }
 
 .book-button{
     background-color: #0178C6;
     color: white;
     text-transform: capitalize;
-    padding: 0 15px;
 
     font-family: Helvetica, Helvetica;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
+    float: right;
 }
 
 .book-button:hover{
@@ -345,5 +372,5 @@ h3, h4 {
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
     padding: 15px 0 15px 0;
-    text-align: center;
+    text-align: left;
 }
