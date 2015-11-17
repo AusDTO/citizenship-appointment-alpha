@@ -448,7 +448,7 @@
         } else if (curIso >= from && curIso <= to) {
           displayAvailable = '0 available';
         } else if (curIso > to) {
-          displayAvailable = 'No slots available';
+          displayAvailable = 'No slots yet';
         }
 
         row+= templateDate.render({
