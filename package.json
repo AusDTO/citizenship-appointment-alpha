@@ -20,7 +20,10 @@
   },
   "homepage": "https://github.com/AusDTO/citizenship-appointment-alpha#readme",
   "dependencies": {
-    "express": "^4.13.3"
+    "consolidate": "^0.13.1",
+    "express": "^4.13.3",
+    "hogan.js": "^3.0.2",
+    "node-uuid": "^1.4.7"
   },
   "devDependencies": {
     "forever": "^0.15.1"
