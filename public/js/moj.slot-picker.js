@@ -333,7 +333,7 @@
 
     showSlotChoices: function() {
       $('.SlotPicker-choices').show();
-      $(".SlotPicker-choices").get(0).scrollIntoView();
+      $('.SlotPicker-choices .confirm-button').get(0).scrollIntoView();
       // $('.SlotPicker-choices').slideDown("fast");;
     },
 

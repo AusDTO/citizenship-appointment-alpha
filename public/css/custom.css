@@ -47,7 +47,7 @@ h6 { font-size: 1.1rem; line-height: 1.9;  }
   h5 { font-size: 1.3rem; }
   h6 { font-size: 1.1rem; }
 
-  img#clientId-image { max-width: 60%; }
+  img#clientId-image { max-width: 640px; }
 }
 
 table {
