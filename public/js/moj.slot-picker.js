@@ -67,14 +67,9 @@
         self.checkSlot($(this));
         self.processSlots();
         self.activateNextOption();
-        self.disableCheckboxes(self.limitReached());
+        self.showSlotChoices();
+        // self.disableCheckboxes(self.limitReached());
         self.togglePromoteHelp();
-      });
-
-      this.$_el.on('click', '.SlotPicker-icon--remove', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        $($(this).data('slot-option')).click();
       });
 
       this.$_el.on('click', '.SlotPicker-icon--promote', function(e) {
@@ -105,11 +100,6 @@
         $(this).addClass('is-clicked');
         // scroll - top of DateSlider
         self.confirmVisibility($('.DateSlider').first(), 'top');
-      });
-
-      this.$_el.on('click', '.SlotPicker-choices li.is-chosen', function() {
-        var date = $(this).find('.SlotPicker-icon--remove').data('slot-option').attr('id').split('slot-')[1].substr(0, 10);
-        $('.BookingCalendar-dateLink[data-date="' + date + '"]').click();
       });
     },
 
@@ -290,7 +280,7 @@
 
       $slot.addClass('is-chosen');
       $slot.find('.SlotPicker-date').text(day);
-      $slot.find('.SlotPicker-time').text(time + ', ' + duration);
+      $slot.find('.SlotPicker-time').text(time);
       $slot.find('.SlotPicker-icon--remove').data('slot-option', checkbox);
     },
 
@@ -337,12 +327,12 @@
       this.$choice.eq(index).addClass('is-active');
     },
 
+    showSlotChoices: function() {
+      $('.SlotPicker-choices').show();
+    },
+
     checkSlot: function(el) {
-      if (el.is(':checked')) {
-        this.addSlot(el.val());
-      } else {
-        this.removeSlot(el.val());
-      }
+      this.settings.currentSlots = [el.val()];
     },
 
     addSlot: function(slot) {
@@ -443,17 +433,17 @@
 
       while (curDate <= end) {
         curIso = moj.Helpers.formatIso(curDate);
-        var numTimeSlots = 0,
+        var numTimeSlots = '',
             timeSlots = this.settings.bookableTimes[curIso];
         if(timeSlots) {
-          numTimeSlots = timeSlots.length
+          numTimeSlots = timeSlots.length + ' available';
         }
 
         row+= templateDate.render({
           date: curIso,
           weekday: this.settings.days[curDate.getDay()].substr(0,3),
           day: curDate.getDate(),
-          available: numTimeSlots + ' available',
+          available: numTimeSlots,
           today: curIso === todayIso,
           newMonth: curDate.getDate() === 1,
           monthIso: curIso.substr(0, 7),
@@ -481,10 +471,6 @@
           mins = time.substr(2),
           out = hrs;
 
-      // if (hrs > 12) {
-      //   out-= 12;
-      // }
-
       if (hrs === 0) {
         out = 12;
       }
@@ -495,7 +481,6 @@
         out+=':00'
       }
       return out;
-      // return out+= (hrs > 11) ? 'pm' : 'am';
     },
 
     duration: function(start, end) {

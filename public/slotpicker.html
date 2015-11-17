@@ -42,7 +42,7 @@
     <div class="BookingCalendar-content">
       <a class="BookingCalendar-dateLink" data-date="{{ date }}" href="#date-{{ date }}">
         {{#newMonth}}
-          <span class="BookingCalendar-tag" id="month-{{ monthIso }}"></span>
+          <span class="BookingCalendar-tag" id="month-{{ monthIso }}">{{ monthShort }}</span>
         {{/newMonth}}
         <p class="BookingCalendar-weekday">{{ weekday }}</p>
         <p class="BookingCalendar-day">{{ day }}</p>
@@ -57,8 +57,6 @@
     {{#notFirst}}
       <a class="SlotPicker-icon SlotPicker-icon--promote" href="#">Promote</a>
     {{/notFirst}}
-    <a class="SlotPicker-icon SlotPicker-icon--remove" href="#">Remove</a>
-    <span class="SlotPicker-position">{{ num }}</span>
     <p class="SlotPicker-date"></p>
     <p class="SlotPicker-time"></p>
     <p class="SlotPicker-prompt">Choose a date and time from the calendar</p>
@@ -169,13 +167,17 @@
       </ul>
     </div>
 
-    <div style="text-align: center">
-      <a class="button confirmButton" href="confirmation.html">Confirm</a>
-    </div>
-
     <div class="SlotPicker-choices">
       <ul>
       </ul>
+      <div class="SlotPicker-choices confirm-button">
+        <button type="button" id="confirm-button">Confirm</button>
+        <script type="text/javascript">
+            document.getElementById("confirm-button").onclick = function () {
+                location.href = "/confirmation.html";
+            };
+        </script>
+      </div>
       <p class="SlotPicker-promoteHelp">Use the arrows to put your visit choices in the order that suits you best.</p>
     </div>
 
