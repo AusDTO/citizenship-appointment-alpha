@@ -28,24 +28,55 @@
   <section class="header">
     <h1 style="padding-top: 1rem;">Book your citizenship appointment</h1>
     <form method="get" action="slotpicker.html">
-      <p>
-        <label for="clientIdInput" style="display: inline;">Client ID:</label>
-        <input class="" type="text" placeholder="11 digits code" id="clientIdInput">
-      </p>
-      <p>
-        <label for="clientIdInput" style="display: inline;">Postcode:</label>
-        <input class="" type="text" placeholder="e.g. 3000" id="postcodeInput">
-      </p>
+      <div class="column-layout">
+        <div class="left-column">Client ID:</div>
+        <div class="middle-column">
+          <input class="" type="text" placeholder="11 digits code" id="clientIdInput">
+          <br/>
+          <a href="#" onclick="toggleClientIDHelp();" class="blue-link" style="text-decoration: none">How to find ClientID?</a>
+          <script type="text/javascript">
+              toggleClientIDHelp = function () {
+                var e = document.getElementById("clientID-help");
+                if(e.style.display == 'block')
+                    e.style.display = 'none';
+                 else
+                    e.style.display = 'block';
+                return true;
+              };
+          </script>
+        </div>
+        <div class="cleared"></div>
+      </div>
+      <div class="column-layout">
+        <div class="left-column">Postcode:</div>
+        <div class="middle-column">
+          <input class="" type="text" placeholder="e.g. 3000" id="postcodeInput">
+        </div>
+        <div class="cleared"></div>
+      </div>
       <input id="button-continue" type="submit" value="Continue">
     </form>
 
+  <div id="clientID-help" style="display: none;">
     <h2 class="section-header">How to find your Client ID code</h2>
     <p>
-      Your Client ID is included on your correspondence under the Date of Birth.
-    </p>
-    <p>
-      It's a 11 digits code <br/>
       <img src="/images/clientId-help.png" style="width: 60%" alt="Find the ID in your letter"/>
+    </p>
+  </div>
+
+  <h2 class="section-header">You will need to bring the following documents to your appointment</h2>
+    <p>
+      <ul>
+        <li>
+          The originals of all the identity documents that you submitted with your application, for all applicants including children. Also refer to the <a href="" class="blue-link">Document Checklist</a>
+        </li>
+        <li>
+          If you lodged your application online, please bring a completed <a href="" class="blue-link">Form 1195 Identity declaration</a>, with a correctly endorsed recent passport sized photo for all applicants including children.
+        </li>
+      </ul>
+    </p>
+    <p style="font-style:italic;">
+      If you do not provide these original documents, a decision on your application may be delayed.
     </p>
 
   </section>
