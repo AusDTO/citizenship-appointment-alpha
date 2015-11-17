@@ -66,7 +66,7 @@ table {
 
 @media (min-width: 550px) {
   .header {
-      margin-top: 8rem;
+      margin-top: 5rem;
       margin-bottom: 18rem;
   }
 }
@@ -141,4 +141,14 @@ label {
 
 .right-column {
   float: right;
+}
+
+.form-fields {
+  font-family:'Open Sans', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:14px;
+  text-decoration:none;
+  color:#333333;
+  padding-top: 0.5rem;
 }
