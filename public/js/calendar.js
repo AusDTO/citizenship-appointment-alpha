@@ -65,12 +65,12 @@ var govau_calendar = window.govau_calendar || {};
             }
             );
             if (daysPerSlide !== 0) {
-                slides = Math.ceil(14 / daysPerSlide);
+                slides = Math.ceil(21 / daysPerSlide);
             } else {
                 slides = 7;
             }
-            if (slides > 5) {
-                slides = 5;
+            if (slides > 9) {
+                slides = 9;
             }
             if (calendar.hasClass("slide-1")) {
                 currentSlide = 1;
@@ -87,23 +87,43 @@ var govau_calendar = window.govau_calendar || {};
                             if (calendar.hasClass("slide-5")) {
                                 currentSlide = 5;
                             }
+                            else {
+                                if (calendar.hasClass("slide-6")) {
+                                    currentSlide = 6 ;
+                                }
+                                else {
+                                    if (calendar.hasClass("slide-7")) {
+                                        currentSlide = 7;
+                                    }
+                                    else {
+                                        if (calendar.hasClass("slide-8")) {
+                                            currentSlide = 8;
+                                        }
+                                        else {
+                                            if (calendar.hasClass("slide-9")) {
+                                                currentSlide = 9;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
             if (currentSlide == 1) {
-                dateSwitcher.find(".prev").attr("disabled", "disabled");
+                dateSwitcher.find(".prev").hide();
             } else {
-                dateSwitcher.find(".prev").removeAttr("disabled");
+                dateSwitcher.find(".prev").show();
             }
             if (currentSlide >= slides) {
-                dateSwitcher.find(".next").attr("disabled", "disabled");
+                dateSwitcher.find(".next").hide();
             } else {
-                dateSwitcher.find(".next").removeAttr("disabled");
+                dateSwitcher.find(".next").show();
             }
             dateSwitcher.find("h3").html(startDate + " - " + endDate);
             if (currentSlide > slides) {
-                calendar.removeClass("slide-1 slide-2 slide-3 slide-4 slide-5").addClass("slide-" + slides);
+                calendar.removeClass("slide-1 slide-2 slide-3 slide-4 slide-5 slide-6 slide-7 slide-8 slide-9").addClass("slide-" + slides);
             }
         }
         ;
@@ -122,9 +142,9 @@ var govau_calendar = window.govau_calendar || {};
                 calendar.find('section, section button[type="button"]').removeClass("selected");
                 $(".booking-calendar .booking-time").remove();
                 $("p#selected-slot").hide();
-                calendar.removeClass("slide-1 slide-2 slide-3 slide-4 slide-5").addClass("slide-" + (currentSlide - 1));
-                $(this).attr("disabled", "disabled");
-                $(".date-switcher .next").removeAttr("disabled");
+                calendar.removeClass("slide-1 slide-2 slide-3 slide-4 slide-5 slide-6 slide-7 slide-8 slide-9").addClass("slide-" + (currentSlide - 1));
+                $(this).hide();
+                $(".date-switcher .next").show();
                 scale();
             }
             );
@@ -136,9 +156,9 @@ var govau_calendar = window.govau_calendar || {};
                 calendar.find('section, section button[type="button"]').removeClass("selected");
                 $(".booking-calendar .booking-time").remove();
                 $("p#selected-slot").hide();
-                calendar.removeClass("slide-1 slide-2 slide-3 slide-4 slide-5").addClass("slide-" + (currentSlide + 1));
-                $(this).attr("disabled", "disabled");
-                $(".date-switcher .prev").removeAttr("disabled");
+                calendar.removeClass("slide-1 slide-2 slide-3 slide-4 slide-5 slide-6 slide-7 slide-8 slide-9").addClass("slide-" + (currentSlide + 1));
+                $(this).hide()
+                $(".date-switcher .prev").show();
                 scale();
             }
             );
@@ -369,7 +389,7 @@ var govau_calendar = window.govau_calendar || {};
                     }
                 }
                 if (i >= booking_json.RequestProperties.info.days) {
-                    i1 = i - booking_json.RequestProperties.info.days;
+                    i1 = i - (booking_json.RequestProperties.info.days*week_index);
                 } else {
                     i1 = i;
                 }

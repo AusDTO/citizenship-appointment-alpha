@@ -101,9 +101,13 @@ h3, h4 {
 }
 
 .booking-calendar>.inner {
-    width: 500%;
+    width: 750%;
     position: relative;
     transition: .5s
+}
+
+.button-desc {
+    display:none;
 }
 
 .booking-calendar.slide-1>.inner {
@@ -126,10 +130,26 @@ h3, h4 {
     left: -400%
 }
 
+.booking-calendar.slide-6>.inner {
+    left: -500%
+}
+
+.booking-calendar.slide-7>.inner {
+    left: -600%
+}
+
+.booking-calendar.slide-8>.inner {
+    left: -700%
+}
+
+.booking-calendar.slide-9>.inner {
+    left: -800%
+}
+
 .booking-calendar section {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    width: 6.6667%;
+    width: 4.4444%;
     float: left;
     padding: 15px 0 0
 }
@@ -258,41 +278,54 @@ h3, h4 {
 
 @media all and (min-width: 30em) {
     .booking-calendar>.inner {
-        width:400%
+        width:600%
     }
 
     .booking-calendar section {
-        width: 6.25%
+        width: 4.16%
+    }
+
+    .button-desc {
+        display:none;
     }
 }
 
 @media all and (min-width: 38em) {
     .booking-calendar>.inner {
-        width:300%
+        width:450%
     }
 
     .booking-calendar section {
-        width: 6.6667%
+        width: 4.44396%
+    }
+
+    .button-desc {
+        display:inline-block;
     }
 }
 
 @media all and (min-width: 54em) {
     .booking-calendar>.inner {
-        width:200%
+        width: 300%
     }
 
     .booking-calendar section {
-        width: 7.1428%
+        width: 4.75%
+    }
+
+    .button-desc {
+        display:inline-block;
     }
 }
 
 #selApptTime {
     text-transform: capitalize;
-    font-weight: bold
+    font-weight: bold;
+    margin-right: 20px;
 }
 
 .book-button{
-    background-color: #0060BD;
+    background-color: #0178C6;
     color: white;
     text-transform: capitalize;
     padding: 0 15px;
@@ -301,4 +334,16 @@ h3, h4 {
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
+}
+
+.book-button:hover{
+    background-color: #00609e;
+    color: white;
+}
+
+#selected-slot {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px 0 15px 0;
+    text-align: center;
 }

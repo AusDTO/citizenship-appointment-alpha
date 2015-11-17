@@ -42,9 +42,9 @@
 
   <section data-scroll-to="true" class="calendar-panel panel second active ">
 		<div class="date-switcher" style="width: 100%">
-			<button type="button" class="prev"> &lt; Previous</button>
+			<button type="button" class="prev" style="display: none;"> &lt;<span class="button-desc">&nbsp;Previous</span></button>
 			<h3></h3>
-			<button type="button" class="next">Next &gt; </button>
+			<button type="button" class="next" style="display: none;"><span class="button-desc">Next&nbsp;</span>&gt; </button>
 		</div>
 
 		<div class="booking-calendar"></div>
@@ -56,7 +56,7 @@
 
 		<p id="selected-slot" style="display: none;">
 			You have selected <span id="selApptTime" class=""></span>
-			<button type="button" onclick="selectDate();" class="book-button">Book</button>
+			<button type="button" onclick="selectDate();" class="book-button">Confirm</button>
 		</p>
 
 		<div class="calendar-err" style="display: none;">
