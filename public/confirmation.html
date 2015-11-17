@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/confirmation.css">
+  <!-- <link rel="stylesheet" href="css/barcode.css"> -->
+  <link rel="stylesheet" href="//fontlibrary.org/face/idautomationhc39m-code-39-barcode">
 
   <link rel="icon" type="image/png" href="images/coat-of-arms-black-on-white-32x32.png" sizes="32x32">
 </head>
@@ -64,6 +66,13 @@
         </div>
         <div class="cleared"></div>
       </div>
+      
+      <div>
+        <p>Scan this barcode or enter your Client ID when you attend your appointment:</p>
+        <!-- <span style="font-family: Code39AzaleaFont; font-size: 5rem;">*81687116621*</span> -->
+        <p style="padding-top: 2rem;"><span style="font-family: IDAHC39MCode39BarcodeRegular; font-size: 2rem;">*81687116621*</span></p>
+      </div>
+
     </div>
     <div class="five columns">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5301.370905405444!2d144.96749748396877!3d-37.808456171195175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642cf64f5d103%3A0x6bae151ef2fd2f4c!2s2+Lonsdale+St%2C+Melbourne+VIC+3000!5e0!3m2!1sen!2sau!4v1447289196910"  height="250" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -79,12 +88,6 @@
         <div class="right-column"><button type="button" class="send-button" id="email-send">Send</button></div>
         <div class="middle-column"><input type="text" style="width:100%"/></div>
       </div>
-
-<script type="text/javascript">
-    document.getElementById("email-send").onclick = function () {
-        location.href = "/confirmation_email.html";
-    };
-</script>
 
       <div class="column-layout">
         <div class="left-column">SMS:</div>
@@ -110,6 +113,12 @@
     </li>
   </ul>
 </div>
+
+<script type="text/javascript">
+    document.getElementById("email-send").onclick = function () {
+        location.href = "/confirmation_email.html";
+    };
+</script>
 
 </body>
 </html>
