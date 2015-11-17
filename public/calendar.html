@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/calendar.css">
+  <link rel="stylesheet" href="css/font-awesome-4.4.0/css/font-awesome.min.css">
 
   <link rel="icon" type="image/png" href="images/coat-of-arms-black-on-white-32x32.png" sizes="32x32">
 </head>
@@ -35,9 +36,14 @@
 
   <section data-scroll-to="true" class="calendar-panel panel second active ">
 		<div class="date-switcher" style="width: 100%">
-			<button type="button" class="prev" style="display: none;"> &lt;<span class="button-desc">&nbsp;Previous</span></button>
+			<button type="button" class="prev" style="display: none;">
+				<span class="fa fa-angle-left"></span>
+				<span class="button-desc">&nbsp;Previous</span></button>
 			<h3></h3>
-			<button type="button" class="next" style="display: none;"><span class="button-desc">Next&nbsp;</span>&gt; </button>
+			<button type="button" class="next" style="display: none;">
+				<span class="button-desc">Next&nbsp;</span>
+				<span class="fa fa-angle-right"></span>
+			</button>
 		</div>
 
 		<div class="booking-calendar"></div>
