@@ -84,9 +84,10 @@
         self.selectDay($(this));
         self.highlightDate($(this));
         self.$timeSlots.addClass('is-active');
-        $('html, body').animate({
-          scrollTop: $(".SlotPicker-day.is-active").offset().top
-        }, 2000);
+        $(".SlotPicker-day.is-active").get(0).scrollIntoView();
+        // $('html, body').animate({
+        //   scrollTop: $(".SlotPicker-day.is-active").offset().top
+        // }, 2000);
       });
 
       this.$_el.on('click', '.BookingCalendar-nav--next', function(e) {
@@ -331,7 +332,9 @@
     },
 
     showSlotChoices: function() {
-      $('.SlotPicker-choices').slideDown("fast");;
+      $('.SlotPicker-choices').show();
+      $(".SlotPicker-choices").get(0).scrollIntoView();
+      // $('.SlotPicker-choices').slideDown("fast");;
     },
 
     checkSlot: function(el) {
