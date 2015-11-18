@@ -58,11 +58,17 @@ table {
   .DateSlider {
     display: none;
   }
+  .BookingCalendar {
+    display: block;
+  }
 }
 
 @media (max-width: 640px) {
   .BookingCalendar {
     display: none;
+  }
+  .DateSlider {
+    display: block;
   }
   img#clientId-image { width: 100%; }
 }
