@@ -58,14 +58,6 @@ table {
   .DateSlider {
     display: none;
   }
-
-  .icon-location {
-      display:none;
-  }
-
-  .word-location {
-      display:inline;
-  }
 }
 
 @media (max-width: 640px) {
@@ -73,14 +65,6 @@ table {
     display: none;
   }
   img#clientId-image { width: 100%; }
-
-  .icon-location {
-      display:none;
-  }
-
-  .word-location {
-      display:inline;
-  }
 }
 
 @media (min-width: 550px) {
@@ -123,7 +107,7 @@ label {
 
 #button-continue {
   text-transform: capitalize !important;
-  background-color: #0060BD !important;
+  background-color: #0178c6 !important;
 
   font-family: 'Open Sans', Arial;
   font-weight: 400;
@@ -138,10 +122,18 @@ label {
   color: white;
   text-transform: capitalize !important;
   padding: 0 15px;
-  font-style: normal;
-  font-size: 16px;
-  text-decoration: none;
+  font-family: 'Open Sans', Arial; 
+  font-weight: 400; 
+  font-style: normal; 
+  font-size: 16px; 
+  text-decoration: none; 
 }
+
+#confirm-button:hover{
+    background-color: #3393d1;
+    color: white;
+}
+
 
 .column-layout{
   margin-bottom: 10px;

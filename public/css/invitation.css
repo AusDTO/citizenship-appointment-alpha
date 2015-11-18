@@ -50,7 +50,7 @@
 }
 
 .book-button{
-    background-color: #0060BD;
+    background-color: #0178C6;
     color: white;
     text-transform: capitalize;
     padding: 0 15px;
@@ -59,6 +59,11 @@
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
+}
+
+.book-button:hover{
+    background-color: #3393d1;
+    color: white;
 }
 
 .left-column{
