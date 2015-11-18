@@ -198,3 +198,17 @@ label {
   color:#333333;
   padding-top: 0.5rem;
 }
+
+.currentApptTime {
+    font-family:'Open Sans', 'Arial';
+    font-weight:700;
+    font-style:normal;
+    font-size:14px;
+    text-decoration:none;
+    color:#333333;
+}
+
+#currentAppDet {
+  display:none;
+}
+
