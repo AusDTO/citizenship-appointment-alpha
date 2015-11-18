@@ -110,7 +110,7 @@
       this.$_el.on('click', '.SlotPicker-choices li.is-active', function() {
         $(this).addClass('is-clicked');
         // scroll - top of DateSlider
-        self.confirmVisibility($('.DateSlider').first(), 'top');
+        // self.confirmVisibility($('.DateSlider').first(), 'top');
       });
     },
 
@@ -217,7 +217,7 @@
       $(selector).addClass('is-active').focus();
 
       // scroll - bottom of selected day
-      this.confirmVisibility($(selector), 'bottom');
+      // this.confirmVisibility($(selector), 'bottom');
     },
 
     chosenDaySelector: function(dateStr) {
@@ -313,7 +313,7 @@
       }
 
       // scroll - bottom of added slot
-      this.confirmVisibility(this.$choice.eq(slots.length-1), 'bottom');
+      // this.confirmVisibility(this.$choice.eq(slots.length-1), 'bottom');
     },
 
     limitReached: function() {
