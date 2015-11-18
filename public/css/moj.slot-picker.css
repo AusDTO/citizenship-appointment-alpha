@@ -198,7 +198,7 @@ button.BookingCalendar-nav--next {
   position: relative;
   display: none;
   overflow: hidden;
-  padding: 0.5em;
+  padding: 0.5em 0.5em 0 0.5em;
   list-style: none;
   background: #F2F2F2; }
   @media (max-width: 640px) {
@@ -278,12 +278,12 @@ button.BookingCalendar-nav--next {
       display: inline; } }
 
 .SlotPicker-choices ul {
+  border-top: 1px solid #333333;
   zoom: 1;
   text-align: center;
   margin: 0 10px 0 10px;
   padding: 0.5em;
-  list-style-type: none;
-  background: #F2F2F2; }
+  list-style-type: none; }
   @media (min-width: 769px) {
     .SlotPicker-choices ul {
       min-height: 60px; } }
@@ -293,8 +293,6 @@ button.BookingCalendar-nav--next {
     margin-top: 10px;
     padding: 10px;
     min-height: 60px; }
-    /*background: white;*/
-    /*border: 1px solid #bfc1c3; }*/
     .SlotPicker-choices ul li:first-child {
       margin-top: 0;
       margin-bottom: 0; }
@@ -333,8 +331,7 @@ button.BookingCalendar-nav--next {
 .SlotPicker-choices .confirm-button {
   text-align: center;
   margin: 0 10px 0 10px;
-  padding: 0.5em;
-  background: #F2F2F2; }
+  padding: 0.5em; }
 
 .SlotPicker-promoteHelp {
   display: none; }
