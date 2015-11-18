@@ -97,12 +97,12 @@
         self.$timeSlots.addClass('is-active');
       });
 
-      this.$_el.on('click', '.BookingCalendar-nav--next', function(e) {
+      this.$_el.on('click', 'button.BookingCalendar-nav--next', function(e) {
         e.preventDefault();
         self.nudgeNav(1);
       });
 
-      this.$_el.on('click', '.BookingCalendar-nav--prev', function(e) {
+      this.$_el.on('click', 'button.BookingCalendar-nav--prev', function(e) {
         e.preventDefault();
         self.nudgeNav(-1);
       });
@@ -653,3 +653,20 @@
   };
 
 }());
+
+
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+$(window).bind("load", function() { 
+    var rescheduled = getParameterByName("resch");
+    if("true"==rescheduled){
+        document.getElementById("currentAppDet").style.display = 'block';
+    }
+});
+

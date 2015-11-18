@@ -518,3 +518,18 @@ var govau_calendar = window.govau_calendar || {};
 (window, document, jQuery, govau_calendar));
 
 jQuery(govau_calendar.bookAppointmentCalendar.init);
+
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+$(window).bind("load", function() { 
+    var rescheduled = getParameterByName("resch");
+    if(rescheduled =="true"){
+        document.getElementById("currentAppDet").style.display = 'block';
+    }
+});
