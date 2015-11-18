@@ -1,6 +1,7 @@
 .button, button, input[type="submit"], input[type="reset"], input[type="button"] {
   font-size: 15px;
   line-height: 24px;
+  border: 1px solid #666666;
 }
 
 ul {
@@ -195,7 +196,7 @@ h3, h4 {
 }
 
 .booking-calendar section.selected button[type="button"] {
-    border-color: #f1eeed
+    border-color: #666666
 }
 
 .booking-calendar section button[type="button"][disabled] {
@@ -217,7 +218,7 @@ h3, h4 {
 }
 
 .booking-calendar section.selected button[type="button"] {
-    border-color: #f1eeed
+    border-color: #666666
 }
 
 .booking-calendar section button[type="button"][disabled] {
