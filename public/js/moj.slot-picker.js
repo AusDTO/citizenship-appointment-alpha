@@ -79,7 +79,7 @@
         self.processSlots();
       });
 
-      this.$_el.on('click chosen', '.BookingCalendar-dateLink, .DateSlider-largeDates li', function(e) {
+      this.$_el.on('click chosen', '.BookingCalendar-dateLink', function(e) {
         e.preventDefault();
         self.selectDay($(this));
         self.highlightDate($(this));
@@ -88,6 +88,13 @@
         // $('html, body').animate({
         //   scrollTop: $(".SlotPicker-day.is-active").offset().top
         // }, 2000);
+      });
+
+      this.$_el.on('click chosen', '.DateSlider-largeDates li', function(e) {
+        e.preventDefault();
+        self.selectDay($(this));
+        self.highlightDate($(this));
+        self.$timeSlots.addClass('is-active');
       });
 
       this.$_el.on('click', '.BookingCalendar-nav--next', function(e) {
