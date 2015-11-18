@@ -204,7 +204,9 @@ a.BookingCalendar-nav--next {
   padding: 0 10px 0 10px; }
   @media (max-width: 768px) {
     .SlotPicker-days {
-      margin-bottom: 0; } }
+      margin-bottom: 0; } 
+}
+
 
 .SlotPicker-day {
   position: relative;
@@ -215,7 +217,8 @@ a.BookingCalendar-nav--next {
   background: #F2F2F2; }
   @media (max-width: 640px) {
     .SlotPicker-day {
-      border-width: 1px 0; } }
+      border-width: 1px 0; } 
+    }
   .SlotPicker-day.is-active {
     margin-bottom: 0;
     display: block; }
@@ -389,3 +392,23 @@ a.BookingCalendar-nav--next {
 .SlotPicker-icon--promote {
   right: 50px;
   background-image: url("../images/promote.png"); }
+
+
+  .icon-location {
+      display:none;
+  }
+
+  .word-location {
+      display:inline;
+  }
+
+  @media (max-width: 640px) {
+    .icon-location {
+      display: inline; 
+    } 
+
+    .word-location {
+      display:none;
+  }
+  }
+

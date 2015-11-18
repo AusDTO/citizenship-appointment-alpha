@@ -58,6 +58,14 @@ table {
   .DateSlider {
     display: none;
   }
+
+  .icon-location {
+      display:none;
+  }
+
+  .word-location {
+      display:inline;
+  }
 }
 
 @media (max-width: 640px) {
@@ -65,6 +73,14 @@ table {
     display: none;
   }
   img#clientId-image { width: 100%; }
+
+  .icon-location {
+      display:none;
+  }
+
+  .word-location {
+      display:inline;
+  }
 }
 
 @media (min-width: 550px) {

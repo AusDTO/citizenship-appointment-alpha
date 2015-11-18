@@ -114,6 +114,14 @@ h3, h4 {
     display:none;
 }
 
+.icon-location {
+    display:inline;
+}
+
+.word-location {
+    display:none;
+}
+
 .booking-calendar.slide-1>.inner {
     left: 0
 }
@@ -309,6 +317,14 @@ h3, h4 {
     .button-desc {
         display:none;
     }
+
+    .icon-location {
+        display:inline;
+    }
+
+    .word-location {
+        display:none;
+    }
 }
 
 @media all and (min-width: 38em) {
@@ -323,6 +339,14 @@ h3, h4 {
     .button-desc {
         display:inline-block;
     }
+
+    .icon-location {
+        display:none;
+    }
+
+    .word-location {
+        display:inline;
+    }
 }
 
 @media all and (min-width: 54em) {
@@ -336,6 +360,14 @@ h3, h4 {
 
     .button-desc {
         display:inline-block;
+    }
+
+    .icon-location {
+        display:none;
+    }
+
+    .word-location {
+        display:inline;
     }
 }
 
