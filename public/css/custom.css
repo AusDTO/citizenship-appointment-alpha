@@ -67,6 +67,13 @@ table {
   img#clientId-image { width: 100%; }
 }
 
+@media (max-width: 550px) {
+  .header {
+      margin-top: 2rem;
+      margin-bottom: 6rem;
+  }
+}
+
 @media (min-width: 550px) {
   .header {
       margin-top: 5rem;
@@ -140,9 +147,32 @@ label {
   clear: both;
 }
 
-.left-column{
-  float: left;
-  width: 90px;
+@media (max-width: 550px) {
+  .left-input-column {
+        float: left;
+        width: 80px;
+  }
+}
+
+@media (min-width: 550px) {
+  .left-input-column {
+        float: left;
+        width: 150px;
+  }
+}
+
+@media (max-width: 550px) {
+  .left-column {
+        float: left;
+        width: 65px;
+  }
+}
+
+@media (min-width: 550px) {
+  .left-column {
+        float: left;
+        width: 90px;
+  }
 }
 
 .middle-column {

@@ -243,16 +243,11 @@ h3, h4 {
     font-size: 11px
 }
 
-.booking-calendar section button[type="button"]:focus,.booking-calendar section button[type="button"].selected {
+.booking-calendar section button[type="button"]:focus,.booking-calendar section button[type="button"].selected, .booking-calendar section button[type="button"]:hover {
     border-color: #609;
     background: #0178C6;
     color: #ffffff;
 
-}
-
-.booking-calendar section button[type="button"]:hover {
-    border-color: #609;
-    background: #d4e9ff;
 }
 
 .booking-calendar section button[type="button"][disabled]:hover,.booking-calendar section button[type="button"][disabled]:focus {
@@ -260,12 +255,8 @@ h3, h4 {
     background: #ffffff;
 }
 
-.booking-calendar section button[type="button"]:focus *,.booking-calendar section button[type="button"].selected * {
+.booking-calendar section button[type="button"]:focus *,.booking-calendar section button[type="button"].selected *, .booking-calendar section button[type="button"]:hover * {
     color: #ffffff
-}
-
-.booking-calendar section button[type="button"]:hover *{
-    color: #000000
 }
 
 .booking-time {
@@ -294,16 +285,10 @@ h3, h4 {
     margin: 5px;
 }
 
-.booking-time ul a:focus,.booking-time ul a:active,.booking-time ul a.selected {
+.booking-time ul a:focus,.booking-time ul a:active,.booking-time ul a.selected,.booking-time ul a:hover {
     color: #ffffff;
     text-decoration: none;
     background: #0178C6;
-}
-
-.booking-time ul a:hover {
-    color: #000000;
-    text-decoration: none;
-    background: #d4e9ff;
 }
 
 @media all and (min-width: 30em) {
@@ -369,6 +354,21 @@ h3, h4 {
 
     .word-location {
         display:inline;
+    }
+
+    .booking-calendar section button[type="button"]:hover {
+        border-color: #609;
+        background: #d4e9ff;
+    }
+
+    .booking-time ul a:hover {
+        color: #000000;
+        text-decoration: none;
+        background: #d4e9ff;
+    }
+
+    .booking-calendar section button[type="button"]:hover *{
+        color: #000000
     }
 }
 
