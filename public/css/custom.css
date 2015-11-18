@@ -218,3 +218,16 @@ label {
   display:none;
 }
 
+
+
+@media (min-width: 1025px) {
+  .desktop-only {
+        display: inherit;
+  }
+}
+
+@media (max-width: 1025px) {
+  .desktop-only {
+        display: none;
+  }
+}
