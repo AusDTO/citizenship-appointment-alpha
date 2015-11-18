@@ -143,55 +143,41 @@ ul.BookingCalendar-legend {
       font-size: 20px;
       line-height: 1.2; } }
 
-a.BookingCalendar-nav {
+.BookingCalendar-nav {
   display: none; }
-  a.BookingCalendar-nav.is-active {
-    display: block; }
 
-a.BookingCalendar-nav--next,
-a.BookingCalendar-nav--prev {
+.BookingCalendar-nav.is-active {
+  display: block; }
+
+button.BookingCalendar-nav--next,
+button.BookingCalendar-nav--prev {
   position: absolute;
   top: 0;
-  left: 0;
-  padding: 0.632em;
-  font-family: "nta", Arial, sans-serif;
-  font-size: 19px;
-  line-height: 1.31579;
-  font-weight: 400;
-  text-transform: none;
-  color: #0b0c0c;
-  line-height: 30px;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding: 0 2rem;
+  line-height: 36px;
   text-decoration: none;
-  background: no-repeat 0 -80px; }
-  @media (max-width: 640px) {
-    a.BookingCalendar-nav--next,
-    a.BookingCalendar-nav--prev {
-      font-size: 16px;
-      line-height: 1.25; } }
-  a.BookingCalendar-nav--next:hover,
-  a.BookingCalendar-nav--prev:hover {
-    text-decoration: underline; }
 
-a.BookingCalendar-nav--prev {
-  margin-left: 10px;
-  padding-left: 40px;
-  background-image: url("../images/prev.png"); }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    a.BookingCalendar-nav--prev {
-      background-position: 0 10px;
-      background-size: 30px; } }
+  background-color: #ffffff;
+  color: #535353;
+  text-transform: capitalize;
 
-a.BookingCalendar-nav--next {
-  left: auto;
+  font-family: Helvetica, Helvetica;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px; }
+
+button.BookingCalendar-nav--next:hover,
+button.BookingCalendar-nav--prev:hover {
+  background-color: #efefef; }
+
+button.BookingCalendar-nav--prev {
+  margin-left: 1rem; }
+
+button.BookingCalendar-nav--next {
   right: 0;
-  margin-right: 10px;
-  padding-right: 40px;
-  background-image: url("../images/next.png");
-  background-position: 100% -80px; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    a.BookingCalendar-nav--next {
-      background-position: 100% 10px;
-      background-size: 30px; } }
+  margin-right: 1rem; }
 
 .SlotPicker-timeSlots {
   display: none; }

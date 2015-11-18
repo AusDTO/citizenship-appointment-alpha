@@ -138,13 +138,14 @@
 
     updateNav: function(i) {
       if (i > 0) {
-        $('.BookingCalendar-nav--prev', this.$_el).addClass('is-active').text(this.settings.navMonths[i - 1].label);
+        $('.BookingCalendar-nav--prev.button-desc', this.$_el).text('Previous');
+        $('.BookingCalendar-nav--prev', this.$_el).addClass('is-active');
       } else {
         $('.BookingCalendar-nav--prev', this.$_el).removeClass('is-active');
       }
-
       if (i + 1 < this.settings.navMonths.length) {
-        $('.BookingCalendar-nav--next', this.$_el).addClass('is-active').text(this.settings.navMonths[i + 1].label);
+        $('.BookingCalendar-nav--next.button-desc', this.$_el).text('Next');
+        $('.BookingCalendar-nav--next', this.$_el).addClass('is-active');
       } else {
         $('.BookingCalendar-nav--next', this.$_el).removeClass('is-active');
       }
