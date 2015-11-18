@@ -21,8 +21,7 @@ var govau_calendar = window.govau_calendar || {};
             slot_length: 0,
             start_time: 0,
             end_time: 0,
-            m_last_index: 700,
-            a_last_index: 1040
+            m_last_index: 720
         };
         var monthConv = {
             jan: "January",
@@ -169,6 +168,12 @@ var govau_calendar = window.govau_calendar || {};
                 e.preventDefault();
                 var daytime = $(this);
                 if (daytime.hasClass("empty")) {
+                    return;
+                }
+                if (daytime.hasClass("selected")) {
+                    $("p#selected-slot").hide();
+                    $(".booking-calendar .booking-time").remove();
+                    calendar.find('section, section button[type="button"]').removeClass("selected");
                     return;
                 }
                 $(".booking-calendar .booking-time").remove();
