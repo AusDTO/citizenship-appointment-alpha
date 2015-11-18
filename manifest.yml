@@ -2,5 +2,5 @@
 applications:
 - name: citizenship-appointment-alpha
   memory: 256M
-  disk: 200M
+  disk_quota: 200M
   host: citizenship-appointment-alpha
