@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
-  
+
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
   <link rel="icon" type="image/png" href="images/coat-of-arms-black-on-white-32x32.png" sizes="32x32">
@@ -46,7 +46,7 @@
                  else {
                     e.style.display = 'block';
                     $("html, body").animate({
-                        scrollTop: $("#clientID-help").offset().top - 10
+                        scrollTop: $("#clientID-help").offset().top + $('#clientID-help').outerHeight(true) -$(window).height()
                     }, 800);
                   }
                 return true;
