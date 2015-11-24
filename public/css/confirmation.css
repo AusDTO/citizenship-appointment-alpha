@@ -54,6 +54,9 @@
     text-transform: capitalize;
     padding: 0 15px;
 
+    width: 100%;
+    min-width: 74px;
+
     font-family: Helvetica, Helvetica;
     font-weight: 400;
     font-style: normal;
@@ -93,9 +96,9 @@
 }
 
 .qr-container {
-    padding: 20px;
     border: 1px solid #c1c1c1;
     margin-top:2rem;
+    min-width: 143px;
 }
 
 .button-with-icon{
@@ -103,10 +106,12 @@
     margin-bottom: 0rem;
     width: 100%;
     padding: 0px;
+    min-width: 143px;
 }
 
 .large-image {
-  width: 90%;
+  max-height: 74px;
+  max-width: 71px;
   padding: 1rem;
 }
 

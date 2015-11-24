@@ -37,7 +37,7 @@
         <span class="fa fa-check-circle"></span>&nbsp;Your reservation is confirmed
       </h1>
       <p class="disclaimer">
-        You&nbsp;<span style="text-decoration:underline">won't</span>&nbsp;be automatically send a confirmation. If you would like to receive a copy, please enter your email address bellow.
+        We have send a confirmation to your email address.
       </p>
 
       <div class="column-layout" style="margin-top: 4rem;">
@@ -71,7 +71,7 @@
     </div>
     <div class="three columns" style="padding:10px">
       <div class="qr-container">
-       <img src="/qrcode" style="max-height: 100px;">
+       <img src="/qrcode" style="max-height: 100px; margin: 20px">
       </div>
       <button type="button" class="button-with-icon">
         <span class="fa fa-mobile"></span>&nbsp;Add to Passbook
@@ -83,51 +83,43 @@
   </div>
 
  <div class="row div-top-border">
-    <div class="eight columns">
-      <div class="column-layout">
-        <div class="left-column">
-          <img class="large-image" src="/images/Email-Copy.png" alt="email copy"/>
+    <div class="columns" style="width: 30%; max-width: 80px">
+      <img class="large-image" src="/images/Email-Copy.png" alt="email copy"/>
+    </div>
+    <div class="columns" style="width: 70%;">
+      <p class="email-sms-header">
+        Email me this confirmation
+      </p>
+      <div class="row">
+        <div class="ten columns">
+          <input type="text" style="width:100%" placeholder="Email address"/>
         </div>
-        <div class="middle-column">
-          <p class="email-sms-header">
-            Email me this confirmation
-          </p>
-          <div class="column-layout">
-            <div class="right-column">
-              <button type="button" class="send-button">Send</button>
-            </div>
-            <div class="middle-column">
-              <input type="text" style="width:100%" placeholder="Email address"/>
-            </div>
-          </div>
+        <div class="two columns">
+          <button type="button" class="send-button">Send</button>
         </div>
       </div>
     </div>
   </div>
 
   <div class="row div-top-border">
-    <div class="eight columns">
-      <div class="column-layout">
-        <div class="left-column">
-          <img class="large-image" src="/images/Sms-Reminder.png" alt="sms-reminder"/>
+    <div class="columns" style="width: 30%; max-width: 80px">
+      <img class="large-image" src="/images/Sms-Reminder.png" alt="sms reminder"/>
+    </div>
+    <div class="columns" style="width: 70%;">
+      <p class="email-sms-header">
+        Set up SMS reminder
+      </p>
+      <div class="row">
+        <div class="ten columns">
+          <input type="text" style="width:100%" placeholder="Your mobile number"/>
         </div>
-        <div class="middle-column">
-          <p class="email-sms-header">
-            Set up SMS reminder
-          </p>
-          <div class="column-layout">
-            <div class="right-column">
-              <button type="button" class="send-button">Send</button>
-            </div>
-            <div class="middle-column">
-              <input type="text" style="width:100%" placeholder="Your mobile number"/>
-            </div>
-          </div>
-          <p class="disclaimer">
-            We will send you a reminder 48 hrs prior your appointment.
-          </p>
+        <div class="two columns">
+          <button type="button" class="send-button">Send</button>
         </div>
       </div>
+      <p class="disclaimer">
+        We will send you a reminder 48 hrs prior your appointment.
+      </p>
     </div>
   </div>
 
