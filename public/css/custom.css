@@ -127,6 +127,22 @@ label {
   font-weight: normal;
 }
 
+.button-cta, input[type="submit"].button-cta {
+  background-color: #0178C6;
+  color: white;
+  border: 0;
+  text-transform: capitalize;
+  padding: 0 15px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4em;
+}
+
+.button-cta:hover, input[type="submit"].button-cta:hover {
+  background-color: #3393d1;
+  color: white;
+}
+
 #button-continue {
   text-transform: capitalize !important;
   background-color: #0178c6 !important;

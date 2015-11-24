@@ -33,8 +33,8 @@
             <table width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tbody>
                     <tr>
-                        <td>
-                            <font size="+1"><b>Australian Citizenship: Invitation to book your appointment</b></font>
+                        <td style="padding: 0;">
+                          <b>Australian Citizenship: Invitation to book your appointment</b>
                         </td>
                     </tr>
                 </tbody>
@@ -43,18 +43,16 @@
             <table width="100%" cellpadding="0" cellspacing="0" border="0" class="message">
                 <tbody>
                     <tr class="desktop-only">
-                        <td>
-                            <font size="-1"><b>Department of Immigration and Border Protection </b>&lt;dibp-noreply@dibp.gov.au&gt;</font>
-                        </td>
-                        <td align="right">
-                            <font size="-1">Tue, Nov 10, 2015 at 3:25 PM</font>
+                        <td style="padding: 0;">
+                          <b>Department of Immigration and Border Protection </b>&lt;dibp-noreply@dibp.gov.au&gt;
+                          &nbsp;&nbsp;&nbsp;Tue, Nov 10, 2015 at 3:25 PM
                         </td>
                     </tr>
                     <tr class="desktop-only">
                         <td colspan="2">
-                            <font size="-1" class="recipient">
+                            <p class="recipient">
                                 <div>To: John Smith &lt;john.smith@gmail.com&gt;</div>
-                            </font>
+                            </p>
                         </td>
                     </tr>
                     <tr>
@@ -62,9 +60,8 @@
                             <table width="100%" cellpadding="12" cellspacing="0" border="0">
                                 <tbody>
                                     <tr>
-                                        <td>
+                                        <td style="padding: 0;">
                                             <div style="overflow: hidden;">
-                                                <font size="-1">
 
 <!-- Begin Email Content-->
 
@@ -74,7 +71,7 @@
   </p>
 
   <div class="inner">
-    
+
     <!--start copy -->
     <div class="text">
       <p>Dear John Smith,</p>
@@ -82,123 +79,105 @@
         I am writing in reference to your application for Australian citizenship. We would like to invite you to attend your citizenship appointment and test.
       </p>
       <div class="row">
-        <div class="six columns">
-          <div class="column-layout" style="margin-top: 3rem;">
-            <div class="left-column">Location: </div>
-            <div class="middle-column">
-              <span class="appointment-time-confirmed">2 Lonsdale Street, Melbourne VIC 3000</span>&nbsp;
-              <a href="" class="blue-link">Directions</a>
-            </div>
-            <div class="cleared"></div>
+        <div class="column-layout" style="margin-top: 3rem;">
+          <div class="left-column">Location: </div>
+          <div class="middle-column">
+            <font class="appointment-time-confirmed" style="padding-right: 0.5rem;">2 Lonsdale Street, Melbourne VIC 3000</font>
+            <a href="https://www.google.com.au/maps/dir//Melbourne+Visa+and+Citizenship+Office,+2+Lonsdale+St,+Melbourne+VIC+3000/@-37.8091637,144.9691164,17z/data=!4m13!1m4!3m3!1s0x6ad642cf6ee77553:0x752915ae037bae5!2sMelbourne+Visa+and+Citizenship+Office!3b1!4m7!1m0!1m5!1m1!1s0x6ad642cf6ee77553:0x752915ae037bae5!2m2!1d144.9713051!2d-37.8091637" target="_blank" style="color: #333333; text-decoration: none;"><font class="blue-link">Directions</font></a>
           </div>
-          <div class="column-layout">
-            <div class="left-column">Client ID:</div>
-            <div class="middle-column appointment-time-confirmed">81687116621</div>
-            <div class="cleared"></div>
-          </div>
-          <p style="margin-top: 2rem; margin-bottom: 2rem;">
-            Please book your appointment via our online booking system.
-          </p>
-          <p>
-            <button type="button" class="book-button" id="book-button">Book now</button>
-            <script type="text/javascript">
-                document.getElementById("book-button").onclick = function () {
-                    location.href = "/start.html"; 
-                };
-            </script>
-          </p>
+          <div class="cleared"></div>
         </div>
-        <div class="five columns desktop-only">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5301.370905405444!2d144.96749748396877!3d-37.808456171195175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642cf64f5d103%3A0x6bae151ef2fd2f4c!2s2+Lonsdale+St%2C+Melbourne+VIC+3000!5e0!3m2!1sen!2sau!4v1447289196910" height="250" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div class="column-layout">
+          <div class="left-column">Client ID:</div>
+          <div class="middle-column appointment-time-confirmed">81687116621</div>
+          <div class="cleared"></div>
         </div>
-        <div class="cleared"></div>
+      </div>
+
+      <p style="margin-top: 2rem; margin-bottom: 2rem;">
+        Please book your appointment via our online booking system.
+      </p>
+      <p>
+        <button type="button" class="button-cta" id="book-button">Book now</button>
+        <script type="text/javascript">
+            document.getElementById("book-button").onclick = function () {
+                location.href = "/start.html";
+            };
+        </script>
+      </p>
       </div>
       <p class="disclaimer" style="margin-top:1.5rem;">This is a new service. If you need any help with using it, please call us on 131 880 between 8.30am and 4.30pm Monday to Friday</p>
-      
 
-      <h2 class="section-header">You will need to bring the following documents to your appointment</h2>
+      <h2 class="section-header">You <u>must</u> bring the following documents to your appointment</h2>
+      <h4 class="documents-table">1. Three (3) original documents that collectively show your:</h4>
+      <table class="documents-table">
+        <tr>
+          <td>
+            <img alt="Photograph" src="images/name.png">
+            <p>Photograph</p>
+          </td>
+          <td>
+            <img alt="Signature" src="images/signature_2.png">
+            <p>Signature</p>
+          </td>
+          <td>
+            <img alt="Residence" src="images/exterior.png">
+            <p>Current residential address</p>
+          </td>
+          <td>
+            <img alt="DOB" src="images/id verified.png">
+            <p>Birth name, date of birth and gender</p>
+          </td>
+        </tr>
+      </table>
+      <h4 class="documents-table">2. Proof of change of name, if applicable</h4>
+      <table class="documents-table">
+        <tr>
+          <td>
+            <img alt="Name" src="images/certificate.png">
+            <p>Proof of name change</p>
+          </td>
+        </tr>
+      </table>
+      <h4 class="documents-table">3. Identity declaration completed by a person with the appropriate authority</h4>
+      <table class="documents-table">
+        <tr>
+          <td>
+            <img alt="Identity" src="images/file.png">
+            <p><a href="https://www.border.gov.au/Forms/Documents/1195.pdf" target="_blank" class="blue-link">Form 1195 Identity declaration</a></p>
+          </td>
+        </tr>
+      </table>
+      <p class="disclaimer" style="margin-top:1.5rem;">
+        You need to bring these documents for all applicants including children. For more information about suitable documents see <a href="https://www.border.gov.au/Trav/Citi/Appl/What-documents-do-you-need/identity-documents" class="blue-link" target="_blank">Identity Document Checklist</a>.
+      </p>
+
+      <h2 class="section-header">What will happen at your appointment</h2>
       <ul>
-        <li>
-          The originals of all the identity documents that you submitted with your application, for all applicants including children. Also refer to the <a href="" class="blue-link">Document Checklist</a>
-        </li>
-        <li>
-          If you lodged your application online, please bring a completed <a href="" class="blue-link">Form 1195 Identity declaration</a>, with a correctly endorsed recent passport sized photo for all applicants including children.
-        </li>
+        <li>You will be at the Citizenship centre for up to 2 hours in total.</li>
+        <li>We will check the original documents you bring to your appointment against the information and copies of the documents you provided in your application, for all applicants including children.</li>
+        <li>We will also take your photograph and collect your signature. This will help us to verify your identity at your appointment, confirm whether your application is valid, and whether you are eligible to sit the citizenship test at this appointment.</li>
+        <li>You will then have 45 minutes to complete the test which consists of 20 multiple choice questions.</li>
       </ul>
-      <p class="disclaimer">If you do not provide these original documents, a decision on your application may be delayed.</p>
-      
+      <p class="disclaimer">If you have included children in your application they are not required to attend this appointment. There are no childcare facilities so you will need to make alternative childcare arrangements for your children.</p>
 
-      <h2 class="section-header ">What will happen at your appointment<h2>
-      <ul>
-        <li>
-          We will check the original documents you bring to your appointment against the information and copies of the documents you provided in your application, for all applicants including children.
-        </li>
-        <li>
-          We will also take your photograph and collect your signature. This will help us to verify your identity at your appointment, confirm whether your application is valid, and whether you are eligible to sit the citizenship test at this appointment.
-        </li>
-        <li>
-          If you do not bring the required original documents or provide the completed Form 1195 and an endorsed photo (if lodged online), we will not be able to verify your identity and you will not be able to sit the citizenship test at this time.
-        </li>
-        <li>
-          It is very important that you attend this appointment as this is your opportunity to demonstrate that you meet some of the legal requirements for citizenship.
-        </li>
-        <li>
-          If you have included children in your application they are not required to attend this appointment. There are no childcare facilities so you will need to make alternative childcare arrangements for your children.
-        </li>
-      </ul>
-      
-
-      <h2 class="section-header ">The citizenship test</h2>
-      <ul>
-        <li>
-          The test is computer-based and conducted in English. You will have 45 minutes to complete the test which consists of 20 multiple choice questions. If you do not complete the test within the allocated time, a result will be given based on the questions completed.
-        </li>
-        <li>
-          You must not refer to study aids or electronic equipment such as cameras or smartphones during the test.
-        </li>
-        <li>
-          You may speak to the test administrator but you cannot speak to other people during the test. If you do not follow these rules your test result will be invalid.
-        </li>
-        <li>
-          If you fail the test you can ask to take the test again. Where possible, you will be allowed to sit the test again on the same day. Otherwise, you may make an appointment to sit the test at another time. If you have difficulty passing the test, we may discuss other options with you.
-        </li>
-      </ul>
-      
-
-      <h2 class="section-header ">How to prepare for the test</h2>
+      <h2 class="section-header">How to prepare for the test</h2>
       <p>
-        The Australian citizenship test questions are based on information contained in the book called <a href="" class="blue-link">Australian Citizenship: Our Common Bond</a> which is also available on DVD. Please read this book or watch the DVD to prepare for the citizenship test. You will not be able to refer to this book or DVD when sitting the test.
+        <a href="http://www.border.gov.au/Trav/Citi/Lear/Citizenship-test/Australian-citizenship-test-resource" class="blue-link" target="_blank">Australian Citizenship: Our Common Bond</a> has all the information you need to help you pass the citizenship test.
       </p>
-      <p>
-        You can obtain a copy of the resource book or DVD, access a practice test and tutorial, and find additional information about the Australian citizenship test from our website at <a href="www.border.gov.au/Citizenship/Pages/Australian-citizenship-test-resource.aspx" class="blue-link">www.border.gov.au/Citizenship/Pages/Australian-citizenship-test-resource.aspx</a> or by telephoning the Citizenship Information Line on 131 880 between 8.30 am and 4.30 pm Monday to Friday. The book is also available in 37 community languages.
-      </p>
-
-      <h2 class="section-header">Personal Identifiers</h2>
-      <p>
-        Your photograph and signature are called personal identifiers. I am authorised under section 40 of the Australian Citizenship Act 2007 to request personal identifiers from you. Please consider this letter a formal request for your personal identifiers.
-      </p>
-      <p>
-        Your personal identifiers will be stored electronically in the department's computer system and may be shared with the Department of Foreign Affairs and Trade under an agreement we have with them to assist in administering the Australian Passports Act 2005. Your personal identifiers may also be produced in evidence in a court or tribunal in proceedings concerning you.
-      </p>
-      <p>
-        Please note that the Privacy Act 1988 applies to a personal identifier. You have the right to make a complaint to the Australian Information Commissioner about the handling of personal information. Please also note that the Freedom of Information Act 1982 gives you access to certain information and documents held by the Australian Government and its agencies. You have a right under that Act to seek access to that information or documents, and to seek amendment of records containing personal information that is incomplete, incorrect, out of date or misleading.
-      </p>
-      
-
-      <h2 class="section-header">Your information - your privacy</h2>
-      <p>
-        Your citizenship application contained a Privacy notice about how the department can collect, use and disclose your personal information, details of which would still apply to information provided as a result of this letter.
-      </p>
-      
-
-      <h2 class="section-header">Client service information</h2>
-      <p>
-        We value your compliments, complaints and suggestions. Your compliments let us know where we are performing well and your complaints and suggestions help us improve the services we provide.
-      </p>
-      <p>
-        In Australia you can call the Global Feedback Unit on 133 177 between 8.30 am and 4.30 pm Monday to Friday. Further information on our Client Service Charter and how to make a compliment, complaint or suggestion is available at <a href="www.border.gov.au/Lega/Lega/clie/" class="blue-link">www.border.gov.au/Lega/Lega/clie/</a>
-      </p>
-      
+      <span class="test-prep-buttons">
+        <a href="http://www.border.gov.au/Citizenship/Documents/our-common-bond-2014.pdf" target="_blank" class="button">
+          <span class=""></span>&nbsp;Download a copy
+        </a>
+        &nbsp;&nbsp;
+        <a href="http://www.border.gov.au/Trav/Citi/Lear/Citizenship-test/Australian-citizenship-test-resource" target="_blank" class="button">
+          <span class=""></span>&nbsp;Watch short clips
+        </a>
+        &nbsp;&nbsp;
+        <a href="http://www.border.gov.au/Trav/Citi/Lear/Citizenship-test/Australian-citizenship-test-resource" target="_blank" class="button">
+          <span class=""></span>&nbsp;Practice
+        </a>
+      </span>
 
       <h2 class="section-header">Changes to your circumstances</h2>
       <p>
@@ -220,7 +199,6 @@
 </div>
 
 <!-- End Email Content-->
-                                                </font>
                                             </div>
                                         </td>
                                     </tr>

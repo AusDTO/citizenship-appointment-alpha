@@ -1,3 +1,11 @@
+td {
+	border: 0;
+}
+
+.appointment-time-confirmed {
+	font-size: 1.2em;
+}
+
 .blue-outer {
 	background-color: #0062b9;
 }
@@ -26,7 +34,7 @@
 
 .section-header {
 	border-top: 1px solid #e5e5e5;
-	padding-top: 1.5rem; 
+	padding-top: 1.5rem;
 	margin-top: 2rem;
 	font-family: 'Open Sans', 'Arial';
     font-weight: 700;
@@ -45,10 +53,10 @@
     color: #333333;
 }
 
-.text .disclaimer{
+.disclaimer{
 	font-style:italic;
 }
-
+/*
 .book-button{
     background-color: #0178C6;
     color: white;
@@ -64,7 +72,7 @@
 .book-button:hover{
     background-color: #3393d1;
     color: white;
-}
+}*/
 
 .left-column{
   float: left;
@@ -78,4 +86,52 @@
 
 .right-column {
   float: right;
+}
+
+h4.documents-table {
+	padding-top: 1rem;
+}
+
+table.documents-table {
+	border-spacing: 1rem;
+  border-collapse: separate;
+}
+
+.documents-table td {
+	padding: 1rem;
+	text-align: center;
+	vertical-align: middle;
+	width: 15rem;
+	height: 12rem;
+  border: 1px solid #D7D7D7;
+	margin-bottom: 1rem;
+}
+
+.documents-table td p {
+	padding: 0;
+	margin: 0;
+}
+
+.documents-table img {
+	width: 4.5rem;
+	margin: 1rem;
+}
+
+span.test-prep-buttons .button {
+	text-decoration: none;
+}
+
+span.test-prep-buttons .button:hover {
+	background-color: #efefef;
+}
+
+@media (max-width: 640px) {
+	table.documents-table {
+		width: 100%;
+	}
+  .documents-table td {
+		height: auto;
+		width: 100%;
+    display: block;
+  }
 }
