@@ -152,13 +152,13 @@
 
     updateNav: function(i) {
       if (i > 0) {
-        $('.BookingCalendar-nav--prev.button-desc', this.$_el).text('Earlier');
+        // $('.BookingCalendar-nav--prev.button-desc', this.$_el).text('Earlier');
         $('.BookingCalendar-nav--prev', this.$_el).addClass('is-active');
       } else {
         $('.BookingCalendar-nav--prev', this.$_el).removeClass('is-active');
       }
       if (i + 1 < this.settings.navMonths.length) {
-        $('.BookingCalendar-nav--next.button-desc', this.$_el).text('Later');
+        // $('.BookingCalendar-nav--next.button-desc', this.$_el).text('Later');
         $('.BookingCalendar-nav--next', this.$_el).addClass('is-active');
       } else {
         $('.BookingCalendar-nav--next', this.$_el).removeClass('is-active');

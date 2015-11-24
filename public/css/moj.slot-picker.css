@@ -159,6 +159,7 @@ ul.BookingCalendar-legend {
   display: none; }
 
 .BookingCalendar-nav.is-active {
+  padding: 0 1.5rem;
   display: block; }
 
 button.BookingCalendar-nav--next,
