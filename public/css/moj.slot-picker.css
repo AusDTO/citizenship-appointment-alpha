@@ -44,6 +44,10 @@ table.BookingCalendar-dates tbody td {
   border-style: solid;
   border-width: 1px; }
 
+table.BookingCalendar-dates .BookingCalendar-date--unavailable {
+  pointer-events: none;
+  cursor: default; }
+
 table.BookingCalendar-dates .BookingCalendar-date--bookable {
   border-color: #333333;
   border-style: solid;
