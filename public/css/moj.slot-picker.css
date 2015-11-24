@@ -8,9 +8,6 @@
   width: device-width; }
 @-o-viewport {
   width: device-width; }
-@font-face {
-  font-family: GDS-Logo;
-  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
 @-ms-viewport {
   width: device-width; }
 @-o-viewport {
@@ -18,33 +15,42 @@
 .BookingCalendar-mask {
   position: relative;
   overflow: hidden;
-  height: 345px; }
+  height: 570px; }
 
 table.BookingCalendar-dates {
   width: 100%;
-  font-size: 19px;
-  border-width: 0;
-  border-style: solid;
-  border-color: transparent;
-  border-spacing: 10px;
+  border-spacing: 1rem;
   border-collapse: separate;
-  background: white; }
-  table.BookingCalendar-dates th,
-  table.BookingCalendar-dates td {
-    width: 14.28571%; }
-  table.BookingCalendar-dates tbody td {
-    padding: 0;
-    border-color: #D7D7D7;
-    border-style: solid;
-    border-width: 1px; }
+  background: white;
+}
 
-  table.BookingCalendar-dates .BookingCalendar-date--bookable {
-    border-color: #333333;
-    border-style: solid;
-    border-width: 1px; }
+table.BookingCalendar-dates th,
+table.BookingCalendar-dates td {
+  width: 14.28571%;
+}
 
-  table.BookingCalendar-dates .BookingCalendar-date--bookable.is-active {
-    border-color: #0178C6; }
+table.BookingCalendar-dates th {
+  text-align: center;
+  border: 0;
+  padding: 0;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+table.BookingCalendar-dates tbody td {
+  font-size: 1.9em;
+  padding: 0;
+  border-color: #D7D7D7;
+  border-style: solid;
+  border-width: 1px; }
+
+table.BookingCalendar-dates .BookingCalendar-date--bookable {
+  border-color: #333333;
+  border-style: solid;
+  border-width: 1px; }
+
+table.BookingCalendar-dates .BookingCalendar-date--bookable.is-active {
+  border-color: #0178C6; }
 
 a.BookingCalendar-dateLink {
   position: absolute;
@@ -59,16 +65,18 @@ a.BookingCalendar-dateLink {
 a.BookingCalendar-dateLink p {
   margin: 0; }
 
-p.BookingCalendar-weekday {
+/*p.BookingCalendar-weekday {
 font-size: 0.75em;
-padding-top: 0.5em; }
+padding-top: 0.5em; }*/
 
 p.BookingCalendar-day {
-  font-size: 1.2em;
-  font-weight: 700; }
+  padding-top: 2rem;
+  font-weight: 700;
+}
 
 p.BookingCalendar-available {
-  font-size: 0.65em; }
+  font-size: 0.5em;
+}
 
 .BookingCalendar-date--bookable a.BookingCalendar-dateLink {
   color: #333333; }
@@ -91,19 +99,19 @@ p.BookingCalendar-available {
 
 .BookingCalendar-content {
   position: relative;
-  min-height: 100px; }
+  min-height: 10rem; }
 
 .BookingCalendar-tag {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
-  font-size: 0.75em;
-  width: 100%;
+  font-size: 0.6em;
+  min-width: 4rem;
   padding: 0;
   color: white;
   line-height: normal;
   text-align: center;
-  background: #6f777b; }
+  background: #9A9B9C; }
 
 .BookingCalendar-tag--today {
   background: #2b8cc4; }
@@ -130,8 +138,8 @@ ul.BookingCalendar-legend {
 .BookingCalendar-currentMonth {
   display: block;
   font-family: "nta", Arial, sans-serif;
-  font-size: 24px;
-  line-height: 1.25;
+  font-size: 1.6em;
+  line-height: normal;
   font-weight: 400;
   text-transform: none;
   font-weight: 700;
@@ -153,20 +161,15 @@ button.BookingCalendar-nav--next,
 button.BookingCalendar-nav--prev {
   position: absolute;
   top: 0;
-  margin-top: 1rem;
-  margin-bottom: 0;
-  padding: 0 2rem;
-  line-height: 36px;
+  margin-top: 0.5rem;
   text-decoration: none;
 
   background-color: #ffffff;
   color: #535353;
   text-transform: capitalize;
-
-  font-family: Helvetica, Helvetica;
-  font-weight: 400;
   font-style: normal;
-  font-size: 16px; }
+  font-size: 1em;
+}
 
 button.BookingCalendar-nav--next:hover,
 button.BookingCalendar-nav--prev:hover {
@@ -187,7 +190,8 @@ button.BookingCalendar-nav--next {
 .SlotPicker-days {
   overflow: hidden;
   margin-bottom: 0;
-  padding: 0 10px 0 10px; }
+  padding: 0 1rem 0 1rem; }
+
   @media (max-width: 768px) {
     .SlotPicker-days {
       margin-bottom: 0; } 
@@ -235,11 +239,16 @@ button.BookingCalendar-nav--next {
   margin-right: 0.5em;
   margin-bottom: 0.5em;
   text-align: center;
-  /*padding: 0.3em 15px 0.3em 46px;*/
-  font-size: 16px;
-  line-height: 33px;
+  font-size: 1.2em;
+  line-height: 2em;
   border: 1px solid #333333;
   background: white; }
+
+.SlotPicker-label:hover {
+  text-decoration: none;
+  background: #DCEEFF;
+}
+
   @media (max-width: 640px) {
     .SlotPicker-label {
       width: 100%;

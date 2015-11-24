@@ -27,7 +27,7 @@
 
     defaults: {
       optionLimit: 1,
-      leadDays: 3,
+      leadDays: 30,
       singleUnavailableMsg: true,
       selections: 'has-selections',
       bookableDates: [],
@@ -129,12 +129,16 @@
     setupNav: function(dates) {
       var months = [], lastMonth, day, month;
 
-      for (day in dates) {
-        month = moj.Helpers.dateFromIso(day).getMonth();
+      // haaaaaaack
+      var endDay = this.settings.bookableDates[this.settings.bookableDates.length-1];
+      var end = moj.Helpers.dateFromIso(endDay),
+          day = this.settings.today;
+      for(; day.getMonth() % 12 != end.getMonth()+1; day.setMonth(day.getMonth() + 1)) {
+        month = day.getMonth();
         if (month !== lastMonth) {
           months.push({
             label: this.settings.months[month],
-            pos: $('#month-' + day.substr(0, 7), this.$_el).closest('tr').index() * this.settings.calendarDayHeight
+            pos: $('#month-' + moj.Helpers.formatIso(day).substr(0, 7), this.$_el).closest('tr').index() * this.settings.calendarDayHeight
           });
         }
         lastMonth = month;
@@ -165,7 +169,7 @@
       this.updateNav(this.settings.navPointer);
       this.$calMask.animate({
         scrollTop: this.settings.navMonths[this.settings.navPointer].pos
-      }, 200);
+      }, 350);
     },
 
     consolidate: function() {
@@ -438,11 +442,12 @@
           end = moj.Helpers.dateFromIso(to),
           count = 1;
 
-      curDate = this.firstDayOfWeek(moj.Helpers.dateFromIso(from));
+      curDate = this.firstDayOfWeek(moj.Helpers.dateFromIso(todayIso));
+      // curDate = this.firstDayOfWeek(moj.Helpers.dateFromIso(from));
       end = this.lastDayOfWeek(this.lastDayOfMonth(end));
 
       if (curDate > this.settings.today) {
-        curDate.setDate(curDate.getDate() - 7);
+        curDate.setDate(curDate.getDate());
       }
 
       while (curDate <= end) {
@@ -452,14 +457,14 @@
             timeSlots = this.settings.bookableTimes[curIso],
             dayStr = this.settings.days[curDate.getDay()];
 
-        if (curIso < from || dayStr == 'Sunday' || dayStr == 'Saturday') {
+        if (curIso < todayIso || dayStr == 'Sunday' || dayStr == 'Saturday') {
           ;
         } else if (curIso >= from && curIso <= to && timeSlots) {
           displayAvailable = timeSlots.length + ' available';
-        } else if (curIso >= from && curIso <= to) {
-          displayAvailable = '0 available';
         } else if (curIso > to) {
           displayAvailable = 'No slots yet';
+        } else {
+          displayAvailable = '0 available';
         }
 
         row+= templateDate.render({

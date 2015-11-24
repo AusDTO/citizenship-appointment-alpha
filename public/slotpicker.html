@@ -47,7 +47,7 @@
         {{#newMonth}}
           <span class="BookingCalendar-tag" id="month-{{ monthIso }}">{{ monthShort }}</span>
         {{/newMonth}}
-        <p class="BookingCalendar-weekday">{{ weekday }}</p>
+        <!-- <p class="BookingCalendar-weekday">{{ weekday }}</p> -->
         <p class="BookingCalendar-day">{{ day }}</p>
         <p class="BookingCalendar-available">{{ available }}</p>
       </a>
@@ -104,7 +104,7 @@
   </p>
 </div>
 
-<div class="SlotPicker" data-today="2015-11-19">
+<div class="SlotPicker" data-today="2015-11-26">
 
   <div class="DateSlider" data-emulatetouch="true" data-selectonload="true">
     <div class="DateSlider-month"></div>
@@ -146,6 +146,20 @@
           <span class="BookingCalendar-nav--next fa fa-angle-right"></span>
         </button>
       </div>
+
+      <table class="BookingCalendar-dates">
+        <thead>
+          <tr>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            <th>Sun</th>
+          </tr>
+        </thead>
+      </table>
 
       <div class="BookingCalendar-mask">
         <table class="BookingCalendar-dates">
@@ -193,46 +207,6 @@
 
     <select class="SlotPicker-input">
       <option value="">none</option>
-      <!-- <option value="2015-11-19-0900-0920">Thursday, 19 November - 9:00am</option> -->
-      <!-- <option value="2015-11-19-0920-0940">Thursday, 19 November - 9:20am</option> -->
-      <!-- <option value="2015-11-19-0940-1000">Thursday, 19 November - 9:40am</option> -->
-      <!-- <option value="2015-11-19-1000-1020">Thursday, 19 November - 10:00am</option> -->
-      <!-- <option value="2015-11-19-1020-1040">Thursday, 19 November - 10:20am</option> -->
-      <option value="2015-11-19-1040-1100">Thursday, 19 November - 10:40am</option>
-      <option value="2015-11-19-1100-1120">Thursday, 19 November - 11:00am</option>
-      <!-- <option value="2015-11-19-1120-1140">Thursday, 19 November - 11:20am</option> -->
-      <option value="2015-11-19-1140-1200">Thursday, 19 November - 11:40am</option>
-      <!-- <option value="2015-11-19-1200-1220">Thursday, 19 November - 12:00pm</option> -->
-      <!-- <option value="2015-11-19-1220-1240">Thursday, 19 November - 12:20pm</option> -->
-      <!-- <option value="2015-11-19-1240-1300">Thursday, 19 November - 12:40pm</option> -->
-      <!-- <option value="2015-11-19-1300-1320">Thursday, 19 November - 1:00pm</option> -->
-      <!-- <option value="2015-11-19-1320-1340">Thursday, 19 November - 1:20pm</option> -->
-      <!-- <option value="2015-11-19-1340-1400">Thursday, 19 November - 1:40pm</option> -->
-      <!-- <option value="2015-11-19-1400-1420">Thursday, 19 November - 2:00pm</option> -->
-      <option value="2015-11-19-1420-1440">Thursday, 19 November - 2:20pm</option>
-      <!-- <option value="2015-11-19-1440-1500">Thursday, 19 November - 2:40pm</option> -->
-      <!-- <option value="2015-11-19-1500-1520">Thursday, 19 November - 3:00pm</option> -->
-
-      <!-- <option value="2015-11-20-0900-0920">Friday, 20 November - 9:00am</option> -->
-      <!-- <option value="2015-11-20-0920-0940">Friday, 20 November - 9:20am</option> -->
-      <!-- <option value="2015-11-20-0940-1000">Friday, 20 November - 9:40am</option> -->
-      <option value="2015-11-20-1000-1020">Friday, 20 November - 10:00am</option>
-      <option value="2015-11-20-1020-1040">Friday, 20 November - 10:20am</option>
-      <option value="2015-11-20-1040-1100">Friday, 20 November - 10:40am</option>
-      <option value="2015-11-20-1100-1120">Friday, 20 November - 11:00am</option>
-      <option value="2015-11-20-1120-1140">Friday, 20 November - 11:20am</option>
-      <option value="2015-11-20-1140-1200">Friday, 20 November - 11:40am</option>
-      <!-- <option value="2015-11-20-1200-1220">Friday, 20 November - 12:00pm</option> -->
-      <!-- <option value="2015-11-20-1220-1240">Friday, 20 November - 12:20pm</option> -->
-      <!-- <option value="2015-11-20-1240-1300">Friday, 20 November - 12:40pm</option> -->
-      <!-- <option value="2015-11-20-1300-1320">Friday, 20 November - 1:00pm</option> -->
-      <!-- <option value="2015-11-20-1320-1340">Friday, 20 November - 1:20pm</option> -->
-      <!-- <option value="2015-11-20-1340-1400">Friday, 20 November - 1:40pm</option> -->
-      <option value="2015-11-20-1400-1420">Friday, 20 November - 2:00pm</option>
-      <option value="2015-11-20-1420-1440">Friday, 20 November - 2:20pm</option>
-      <option value="2015-11-20-1440-1500">Friday, 20 November - 2:40pm</option>
-      <option value="2015-11-20-1500-1520">Friday, 20 November - 3:00pm</option>
-
       <!-- <option value="2015-11-23-0900-0920">Monday, 23 November - 9:00am</option>
       <option value="2015-11-23-0920-0940">Monday, 23 November - 9:20am</option>
       <option value="2015-11-23-0940-1000">Monday, 23 November - 9:40am</option>
@@ -247,11 +221,11 @@
       <option value="2015-11-23-1240-1300">Monday, 23 November - 12:40pm</option>
       <option value="2015-11-23-1300-1320">Monday, 23 November - 1:00pm</option>
       <option value="2015-11-23-1320-1340">Monday, 23 November - 1:20pm</option> -->
-      <option value="2015-11-23-1340-1400">Monday, 23 November - 1:40pm</option>
+      <!-- <option value="2015-11-23-1340-1400">Monday, 23 November - 1:40pm</option>
       <option value="2015-11-23-1400-1420">Monday, 23 November - 2:00pm</option>
       <option value="2015-11-23-1420-1440">Monday, 23 November - 2:20pm</option>
       <option value="2015-11-23-1440-1500">Monday, 23 November - 2:40pm</option>
-      <option value="2015-11-23-1500-1520">Monday, 23 November - 3:00pm</option>
+      <option value="2015-11-23-1500-1520">Monday, 23 November - 3:00pm</option> -->
 
       <!-- <option value="2015-11-24-0900-0920">Tuesday, 24 November - 9:00am</option>
       <option value="2015-11-24-0920-0940">Tuesday, 24 November - 9:20am</option>
@@ -277,10 +251,10 @@
       <!-- <option value="2015-11-25-0920-0940">Wednesday, 25 November - 9:20am</option> -->
       <!-- <option value="2015-11-25-0940-1000">Wednesday, 25 November - 9:40am</option> -->
       <!-- <option value="2015-11-25-1000-1020">Wednesday, 25 November - 10:00am</option> -->
-      <option value="2015-11-25-1020-1040">Wednesday, 25 November - 10:20am</option>
+      <!-- <option value="2015-11-25-1020-1040">Wednesday, 25 November - 10:20am</option> -->
       <!-- <option value="2015-11-25-1040-1100">Wednesday, 25 November - 10:40am</option> -->
-      <option value="2015-11-25-1100-1120">Wednesday, 25 November - 11:00am</option>
-      <option value="2015-11-25-1120-1140">Wednesday, 25 November - 11:20am</option>
+      <!-- <option value="2015-11-25-1100-1120">Wednesday, 25 November - 11:00am</option> -->
+      <!-- <option value="2015-11-25-1120-1140">Wednesday, 25 November - 11:20am</option> -->
       <!-- <option value="2015-11-25-1140-1200">Wednesday, 25 November - 11:40am</option> -->
       <!-- <option value="2015-11-25-1200-1220">Wednesday, 25 November - 12:00pm</option> -->
       <!-- <option value="2015-11-25-1220-1240">Wednesday, 25 November - 12:20pm</option> -->
@@ -288,28 +262,28 @@
       <!-- <option value="2015-11-25-1300-1320">Wednesday, 25 November - 1:00pm</option> -->
       <!-- <option value="2015-11-25-1320-1340">Wednesday, 25 November - 1:20pm</option> -->
       <!-- <option value="2015-11-25-1340-1400">Wednesday, 25 November - 1:40pm</option> -->
-      <option value="2015-11-25-1400-1420">Wednesday, 25 November - 2:00pm</option>
-      <option value="2015-11-25-1420-1440">Wednesday, 25 November - 2:20pm</option>
+      <!-- <option value="2015-11-25-1400-1420">Wednesday, 25 November - 2:00pm</option> -->
+      <!-- <option value="2015-11-25-1420-1440">Wednesday, 25 November - 2:20pm</option> -->
       <!-- <option value="2015-11-25-1440-1500">Wednesday, 25 November - 2:40pm</option> -->
-      <option value="2015-11-25-1500-1520">Wednesday, 25 November - 3:00pm</option>
+      <!-- <option value="2015-11-25-1500-1520">Wednesday, 25 November - 3:00pm</option> -->
 
       <!-- <option value="2015-11-26-0900-0920">Thursday, 26 November - 9:00am</option> -->
-      <option value="2015-11-26-0920-0940">Thursday, 26 November - 9:20am</option>
-      <option value="2015-11-26-0940-1000">Thursday, 26 November - 9:40am</option>
+      <!-- <option value="2015-11-26-0920-0940">Thursday, 26 November - 9:20am</option>
+      <option value="2015-11-26-0940-1000">Thursday, 26 November - 9:40am</option> -->
       <!-- <option value="2015-11-26-1000-1020">Thursday, 26 November - 10:00am</option>
       <option value="2015-11-26-1020-1040">Thursday, 26 November - 10:20am</option>
       <option value="2015-11-26-1040-1100">Thursday, 26 November - 10:40am</option>
       <option value="2015-11-26-1100-1120">Thursday, 26 November - 11:00am</option> -->
-      <option value="2015-11-26-1120-1140">Thursday, 26 November - 11:20am</option>
+      <!-- <option value="2015-11-26-1120-1140">Thursday, 26 November - 11:20am</option> -->
       <!-- <option value="2015-11-26-1140-1200">Thursday, 26 November - 11:40am</option> -->
-      <option value="2015-11-26-1200-1220">Thursday, 26 November - 12:00pm</option>
-      <option value="2015-11-26-1220-1240">Thursday, 26 November - 12:20pm</option>
+      <!-- <option value="2015-11-26-1200-1220">Thursday, 26 November - 12:00pm</option>
+      <option value="2015-11-26-1220-1240">Thursday, 26 November - 12:20pm</option> -->
       <!-- <option value="2015-11-26-1240-1300">Thursday, 26 November - 12:40pm</option> -->
       <!-- <option value="2015-11-26-1300-1320">Thursday, 26 November - 1:00pm</option> -->
       <!-- <option value="2015-11-26-1320-1340">Thursday, 26 November - 1:20pm</option> -->
       <!-- <option value="2015-11-26-1340-1400">Thursday, 26 November - 1:40pm</option> -->
       <!-- <option value="2015-11-26-1400-1420">Thursday, 26 November - 2:00pm</option> -->
-      <option value="2015-11-26-1420-1440">Thursday, 26 November - 2:20pm</option>
+      <!-- <option value="2015-11-26-1420-1440">Thursday, 26 November - 2:20pm</option> -->
       <!-- <option value="2015-11-26-1440-1500">Thursday, 26 November - 2:40pm</option> -->
       <!-- <option value="2015-11-26-1500-1520">Thursday, 26 November - 3:00pm</option> -->
 
@@ -334,7 +308,7 @@
       <option value="2015-11-27-1500-1520">Friday, 27 November - 3:00pm</option> -->
 
       <!-- <option value="2015-11-30-0900-0920">Monday, 30 November - 9:00am</option> -->
-      <option value="2015-11-30-0920-0940">Monday, 30 November - 9:20am</option>
+      <!-- <option value="2015-11-30-0920-0940">Monday, 30 November - 9:20am</option>
       <option value="2015-11-30-0940-1000">Monday, 30 November - 9:40am</option>
       <option value="2015-11-30-1000-1020">Monday, 30 November - 10:00am</option>
       <option value="2015-11-30-1020-1040">Monday, 30 November - 10:20am</option>
@@ -343,17 +317,17 @@
       <option value="2015-11-30-1120-1140">Monday, 30 November - 11:20am</option>
       <option value="2015-11-30-1140-1200">Monday, 30 November - 11:40am</option>
       <option value="2015-11-30-1200-1220">Monday, 30 November - 12:00pm</option>
-      <option value="2015-11-30-1220-1240">Monday, 30 November - 12:20pm</option>
+      <option value="2015-11-30-1220-1240">Monday, 30 November - 12:20pm</option> -->
       <!-- <option value="2015-11-30-1240-1300">Monday, 30 November - 12:40pm</option> -->
       <!-- <option value="2015-11-30-1300-1320">Monday, 30 November - 1:00pm</option> -->
       <!-- <option value="2015-11-30-1320-1340">Monday, 30 November - 1:20pm</option> -->
-      <option value="2015-11-30-1340-1400">Monday, 30 November - 1:40pm</option>
+      <!-- <option value="2015-11-30-1340-1400">Monday, 30 November - 1:40pm</option>
       <option value="2015-11-30-1400-1420">Monday, 30 November - 2:00pm</option>
       <option value="2015-11-30-1420-1440">Monday, 30 November - 2:20pm</option>
       <option value="2015-11-30-1440-1500">Monday, 30 November - 2:40pm</option>
-      <option value="2015-11-30-1500-1520">Monday, 30 November - 3:00pm</option>
+      <option value="2015-11-30-1500-1520">Monday, 30 November - 3:00pm</option> -->
 
-      <option value="2015-12-01-0900-0920">Tuesday, 1 December - 9:00am</option>
+      <!-- <option value="2015-12-01-0900-0920">Tuesday, 1 December - 9:00am</option>
       <option value="2015-12-01-0920-0940">Tuesday, 1 December - 9:20am</option>
       <option value="2015-12-01-0940-1000">Tuesday, 1 December - 9:40am</option>
       <option value="2015-12-01-1000-1020">Tuesday, 1 December - 10:00am</option>
@@ -367,13 +341,13 @@
       <option value="2015-12-01-1240-1300">Tuesday, 1 December - 12:40pm</option>
       <option value="2015-12-01-1300-1320">Tuesday, 1 December - 1:00pm</option>
       <option value="2015-12-01-1320-1340">Tuesday, 1 December - 1:20pm</option>
-      <option value="2015-12-01-1340-1400">Tuesday, 1 December - 1:40pm</option>
+      <option value="2015-12-01-1340-1400">Tuesday, 1 December - 1:40pm</option> -->
       <!-- <option value="2015-12-01-1400-1420">Tuesday, 1 December - 2:00pm</option> -->
-      <option value="2015-12-01-1420-1440">Tuesday, 1 December - 2:20pm</option>
+      <!-- <option value="2015-12-01-1420-1440">Tuesday, 1 December - 2:20pm</option>
       <option value="2015-12-01-1440-1500">Tuesday, 1 December - 2:40pm</option>
-      <option value="2015-12-01-1500-1520">Tuesday, 1 December - 3:00pm</option>
+      <option value="2015-12-01-1500-1520">Tuesday, 1 December - 3:00pm</option> -->
 
-      <option value="2015-12-02-0900-0920">Wednesday, 2 December - 9:00am</option>
+      <!-- <option value="2015-12-02-0900-0920">Wednesday, 2 December - 9:00am</option>
       <option value="2015-12-02-0920-0940">Wednesday, 2 December - 9:20am</option>
       <option value="2015-12-02-0940-1000">Wednesday, 2 December - 9:40am</option>
       <option value="2015-12-02-1000-1020">Wednesday, 2 December - 10:00am</option>
@@ -385,36 +359,36 @@
       <option value="2015-12-02-1200-1220">Wednesday, 2 December - 12:00pm</option>
       <option value="2015-12-02-1220-1240">Wednesday, 2 December - 12:20pm</option>
       <option value="2015-12-02-1240-1300">Wednesday, 2 December - 12:40pm</option>
-      <option value="2015-12-02-1300-1320">Wednesday, 2 December - 1:00pm</option>
+      <option value="2015-12-02-1300-1320">Wednesday, 2 December - 1:00pm</option> -->
       <!-- <option value="2015-12-02-1320-1340">Wednesday, 2 December - 1:20pm</option> -->
-      <option value="2015-12-02-1340-1400">Wednesday, 2 December - 1:40pm</option>
+      <!-- <option value="2015-12-02-1340-1400">Wednesday, 2 December - 1:40pm</option>
       <option value="2015-12-02-1400-1420">Wednesday, 2 December - 2:00pm</option>
       <option value="2015-12-02-1420-1440">Wednesday, 2 December - 2:20pm</option>
       <option value="2015-12-02-1440-1500">Wednesday, 2 December - 2:40pm</option>
-      <option value="2015-12-02-1500-1520">Wednesday, 2 December - 3:00pm</option>
+      <option value="2015-12-02-1500-1520">Wednesday, 2 December - 3:00pm</option> -->
 
       <!-- <option value="2015-12-03-0900-0920">Thursday, 3 December - 9:00am</option> -->
       <!-- <option value="2015-12-03-0920-0940">Thursday, 3 December - 9:20am</option> -->
       <!-- <option value="2015-12-03-0940-1000">Thursday, 3 December - 9:40am</option> -->
-      <option value="2015-12-03-1000-1020">Thursday, 3 December - 10:00am</option>
+      <!-- <option value="2015-12-03-1000-1020">Thursday, 3 December - 10:00am</option>
       <option value="2015-12-03-1020-1040">Thursday, 3 December - 10:20am</option>
       <option value="2015-12-03-1040-1100">Thursday, 3 December - 10:40am</option>
       <option value="2015-12-03-1100-1120">Thursday, 3 December - 11:00am</option>
       <option value="2015-12-03-1120-1140">Thursday, 3 December - 11:20am</option>
       <option value="2015-12-03-1140-1200">Thursday, 3 December - 11:40am</option>
-      <option value="2015-12-03-1200-1220">Thursday, 3 December - 12:00pm</option>
+      <option value="2015-12-03-1200-1220">Thursday, 3 December - 12:00pm</option> -->
       <!-- <option value="2015-12-03-1220-1240">Thursday, 3 December - 12:20pm</option> -->
-      <option value="2015-12-03-1240-1300">Thursday, 3 December - 12:40pm</option>
+      <!-- <option value="2015-12-03-1240-1300">Thursday, 3 December - 12:40pm</option>
       <option value="2015-12-03-1300-1320">Thursday, 3 December - 1:00pm</option>
       <option value="2015-12-03-1320-1340">Thursday, 3 December - 1:20pm</option>
       <option value="2015-12-03-1340-1400">Thursday, 3 December - 1:40pm</option>
       <option value="2015-12-03-1400-1420">Thursday, 3 December - 2:00pm</option>
       <option value="2015-12-03-1420-1440">Thursday, 3 December - 2:20pm</option>
       <option value="2015-12-03-1440-1500">Thursday, 3 December - 2:40pm</option>
-      <option value="2015-12-03-1500-1520">Thursday, 3 December - 3:00pm</option>
+      <option value="2015-12-03-1500-1520">Thursday, 3 December - 3:00pm</option> -->
 
       <!-- <option value="2015-12-04-0900-0920">Friday, 4 December - 9:00am</option> -->
-      <option value="2015-12-04-0920-0940">Friday, 4 December - 9:20am</option>
+      <!-- <option value="2015-12-04-0920-0940">Friday, 4 December - 9:20am</option>
       <option value="2015-12-04-0940-1000">Friday, 4 December - 9:40am</option>
       <option value="2015-12-04-1000-1020">Friday, 4 December - 10:00am</option>
       <option value="2015-12-04-1020-1040">Friday, 4 December - 10:20am</option>
@@ -423,9 +397,9 @@
       <option value="2015-12-04-1120-1140">Friday, 4 December - 11:20am</option>
       <option value="2015-12-04-1140-1200">Friday, 4 December - 11:40am</option>
       <option value="2015-12-04-1200-1220">Friday, 4 December - 12:00pm</option>
-      <option value="2015-12-04-1220-1240">Friday, 4 December - 12:20pm</option>
+      <option value="2015-12-04-1220-1240">Friday, 4 December - 12:20pm</option> -->
       <!-- <option value="2015-12-04-1240-1300">Friday, 4 December - 12:40pm</option> -->
-      <option value="2015-12-04-1300-1320">Friday, 4 December - 1:00pm</option>
+      <!-- <option value="2015-12-04-1300-1320">Friday, 4 December - 1:00pm</option>
       <option value="2015-12-04-1320-1340">Friday, 4 December - 1:20pm</option>
       <option value="2015-12-04-1340-1400">Friday, 4 December - 1:40pm</option>
       <option value="2015-12-04-1400-1420">Friday, 4 December - 2:00pm</option>
@@ -443,9 +417,9 @@
       <option value="2015-12-07-1120-1140">Wednesday, 9 December - 11:20am</option>
       <option value="2015-12-07-1140-1200">Wednesday, 9 December - 11:40am</option>
       <option value="2015-12-07-1200-1220">Wednesday, 9 December - 12:00pm</option>
-      <option value="2015-12-07-1220-1240">Wednesday, 9 December - 12:20pm</option>
+      <option value="2015-12-07-1220-1240">Wednesday, 9 December - 12:20pm</option> -->
       <!-- <option value="2015-12-07-1240-1300">Wednesday, 9 December - 12:40pm</option> -->
-      <option value="2015-12-07-1300-1320">Wednesday, 9 December - 1:00pm</option>
+      <!-- <option value="2015-12-07-1300-1320">Wednesday, 9 December - 1:00pm</option>
       <option value="2015-12-07-1320-1340">Wednesday, 9 December - 1:20pm</option>
       <option value="2015-12-07-1340-1400">Wednesday, 9 December - 1:40pm</option>
       <option value="2015-12-07-1400-1420">Wednesday, 9 December - 2:00pm</option>
@@ -463,17 +437,17 @@
       <option value="2015-12-08-1120-1140">Tuesday, 8 December - 11:20am</option>
       <option value="2015-12-08-1140-1200">Tuesday, 8 December - 11:40am</option>
       <option value="2015-12-08-1200-1220">Tuesday, 8 December - 12:00pm</option>
-      <option value="2015-12-08-1220-1240">Tuesday, 8 December - 12:20pm</option>
+      <option value="2015-12-08-1220-1240">Tuesday, 8 December - 12:20pm</option> -->
       <!-- <option value="2015-12-08-1240-1300">Tuesday, 8 December - 12:40pm</option> -->
       <!-- <option value="2015-12-08-1300-1320">Tuesday, 8 December - 1:00pm</option> -->
-      <option value="2015-12-08-1320-1340">Tuesday, 8 December - 1:20pm</option>
+      <!-- <option value="2015-12-08-1320-1340">Tuesday, 8 December - 1:20pm</option>
       <option value="2015-12-08-1340-1400">Tuesday, 8 December - 1:40pm</option>
       <option value="2015-12-08-1400-1420">Tuesday, 8 December - 2:00pm</option>
       <option value="2015-12-08-1420-1440">Tuesday, 8 December - 2:20pm</option>
-      <option value="2015-12-08-1440-1500">Tuesday, 8 December - 2:40pm</option>
+      <option value="2015-12-08-1440-1500">Tuesday, 8 December - 2:40pm</option> -->
       <!-- <option value="2015-12-08-1500-1520">Tuesday, 8 December - 3:00pm</option> -->
 
-      <option value="2015-12-09-0900-0920">Wednesday, 9 December - 9:00am</option>
+      <!-- <option value="2015-12-09-0900-0920">Wednesday, 9 December - 9:00am</option>
       <option value="2015-12-09-0920-0940">Wednesday, 9 December - 9:20am</option>
       <option value="2015-12-09-0940-1000">Wednesday, 9 December - 9:40am</option>
       <option value="2015-12-09-1000-1020">Wednesday, 9 December - 10:00am</option>
@@ -481,40 +455,40 @@
       <option value="2015-12-09-1040-1100">Wednesday, 9 December - 10:40am</option>
       <option value="2015-12-09-1100-1120">Wednesday, 9 December - 11:00am</option>
       <option value="2015-12-09-1120-1140">Wednesday, 9 December - 11:20am</option>
-      <option value="2015-12-09-1140-1200">Wednesday, 9 December - 11:40am</option>
+      <option value="2015-12-09-1140-1200">Wednesday, 9 December - 11:40am</option> -->
       <!-- <option value="2015-12-09-1200-1220">Wednesday, 9 December - 12:00pm</option> -->
-      <option value="2015-12-09-1220-1240">Wednesday, 9 December - 12:20pm</option>
+      <!-- <option value="2015-12-09-1220-1240">Wednesday, 9 December - 12:20pm</option> -->
       <!-- <option value="2015-12-09-1240-1300">Wednesday, 9 December - 12:40pm</option> -->
-      <option value="2015-12-09-1300-1320">Wednesday, 9 December - 1:00pm</option>
+      <!-- <option value="2015-12-09-1300-1320">Wednesday, 9 December - 1:00pm</option>
       <option value="2015-12-09-1320-1340">Wednesday, 9 December - 1:20pm</option>
       <option value="2015-12-09-1340-1400">Wednesday, 9 December - 1:40pm</option>
       <option value="2015-12-09-1400-1420">Wednesday, 9 December - 2:00pm</option>
       <option value="2015-12-09-1420-1440">Wednesday, 9 December - 2:20pm</option>
       <option value="2015-12-09-1440-1500">Wednesday, 9 December - 2:40pm</option>
-      <option value="2015-12-09-1500-1520">Wednesday, 9 December - 3:00pm</option>
+      <option value="2015-12-09-1500-1520">Wednesday, 9 December - 3:00pm</option> -->
 
       <!-- <option value="2015-12-10-0900-0920">Thursday, 10 December - 9:00am</option> -->
       <!-- <option value="2015-12-10-0920-0940">Thursday, 10 December - 9:20am</option> -->
-      <option value="2015-12-10-0940-1000">Thursday, 10 December - 9:40am</option>
+      <!-- <option value="2015-12-10-0940-1000">Thursday, 10 December - 9:40am</option>
       <option value="2015-12-10-1000-1020">Thursday, 10 December - 10:00am</option>
       <option value="2015-12-10-1020-1040">Thursday, 10 December - 10:20am</option>
       <option value="2015-12-10-1040-1100">Thursday, 10 December - 10:40am</option>
       <option value="2015-12-10-1100-1120">Thursday, 10 December - 11:00am</option>
       <option value="2015-12-10-1120-1140">Thursday, 10 December - 11:20am</option>
       <option value="2015-12-10-1140-1200">Thursday, 10 December - 11:40am</option>
-      <option value="2015-12-10-1200-1220">Thursday, 10 December - 12:00pm</option>
+      <option value="2015-12-10-1200-1220">Thursday, 10 December - 12:00pm</option> -->
       <!-- <option value="2015-12-10-1220-1240">Thursday, 10 December - 12:20pm</option> -->
-      <!-- <option value="2015-12-10-1240-1300">Thursday, 10 December - 12:40pm</option> -->
-      <option value="2015-12-10-1300-1320">Thursday, 10 December - 1:00pm</option>
+      <option value="2015-12-10-1240-1300">Thursday, 10 December - 12:40pm</option>
+      <!-- <option value="2015-12-10-1300-1320">Thursday, 10 December - 1:00pm</option>
       <option value="2015-12-10-1320-1340">Thursday, 10 December - 1:20pm</option>
       <option value="2015-12-10-1340-1400">Thursday, 10 December - 1:40pm</option>
       <option value="2015-12-10-1400-1420">Thursday, 10 December - 2:00pm</option>
       <option value="2015-12-10-1420-1440">Thursday, 10 December - 2:20pm</option>
       <option value="2015-12-10-1440-1500">Thursday, 10 December - 2:40pm</option>
-      <option value="2015-12-10-1500-1520">Thursday, 10 December - 3:00pm</option>
+      <option value="2015-12-10-1500-1520">Thursday, 10 December - 3:00pm</option> -->
 
       <!-- <option value="2015-12-11-0900-0920">Friday, 11 December - 9:00am</option> -->
-      <option value="2015-12-11-0920-0940">Friday, 11 December - 9:20am</option>
+      <!-- <option value="2015-12-11-0920-0940">Friday, 11 December - 9:20am</option>
       <option value="2015-12-11-0940-1000">Friday, 11 December - 9:40am</option>
       <option value="2015-12-11-1000-1020">Friday, 11 December - 10:00am</option>
       <option value="2015-12-11-1020-1040">Friday, 11 December - 10:20am</option>
@@ -531,9 +505,29 @@
       <option value="2015-12-11-1400-1420">Friday, 11 December - 2:00pm</option>
       <option value="2015-12-11-1420-1440">Friday, 11 December - 2:20pm</option>
       <option value="2015-12-11-1440-1500">Friday, 11 December - 2:40pm</option>
-      <option value="2015-12-11-1500-1520">Friday, 11 December - 3:00pm</option>
+      <option value="2015-12-11-1500-1520">Friday, 11 December - 3:00pm</option> -->
+
+      <!-- <option value="2016-01-04-1500-1520">Monday, 04 January - 3:00pm</option> -->
+      <option value="2016-01-05-1500-1520">Tuesday, 05 January - 3:00pm</option>
+      <option value="2016-01-06-1500-1520">Wednesday, 06 January - 3:00pm</option>
+      <option value="2016-01-07-1500-1520">Thursday, 07 January - 3:00pm</option>
+      <!-- <option value="2016-01-08-1500-1520">Friday, 08 January - 3:00pm</option> -->
+
+      <option value="2016-01-11-1500-1520">Monday, 11 January - 3:00pm</option>
+      <option value="2016-01-12-1500-1520">Tuesday, 12 January - 3:00pm</option>
+      <option value="2016-01-13-1500-1520">Wednesday, 13 January - 3:00pm</option>
+      <option value="2016-01-14-1500-1520">Thursday, 14 January - 3:00pm</option>
+      <option value="2016-01-15-1500-1520">Friday, 15 January - 3:00pm</option>
 
 
+      <option value="2016-01-18-1500-1520">Monday, 18 January - 3:00pm</option>
+      <option value="2016-01-19-1500-1520">Tuesday, 19 January - 3:00pm</option>
+      <option value="2016-01-20-1500-1520">Wednesday, 20 January - 3:00pm</option>
+      <option value="2016-01-21-1500-1520">Thursday, 21 January - 3:00pm</option>
+
+      <option value="2016-02-10-1500-1520">?, 10 February - 3:00pm</option>
+
+      <!-- <option value="2016-01-22-1500-1520">Friday, 08 January - 3:00pm</option> -->
     </select>
 
   </div>
