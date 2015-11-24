@@ -57,12 +57,16 @@
 
 <script type="text/html" id="SlotPicker-tmplChoice">
   <li>
-    {{#notFirst}}
-      <a class="SlotPicker-icon SlotPicker-icon--promote" href="#">Promote</a>
-    {{/notFirst}}
-    <p class="SlotPicker-date"></p>
-    <p class="SlotPicker-time"></p>
-    <p class="SlotPicker-prompt">Choose a date and time from the calendar</p>
+    <span class="SlotPicker-date"></span>,
+    <span class="SlotPicker-time"></span>
+    <span class="SlotPicker-choices confirm-button">
+      <button type="button" class="button-cta" id="confirm-button">Confirm</button>
+      <script type="text/javascript">
+          document.getElementById("confirm-button").onclick = function () {
+              location.href = "/confirmation.html";
+          };
+      </script>
+    </span>
   </li>
 </script>
 
@@ -194,15 +198,6 @@
     <div class="SlotPicker-choices">
       <ul>
       </ul>
-      <div class="SlotPicker-choices confirm-button">
-        <button type="button" id="confirm-button">Confirm</button>
-        <script type="text/javascript">
-            document.getElementById("confirm-button").onclick = function () {
-                location.href = "/confirmation.html";
-            };
-        </script>
-      </div>
-      <p class="SlotPicker-promoteHelp">Use the arrows to put your visit choices in the order that suits you best.</p>
     </div>
 
     <select class="SlotPicker-input">
