@@ -36,7 +36,7 @@
       <h1 class="res-confirmed">
         <span class="fa fa-check-circle"></span>&nbsp;Your reservation is confirmed
       </h1>
-      <p class="disclaimer">
+      <p class="disclaimer" style="margin-left: 3rem;">
         We have send a confirmation to your email address.
       </p>
 
@@ -95,7 +95,7 @@
           <input type="text" style="width:100%" placeholder="Email address"/>
         </div>
         <div class="two columns">
-          <button type="button" class="send-button">Send</button>
+          <button type="button" class="send-button" id="email-send">Send</button>
         </div>
       </div>
     </div>
@@ -136,6 +136,12 @@
     It is important that you tell us about any changes to your circumstances including your name, contact details, address or children included on this application as soon as possible. To advise the department of any changes in circumstance please contact the Citizenship Information Line on 131 880 between 8.30 am and 4.30 pm Monday to Friday.
   </p>
 </div>
+
+<script type="text/javascript">
+    document.getElementById("email-send").onclick = function () {
+        location.href = "/confirmation_email.html";
+    };
+</script>
 
 </body>
 </html>

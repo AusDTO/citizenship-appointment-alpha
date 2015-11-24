@@ -109,6 +109,12 @@
     min-width: 143px;
 }
 
+.button-with-icon-inline{
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    min-width: 143px;
+}
+
 .large-image {
   max-height: 74px;
   max-width: 71px;
