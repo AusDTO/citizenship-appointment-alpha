@@ -130,10 +130,13 @@
       var months = [], lastMonth, day, month;
 
       // haaaaaaack
-      var endDay = this.settings.bookableDates[this.settings.bookableDates.length-1];
+      var endDay = this.settings.bookableDates[this.settings.bookableDates.length-1],
+          startDay = this.settings.bookableDates[0];
       var end = moj.Helpers.dateFromIso(endDay),
-          day = this.settings.today;
-      for(; day.getMonth() % 12 != end.getMonth()+1; day.setMonth(day.getMonth() + 1)) {
+          // start = moj.Helpers.dateFromIso(startDay); // start from first available slot
+          start = this.settings.today; // start from present day
+
+      for(day = start; day.getMonth() % 12 != end.getMonth()+1; day.setMonth(day.getMonth() + 1)) {
         month = day.getMonth();
         if (month !== lastMonth) {
           months.push({
@@ -442,8 +445,8 @@
           end = moj.Helpers.dateFromIso(to),
           count = 1;
 
-      curDate = this.firstDayOfWeek(moj.Helpers.dateFromIso(todayIso));
-      // curDate = this.firstDayOfWeek(moj.Helpers.dateFromIso(from));
+      // curDate = this.firstDayOfWeek(moj.Helpers.dateFromIso(from)); // start from first available slot
+      curDate = this.firstDayOfWeek(moj.Helpers.dateFromIso(todayIso)); // start from present day
       end = this.lastDayOfWeek(this.lastDayOfMonth(end));
 
       if (curDate > this.settings.today) {
