@@ -37,7 +37,7 @@
       <div class="middle-column">
         <input class="" type="text" style="margin-bottom: 0px" placeholder="11 digits code" id="clientIdInput">
         <br/>
-        <a href="#" onclick="toggleClientIDHelp();" class="blue-link" style="text-decoration: none">How to find Client ID?</a>
+        <a href="#" onclick="toggleClientIDHelp();" class="blue-link" style="text-decoration: none">Show how to find your Client ID</a>
         <script type="text/javascript">
             toggleClientIDHelp = function () {
               var e = document.getElementById("clientID-help");
@@ -55,17 +55,17 @@
       </div>
       <div class="cleared"></div>
     </div>
-    <!-- <div class="column-layout">
-      <div class="left-input-column form-fields">Address postcode:</div>
+    <div class="column-layout">
+      <div class="left-input-column form-fields">Family name:</div>
       <div class="middle-column">
-        <input class="" type="text" placeholder="e.g. 3000" id="postcodeInput">
+        <input class="" type="text" id="familynameInput">
       </div>
       <div class="cleared"></div>
-    </div> -->
+    </div>
     <div class="column-layout">
       <div class="left-input-column">&nbsp;</div>
       <div class="middle-column">
-        <input id="button-continue" type="submit" value="Continue">
+        <input class="button button-cta" type="submit" value="Continue">
       </div>
       <div class="cleared"></div>
     </div>
@@ -77,14 +77,25 @@
       Your Client ID is included on your correspondence under the Date of Birth. It's a 11 digits code.
     </p>
     <p>
-      <img src="/images/clientId-help.png" id="clientId-image" alt="Find the ID in your letter"/>
+      <img src="/images/clientId-help2.jpg" id="clientId-image" alt="Find the ID in your letter"/>
     </p>
   </div>
 
 </div>
 
 <script type="text/javascript">
-  document.getElementById("clientIdInput").focus();
+  function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+  $(window).bind("load", function() {
+      var id = getParameterByName("id");
+      $("#clientIdInput").val(id);
+  });
+  $("#clientIdInput").focus();
 </script>
 </body>
 </html>
