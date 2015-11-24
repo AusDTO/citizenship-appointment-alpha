@@ -27,104 +27,123 @@
 </div>
 
 <div class="container">
-
-  <div class="print-button">
-    <a href="javascript:window.print()"><span class="fa fa-print"></span>&nbsp;Print this page</a>
-  </div>
-  <div class="cleared"></div>
-  <h1 class="res-confirmed">
-    <span class="fa fa-check-circle"></span>&nbsp;Your reservation is confirmed
-  </h1>
-
+  <p class="service-message">
+    This is a new service. If you need any help with using it, please <a href="" class="black-link">contact us</a>
+  </p>
   <div class="row">
-    <div class="seven columns">
-      <div class="column-layout" style="margin-top: 3rem;">
-        <div class="left-column">What:</div>
-        <div class="middle-column">Citizenship appointment and test</div>
-        <div class="cleared"></div>
-      </div>
-      <div class="column-layout">
-        <div class="left-column">Where:</div>
-        <div class="middle-column">
-          <span style="margin-right: 12px;">
-            2 Lonsdale Street, Melbourne VIC 3000
-          </span>
-          <a href="" class="blue-link">Directions</a>
-        </div>
-        <div class="cleared"></div>
-      </div>
-      <div class="column-layout">
-        <div class="left-column">When:</div>
+    <div class="eight columns">
+
+      <h1 class="res-confirmed">
+        <span class="fa fa-check-circle"></span>&nbsp;Your reservation is confirmed
+      </h1>
+      <p class="disclaimer">
+        You&nbsp;<span style="text-decoration:underline">won't</span>&nbsp;be automatically send a confirmation. If you would like to receive a copy, please enter your email address bellow.
+      </p>
+
+      <div class="column-layout" style="margin-top: 4rem;">
+        <div class="left-conf-column"><span class="fa fa-clock-o"></span></div>
         <div class="middle-column">
           <span class="appointment-time-confirmed">
              Thursday 26th November, at 13:20
           </span>
-          <a href="slotpicker.html?resch=true" class="blue-link">Reschedule</a>
         </div>
         <div class="cleared"></div>
       </div>
       <div class="column-layout">
-        <div class="left-column">&nbsp;</div>
+        <div class="left-conf-column"><span class="fa fa-map-marker"></span></div>
         <div class="middle-column">
-          <button type="button" class="calendar-add conf">
-            <span class="fa fa-calendar"></span>&nbsp;Add to Calendar
-          </button>
+          <span style="margin-right: 12px;">
+            2 Lonsdale Street, Melbourne VIC 3000
+          </span>
+        </div>
+        <div class="cleared"></div>
+      </div>
+      <div class="column-layout">
+        <div class="left-conf-column"><span class="fa fa-calendar-plus-o"></span></div>
+        <div class="middle-column">
+          <span style="margin-right: 12px;">
+            <a href="" class="blue-link">Add to my calendar</a>
+          </span>
         </div>
         <div class="cleared"></div>
       </div>
 
-      <div>
-        <p>Scan this barcode or enter your Client ID when you attend your appointment:</p>
-        <p><span style="font-family: Code39AzaleaFont; font-size: 5rem;">*81687116621*</span></p>
-      </div>
-
     </div>
-    <div class="five columns desktop-only">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5301.370905405444!2d144.96749748396877!3d-37.808456171195175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642cf64f5d103%3A0x6bae151ef2fd2f4c!2s2+Lonsdale+St%2C+Melbourne+VIC+3000!5e0!3m2!1sen!2sau!4v1447289196910"  height="250" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <div class="three columns" style="padding:10px">
+      <div class="qr-container">
+       <img src="/qrcode" style="max-height: 100px;">
+      </div>
+      <button type="button" class="button-with-icon">
+        <span class="fa fa-mobile"></span>&nbsp;Add to Passbook
+      </button>
+      <button type="button" class="button-with-icon">
+        <span class="fa fa-print"></span>&nbsp;Print this page
+      </button>
     </div>
   </div>
 
-  <h2 style="border-top: 1px solid #e5e5e5; padding-top: 1rem; margin-top: 2rem">Send a copy to</h2>
-
-  <div class="row">
+ <div class="row div-top-border">
     <div class="eight columns">
-      <div class="column-layout" style="margin-top: 3rem;">
-        <div class="left-column">Your email:</div>
-        <div class="right-column"><button type="button" class="send-button" id="email-send">Send</button></div>
-        <div class="middle-column"><input type="text" style="width:100%"/></div>
-      </div>
-
       <div class="column-layout">
-        <div class="left-column">SMS:</div>
-        <div class="right-column"><button type="button" class="send-button">Send</button></div>
-        <div class="middle-column"><input type="text" style="width:100%"/></div>
+        <div class="left-column">
+          <img class="large-image" src="/images/Email-Copy.png" alt="email copy"/>
+        </div>
+        <div class="middle-column">
+          <p class="email-sms-header">
+            Email me this confirmation
+          </p>
+          <div class="column-layout">
+            <div class="right-column">
+              <button type="button" class="send-button">Send</button>
+            </div>
+            <div class="middle-column">
+              <input type="text" style="width:100%" placeholder="Email address"/>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <h2 style="border-top: 1px solid #e5e5e5; padding-top: 1rem;">Prepare for your appointment</h2>
-  <p>You will need to bring the following documents to your appointment:</p>
-  <ul>
-    <li>Collect the originals of all the identity documents that you submitted with your application. Also refer to the <a href="#" class="blue-link">Document Checklist</a>.</li>
-    <li>If you lodged your application online, please complete <a href="#" class="blue-link">Form 1195 Identity Declaration</a>, with a correctly endorsed recent passport sized photo for all applicants including children.</li>
-  </ul>
-  <h2 style="padding-top: 1rem;">Prepare for the test</h2>
-  <p>You will need to bring the following documents to your appointment:</p>
-  <ul>
-    <li>
-      Everything you need to know to help you pass the test is contained in the free citizenship test resource. See: <a href="#" class="blue-link">Australian Citizenship: Our Common Bond</a>.
-    </li>
-    <li>
-      There are four <a href="#" class="blue-link">practice tests</a> and a <a href="#" class="blue-link">tutorial</a> to help you with your test.
-    </li>
-  </ul>
-</div>
+  <div class="row div-top-border">
+    <div class="eight columns">
+      <div class="column-layout">
+        <div class="left-column">
+          <img class="large-image" src="/images/Sms-Reminder.png" alt="sms-reminder"/>
+        </div>
+        <div class="middle-column">
+          <p class="email-sms-header">
+            Set up SMS reminder
+          </p>
+          <div class="column-layout">
+            <div class="right-column">
+              <button type="button" class="send-button">Send</button>
+            </div>
+            <div class="middle-column">
+              <input type="text" style="width:100%" placeholder="Your mobile number"/>
+            </div>
+          </div>
+          <p class="disclaimer">
+            We will send you a reminder 48 hrs prior your appointment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<script type="text/javascript">
-    document.getElementById("email-send").onclick = function () {
-        location.href = "/confirmation_email.html";
-    };
-</script>
+  <h2 style="border-top: 1px solid #e5e5e5; padding-top: 2rem;">Prepare for your appointment</h2>
+  <ul class="close-dots">
+    <li>Collect all the <a href="#" class="blue-link">required documents</a></li>
+    <li>Study for the <a href="#" class="blue-link">citizenship test</a></li>
+    <li>Arrive 5 mins prior your appointment</li>
+    <li>Scan your confirmation barcode or enter your Client ID at the reception kiosk</li>
+  </ul>
+
+  <h2 style="border-top: 1px solid #e5e5e5; padding-top: 2rem;">Changes to your circumstances</h2>
+  <p>
+    It is important that you tell us about any changes to your circumstances including your name, contact details, address or children included on this application as soon as possible. To advise the department of any changes in circumstance please contact the Citizenship Information Line on 131 880 between 8.30 am and 4.30 pm Monday to Friday.
+  </p>
+</div>
 
 </body>
 </html>

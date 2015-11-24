@@ -3,6 +3,7 @@ var express = require('express'),
     consolidate = require('consolidate'),
     hogan = require('hogan.js'),
     uuid = require('node-uuid'),
+    qr = require('qr-image'), 
     path = require('path'),
     querystring = require('querystring'),
     default_port = (process.env.PORT || 3000);
@@ -31,6 +32,15 @@ app.get('/googlecalendar', function(req, res) {
     'trp': 'false'
   });
   res.redirect('http://www.google.com/calendar/event?' + calendar_event);
+});
+
+app.get('/qrcode', function(req, res) {  
+  var code = qr.image(
+    "Welcome to our awesome Alpha! Your client id is: 9281112121", 
+    { type: 'svg' }
+  );
+  res.type('svg');
+  code.pipe(res);
 });
 
 var server = app.listen(default_port, function () {
