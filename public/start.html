@@ -26,50 +26,50 @@
 </div>
 
 <div class="container">
-  <p style="font-family:'Open Sans', 'Arial';font-weight:400;font-style:normal;font-size:14px;text-decoration:none;color:#333333; padding-top:5px">
+  <p class="service-message">
     This is a new service. If you need any help with using it, please <a href="" class="black-link">contact us</a>
   </p>
-  <section class="header">
-    <h1 style="padding-top: 1rem;">Book your citizenship appointment</h1>
-    <form method="get" action="slotpicker.html">
-      <div class="column-layout">
-        <div class="left-input-column form-fields">Client ID:</div>
-        <div class="middle-column">
-          <input class="" type="text" style="margin-bottom: 0px" placeholder="11 digits code" id="clientIdInput">
-          <br/>
-          <a href="#" onclick="toggleClientIDHelp();" class="blue-link" style="text-decoration: none">How to find Client ID?</a>
-          <script type="text/javascript">
-              toggleClientIDHelp = function () {
-                var e = document.getElementById("clientID-help");
-                if(e.style.display == 'block')
-                    e.style.display = 'none';
-                 else {
-                    e.style.display = 'block';
-                    $("html, body").animate({
-                        scrollTop: $("#clientID-help").offset().top + $('#clientID-help').outerHeight(true) -$(window).height()
-                    }, 800);
-                  }
-                return true;
-              };
-          </script>
-        </div>
-        <div class="cleared"></div>
+  <h1>Book your citizenship appointment</h1>
+
+  <form method="get" action="slotpicker.html">
+    <div class="column-layout">
+      <div class="left-input-column form-fields">Client ID:</div>
+      <div class="middle-column">
+        <input class="" type="text" style="margin-bottom: 0px" placeholder="11 digits code" id="clientIdInput">
+        <br/>
+        <a href="#" onclick="toggleClientIDHelp();" class="blue-link" style="text-decoration: none">How to find Client ID?</a>
+        <script type="text/javascript">
+            toggleClientIDHelp = function () {
+              var e = document.getElementById("clientID-help");
+              if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else {
+                  e.style.display = 'block';
+                  $("html, body").animate({
+                      scrollTop: $("#clientID-help").offset().top + $('#clientID-help').outerHeight(true) -$(window).height()
+                  }, 800);
+                }
+              return true;
+            };
+        </script>
       </div>
-      <!-- <div class="column-layout">
-        <div class="left-input-column form-fields">Address postcode:</div>
-        <div class="middle-column">
-          <input class="" type="text" placeholder="e.g. 3000" id="postcodeInput">
-        </div>
-        <div class="cleared"></div>
-      </div> -->
-      <div class="column-layout">
-        <div class="left-input-column">&nbsp;</div>
-        <div class="middle-column">
-          <input id="button-continue" type="submit" value="Continue">
-        </div>
-        <div class="cleared"></div>
+      <div class="cleared"></div>
+    </div>
+    <!-- <div class="column-layout">
+      <div class="left-input-column form-fields">Address postcode:</div>
+      <div class="middle-column">
+        <input class="" type="text" placeholder="e.g. 3000" id="postcodeInput">
       </div>
-    </form>
+      <div class="cleared"></div>
+    </div> -->
+    <div class="column-layout">
+      <div class="left-input-column">&nbsp;</div>
+      <div class="middle-column">
+        <input id="button-continue" type="submit" value="Continue">
+      </div>
+      <div class="cleared"></div>
+    </div>
+  </form>
 
   <div id="clientID-help" style="display: none;">
     <h2 class="section-header" style="font-size: 20px;">How to find your Client ID code</h2>

@@ -1,3 +1,12 @@
+body {
+  font-family: 'Open Sans', 'Arial';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4em;
+  text-decoration: none;
+  color: #333333;
+}
+
 p {
   margin-bottom: 1.5rem;
 }
@@ -214,11 +223,17 @@ label {
     color:#333333;
 }
 
+.service-message h1 {
+  padding-top: 1rem;
+}
+
+.service-message {
+  padding-top: 0.5em;
+}
+
 #currentAppDet {
   display:none;
 }
-
-
 
 @media (min-width: 1025px) {
   .desktop-only {
