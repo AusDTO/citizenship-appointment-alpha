@@ -6,6 +6,15 @@ td {
 	font-size: 1.2em;
 }
 
+.appointment-time-predefined {
+	font-family:'Open Sans', 'Arial';
+	font-weight:700;
+	font-style:normal;
+	font-size:14px;
+	text-decoration:none;
+	color:#333333;
+}
+
 .blue-outer {
 	background-color: #0062b9;
 }
@@ -13,6 +22,11 @@ td {
 .inner {
 	background-color: white;
 	padding: 25px;
+}
+
+
+.disclaimer{
+	font-style:italic !important;
 }
 
 .text p {
@@ -53,9 +67,6 @@ td {
     color: #333333;
 }
 
-.disclaimer{
-	font-style:italic;
-}
 /*
 .book-button{
     background-color: #0178C6;
