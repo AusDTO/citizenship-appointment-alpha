@@ -63,25 +63,6 @@ table {
   margin-bottom: 0;
 }
 
-@media (min-width: 640px) {
-  .DateSlider {
-    display: none;
-  }
-  .BookingCalendar {
-    display: block;
-  }
-}
-
-@media (max-width: 640px) {
-  .BookingCalendar {
-    display: none;
-  }
-  .DateSlider {
-    display: block;
-  }
-  img#clientId-image { width: 100%; }
-}
-
 @media (max-width: 550px) {
   .header {
       margin-top: 2rem;
