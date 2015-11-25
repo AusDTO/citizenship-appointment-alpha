@@ -12,8 +12,10 @@ app.engine('mustache', consolidate.hogan); // set templating engine for .mustach
 app.set('view engine', 'mustache');  // default extension for template names when used with res.render
 app.set('views', path.join(__dirname, 'templates')); // default template location
 
-app.use(require('connect-livereload')());  // runs livereload server and serves livereload.js
-require('express-livereload')(app);  // inserts <script> reference to livereload.js
+if (app.settings.env !== 'production') {
+  app.use(require('connect-livereload')());  // runs livereload server and serves livereload.js
+  require('express-livereload')(app);  // inserts <script> reference to livereload.js
+}
 
 app.use('/', express.static(path.join(__dirname, 'public')));
 
@@ -37,7 +39,7 @@ app.get('/googlecalendar', function(req, res) {
   res.redirect('http://www.google.com/calendar/event?' + calendar_event);
 });
 
-app.get('/qrcode', function(req, res) {  
+app.get('/qrcode', function(req, res) {
   var code = qr.image(
     "Welcome to our awesome Alpha! Your client id is: 9281112121",
     { type: 'svg' }
