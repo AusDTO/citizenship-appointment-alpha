@@ -79,6 +79,11 @@
       <p>
         I am writing in reference to your application for Australian citizenship. We would like to invite you to attend your citizenship appointment and test.
       </p>
+
+
+      <p style="margin-top: 2rem; margin-bottom: 2rem;">
+        Please book your appointment via our online booking system.
+      </p>
       <div class="row">
         <div class="column-layout" style="margin-top: 3rem;">
           <div class="left-column">Location: </div>
@@ -93,19 +98,19 @@
           <div class="middle-column appointment-time-confirmed">81687116621</div>
           <div class="cleared"></div>
         </div>
+        <div class="column-layout">
+          <div class="left-column">&nbsp;</div>
+          <div class="middle-column">
+            <button type="button" class="button-cta" id="book-button">Book now</button>
+            <script type="text/javascript">
+                document.getElementById("book-button").onclick = function () {
+                    location.href = "/start.html?id=81687116621";
+                };
+            </script>
+          </div>
+          <div class="cleared"></div>
+        </div>
       </div>
-
-      <p style="margin-top: 2rem; margin-bottom: 2rem;">
-        Please book your appointment via our online booking system.
-      </p>
-      <p>
-        <button type="button" class="button-cta" id="book-button">Book now</button>
-        <script type="text/javascript">
-            document.getElementById("book-button").onclick = function () {
-                location.href = "/start.html?id=81687116621";
-            };
-        </script>
-      </p>
       </div>
       <p class="disclaimer" style="margin-top:1.5rem;">This is a new service. If you need any help with using it, please call us on 131 880 between 8.30am and 4.30pm Monday to Friday</p>
 
