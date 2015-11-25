@@ -33,7 +33,7 @@
       bookableDates: [],
       originalSlots: [],
       currentSlots: [],
-      calendarDayHeight: 45,
+      calendarDayHeight: 48,
       navPointer: 0,
       today: new Date(),
       scrollToFocus: true,
