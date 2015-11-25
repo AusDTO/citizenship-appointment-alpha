@@ -164,7 +164,12 @@
         $('.BookingCalendar-nav--next', this.$_el).removeClass('is-active');
       }
 
-      this.$currentMonth.text(this.settings.navMonths[i].label);
+      if(i === 0 && this.settings.navMonths.length > 1) {
+        this.$currentMonth.text(this.settings.navMonths[i].label + " - " + this.settings.navMonths[i+1].label);
+      } else {
+        this.$currentMonth.text(this.settings.navMonths[i].label);
+      }
+
     },
 
     nudgeNav: function(i) {
