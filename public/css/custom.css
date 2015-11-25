@@ -132,7 +132,8 @@ label {
   color: white;
   border: 0;
   text-transform: capitalize;
-  padding: 0 15px;
+  padding: 0 1rem;
+  margin: 1rem 0;
   font-weight: 400;
   font-style: normal;
   font-size: 1.4em;
