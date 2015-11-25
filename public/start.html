@@ -31,7 +31,7 @@
   </p>
   <h1>Book your citizenship appointment</h1>
 
-  <form method="get" action="slotpicker.html">
+  <form method="get" action="javascript: goToCalendar();">
     <div class="column-layout">
       <div class="left-input-column form-fields">Client ID:</div>
       <div class="middle-column">
@@ -50,6 +50,11 @@
                   }, 800);
                 }
               return true;
+            };
+
+            goToCalendar = function(){
+              var reschedule = getParameterByName("resch");
+              location.href = "/slotpicker.html"+(reschedule == "true"?"?resch=true":"");
             };
         </script>
       </div>
