@@ -298,7 +298,7 @@ button.BookingCalendar-nav--next {
       display: inline; } }*/
 
 .SlotPicker-choices ul {
-  font-size: 1.5em;
+  font-size: 1.1em;
   border-top: 1px solid #333333;
   zoom: 1;
   text-align: center;
@@ -428,4 +428,11 @@ button.BookingCalendar-nav--next {
     display: block;
   }
 
+  .SlotPicker {
+    margin-bottom: 3rem;
+  }
+
+.button-cta, input[type="submit"].button-cta {
+  font-size: 1.1em;
+}
 
