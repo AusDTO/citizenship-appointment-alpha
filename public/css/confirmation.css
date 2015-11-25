@@ -147,3 +147,15 @@
       display: block;
   }
 }
+
+@media (max-width: 550px) {
+  .desktop-margin{
+     margin-left: 0rem;
+   }
+}
+
+@media (min-width: 550px) {
+  .desktop-margin{
+     margin-left: 3rem;
+   }
+}
