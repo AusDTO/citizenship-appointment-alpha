@@ -143,36 +143,6 @@ label {
   color: white;
 }
 
-#button-continue {
-  text-transform: capitalize !important;
-  background-color: #0178c6 !important;
-
-  font-family: 'Open Sans', Arial;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
-
-#confirm-button {
-  background-color: #0178C6;
-  color: white;
-  text-transform: capitalize !important;
-  padding: 0 15px;
-  font-family: 'Open Sans', Arial; 
-  font-weight: 400; 
-  font-style: normal; 
-  font-size: 16px; 
-  text-decoration: none; 
-}
-
-#confirm-button:hover{
-    background-color: #3393d1;
-    color: white;
-}
-
-
 .column-layout{
   margin-bottom: 10px;
   clear: both;
