@@ -33,7 +33,7 @@
       bookableDates: [],
       originalSlots: [],
       currentSlots: [],
-      calendarDayHeight: 112,
+      calendarDayHeight: 56,
       navPointer: 0,
       today: new Date(),
       scrollToFocus: true,
@@ -81,10 +81,16 @@
 
       this.$_el.on('click chosen', '.BookingCalendar-dateLink', function(e) {
         e.preventDefault();
+        $('tr.CalRow-slots').hide();
         self.selectDay($(this));
         self.highlightDate($(this));
-        self.$timeSlots.addClass('is-active');
-        $(".SlotPicker-day.is-active").get(0).scrollIntoView();
+        var day = ($(this)).data('date');
+        var rowId = $('[data-date=' + day + ']', this.$_el).closest('tr').attr('id');
+
+        $('li.SlotPicker-day#date-' + day).appendTo('ul#' + rowId);
+        $('tr.CalRow-slots#'+rowId).show();
+        // self.$timeSlots.addClass('is-active');
+        // $(".SlotPicker-day.is-active").get(0).scrollIntoView();
         // $('html, body').animate({
         //   scrollTop: $(".SlotPicker-day.is-active").offset().top
         // }, 2000);
@@ -302,6 +308,8 @@
           duration = label.find('.SlotPicker-duration').text(),
           $slot = this.$choice.eq(index);
 
+          console.log(day);
+
       $slot.addClass('is-chosen');
       $slot.find('.SlotPicker-date').text(day);
       $slot.find('.SlotPicker-time').text(time);
@@ -458,6 +466,9 @@
         curDate.setDate(curDate.getDate());
       }
 
+      // for identifying rows in calendar
+      var rowNum = 0;
+
       while (curDate <= end) {
         curIso = moj.Helpers.formatIso(curDate);
 
@@ -494,10 +505,12 @@
 
         if (count === 7) {
           out+= templateRow.render({
+            rowId: rowNum,
             cells: row
           });
           row = '';
           count = 0;
+          rowNum++;
         }
 
         curDate.setDate(curDate.getDate() + 1);

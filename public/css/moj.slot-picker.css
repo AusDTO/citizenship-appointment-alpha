@@ -15,11 +15,11 @@
 .BookingCalendar-mask {
   position: relative;
   overflow: hidden;
-  height: 570px; }
+  height: 560px; }
 
 table.BookingCalendar-dates {
   width: 100%;
-  border-spacing: 1rem;
+  border-spacing: 1rem 0.50rem;
   border-collapse: separate;
   background: white;
 }
@@ -448,9 +448,19 @@ button.BookingCalendar-nav--next {
 
     .word-location {
       display:none;
-  }
+    }
   }
 
+  table.BookingCalendar-dates tbody td.CalRow-slots {
+    border: 0;
+    border-color: transparent;
+    font-size: 1em;
+  }
+
+  ul.CalRow-slots {
+    padding: 0;
+    margin: 0;
+  }
   
 @media (min-width: 640px) {
   .DateSlider {
