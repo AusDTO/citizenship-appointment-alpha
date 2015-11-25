@@ -135,3 +135,15 @@
   text-decoration:none;
   color:#333333;
 }
+
+@media (max-width: 815px) {
+  #pushdown-span {
+      display: none;
+  }
+}
+
+@media (min-width: 815px) {
+  #pushdown-span {
+      display: block;
+  }
+}
