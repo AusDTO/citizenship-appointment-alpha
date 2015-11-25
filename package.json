@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "forever --watch server.js",
+    "dev": "supervisor -e 'html,mustache,js' node server.js",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -27,6 +27,6 @@
     "qr-image": "^3.1.0"
   },
   "devDependencies": {
-    "forever": "^0.15.1"
+    "supervisor": "^0.9.1"
   }
 }
