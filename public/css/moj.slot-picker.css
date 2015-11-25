@@ -48,6 +48,15 @@ table.BookingCalendar-dates .BookingCalendar-date--unavailable {
   pointer-events: none;
   cursor: default; }
 
+table.BookingCalendar-dates .BookingCalendar-date--past {
+  border: 0;
+  background: transparent;
+}
+
+.BookingCalendar-date--past * {
+  display: none;
+}
+
 table.BookingCalendar-dates .BookingCalendar-date--bookable {
   border-color: #333333;
   border-style: solid;

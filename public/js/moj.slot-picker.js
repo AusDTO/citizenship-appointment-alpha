@@ -470,6 +470,11 @@
           displayAvailable = '0 available';
         }
 
+        var className = moj.Helpers.dateBookable(curDate, this.settings.bookableDates) ? 'BookingCalendar-date--bookable' : 'BookingCalendar-date--unavailable';
+        if (curIso < todayIso) {
+          className += ' BookingCalendar-date--past';
+        }
+
         row+= templateDate.render({
           date: curIso,
           weekday: dayStr.substr(0,3),
@@ -479,7 +484,7 @@
           newMonth: curDate.getDate() === 1,
           monthIso: curIso.substr(0, 7),
           monthShort: this.settings.months[curDate.getMonth()].substr(0,3),
-          klass: moj.Helpers.dateBookable(curDate, this.settings.bookableDates) ? 'BookingCalendar-date--bookable' : 'BookingCalendar-date--unavailable'
+          klass: className
         });
 
         if (count === 7) {
