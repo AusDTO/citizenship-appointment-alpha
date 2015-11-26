@@ -15,11 +15,13 @@
 .BookingCalendar-mask {
   position: relative;
   overflow: hidden;
-  height: 560px; }
+  height: 535px;
+  margin-bottom: 2rem;
+}
 
 table.BookingCalendar-dates {
   width: 100%;
-  border-spacing: 1rem 0.50rem;
+  border-spacing: 0.5rem 0.50rem;
   border-collapse: separate;
   background: white;
 }

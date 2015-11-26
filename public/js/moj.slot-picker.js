@@ -33,8 +33,9 @@
       bookableDates: [],
       originalSlots: [],
       currentSlots: [],
-      calendarDayHeight: 56,
+      calendarDayHeight: 107,
       navPointer: 0,
+      prevPos: 0,
       today: new Date(),
       scrollToFocus: true,
       days: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
@@ -81,19 +82,16 @@
 
       this.$_el.on('click chosen', '.BookingCalendar-dateLink', function(e) {
         e.preventDefault();
-        $('tr.CalRow-slots').hide();
         self.selectDay($(this));
         self.highlightDate($(this));
-        var day = ($(this)).data('date');
-        var rowId = $('[data-date=' + day + ']', this.$_el).closest('tr').attr('id');
 
-        $('li.SlotPicker-day#date-' + day).appendTo('ul#' + rowId);
+        $('tr.CalRow-slots').hide();
+        var day = ($(this)).data('date'),
+            rowId = $('[data-date=' + day + ']').closest('tr').attr('id');
+        $('li#date-' + day).appendTo('ul#' + rowId);
         $('tr.CalRow-slots#'+rowId).show();
-        // self.$timeSlots.addClass('is-active');
-        // $(".SlotPicker-day.is-active").get(0).scrollIntoView();
-        // $('html, body').animate({
-        //   scrollTop: $(".SlotPicker-day.is-active").offset().top
-        // }, 2000);
+
+        self.$timeSlots.addClass('is-active');
       });
 
       this.$_el.on('click chosen', '.DateSlider-largeDates li', function(e) {
@@ -145,9 +143,14 @@
       for(day = start; day.getMonth() % 12 != end.getMonth()+1; day.setMonth(day.getMonth() + 1)) {
         month = day.getMonth();
         if (month !== lastMonth) {
+          // super hacky
+          var rowId = lastMonth === undefined ? 'row-0' : $('#month-' + moj.Helpers.formatIso(day).substr(0, 7), this.$_el).closest('tr').attr('id');
+          var posVal = lastMonth === undefined ? 0 : rowId.split('-')[1] * this.settings.calendarDayHeight;
           months.push({
             label: this.settings.months[month],
-            pos: $('#month-' + moj.Helpers.formatIso(day).substr(0, 7), this.$_el).closest('tr').index() * this.settings.calendarDayHeight
+            // pos: $('#month-' + moj.Helpers.formatIso(day).substr(0, 7), this.$_el).closest('tr').index() * this.settings.calendarDayHeight
+            rowId: rowId,
+            pos: posVal
           });
         }
         lastMonth = month;
@@ -181,9 +184,15 @@
     nudgeNav: function(i) {
       this.settings.navPointer = i + this.settings.navPointer;
       this.updateNav(this.settings.navPointer);
+
+      var rowId = this.settings.navMonths[this.settings.navPointer].rowId;
+      var pos = $('tr.CalRow#' + rowId).position().top + this.settings.prevPos
+
       this.$calMask.animate({
-        scrollTop: this.settings.navMonths[this.settings.navPointer].pos
+        scrollTop: $('tr.CalRow#' + rowId).position().top + this.settings.prevPos
       }, 350);
+
+      this.settings.prevPos = pos;
     },
 
     consolidate: function() {
@@ -308,8 +317,6 @@
           duration = label.find('.SlotPicker-duration').text(),
           $slot = this.$choice.eq(index);
 
-          console.log(day);
-
       $slot.addClass('is-chosen');
       $slot.find('.SlotPicker-date').text(day);
       $slot.find('.SlotPicker-time').text(time);
@@ -362,7 +369,9 @@
     showSlotChoices: function() {
       $('.SlotPicker-choices').show();
       $('.SlotPicker-choices .confirm-button').get(0).scrollIntoView();
-      // $('.SlotPicker-choices').slideDown("fast");;
+      // $("html, body").animate({
+      //     scrollTop: $('.SlotPicker-choices').offset().top
+      // }, 800);
     },
 
     checkSlot: function(el) {
