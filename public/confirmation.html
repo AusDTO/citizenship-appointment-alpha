@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/confirmation.css">
   <link rel="stylesheet" href="css/barcode.css">
   <link rel="stylesheet" href="css/font-awesome-4.4.0/css/font-awesome.min.css">
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
   <link rel="icon" type="image/png" href="images/coat-of-arms-black-on-white-32x32.png" sizes="32x32">
 </head>
@@ -34,10 +35,10 @@
     <div class="eight columns">
 
       <h1 class="res-confirmed">
-        <span class="fa fa-check-circle"></span>&nbsp;Your reservation is confirmed
+        <span class="fa fa-check-circle"></span>&nbsp;<span id="res-confirmed">Your appointment is confirmed</span>
       </h1>
-      <p class="disclaimer desktop-margin">
-        We have sent a confirmation to your email address.
+      <p class="disclaimer desktop-margin" style="font-size: 1.5em">
+        We have sent this confirmation to your email address.
       </p>
 
       <div class="column-layout" style="margin-top: 4rem;">
@@ -58,26 +59,17 @@
         </div>
         <div class="cleared"></div>
       </div>
-      <div class="column-layout">
-        <div class="left-conf-column"><span class="fa fa-calendar-plus-o"></span></div>
-        <div class="middle-column">
-          <span style="margin-right: 12px;">
-            <a href="" class="blue-link">Add to my calendar</a>
-          </span>
-        </div>
-        <div class="cleared"></div>
-      </div>
 
     </div>
     <div class="three columns" style="padding:10px">
       <div class="qr-container">
        <img src="/qrcode" style="max-height: 100px; margin: 20px">
       </div>
-      <button type="button" class="button-with-icon">
-        <span class="fa fa-mobile"></span>&nbsp;Add to Passbook
+      <button type="button" class="button-with-icon" id="print-page">
+        <span class="fa fa-print"></span>&nbsp;Print this page
       </button>
       <button type="button" class="button-with-icon">
-        <span class="fa fa-print"></span>&nbsp;Print this page
+        <span class="fa fa-calendar-plus-o"></span>&nbsp;Add to calendar
       </button>
     </div>
   </div>
@@ -88,7 +80,7 @@
     </div>
     <div class="columns" style="width: 70%;">
       <p class="email-sms-header">
-        Email me this confirmation
+        Send this confirmation to another email address
       </p>
       <div class="row">
         <div class="ten columns">
@@ -118,7 +110,7 @@
         </div>
       </div>
       <p class="disclaimer">
-        We will send you a reminder 48 hrs prior your appointment.
+        We will send you a reminder 24 hrs prior your appointment.
       </p>
     </div>
   </div>
@@ -138,9 +130,24 @@
 </div>
 
 <script type="text/javascript">
-    document.getElementById("email-send").onclick = function () {
-        location.href = "/confirmation_email.html";
-    };
+  function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+  var rescheduled = getParameterByName("resch");
+  if("true"==rescheduled){
+    document.getElementById("res-confirmed").textContent="Your appointment was rescheduled";
+  }
+  document.getElementById("email-send").onclick = function () {
+      var reschedule = getParameterByName("resch");
+      location.href = "/confirmation_email.html"+(reschedule == "true"?"?resch=true":"");
+  };
+  document.getElementById("print-page").onclick = function () {
+      location.href = "javascript:window.print()";
+  };
 </script>
 
 </body>

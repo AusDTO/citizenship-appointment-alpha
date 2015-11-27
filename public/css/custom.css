@@ -125,6 +125,10 @@ label {
   color: white;
 }
 
+button:hover {
+	background-color: #efefef;
+}
+
 .column-layout{
   margin-bottom: 10px;
   clear: both;

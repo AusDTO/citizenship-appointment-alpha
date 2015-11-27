@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/confirmation.css">
   <link rel="stylesheet" href="css/barcode.css">
   <link rel="stylesheet" href="css/font-awesome-4.4.0/css/font-awesome.min.css">
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
   <link rel="icon" type="image/png" href="images/coat-of-arms-black-on-white-32x32.png" sizes="32x32">
 </head>
@@ -81,7 +82,7 @@
 
   <div class="inner">
     <h1 class="res-confirmed" style="margin-bottom: 0px;">
-      <span class="fa fa-check-circle"></span>&nbsp;Your reservation is confirmed
+      <span class="fa fa-check-circle"></span>&nbsp;<span id="res-confirmed">Your appointment is confirmed</span>
     </h1>
 
       <div class="row">
@@ -104,15 +105,6 @@
             </div>
             <div class="cleared"></div>
           </div>
-          <div class="column-layout">
-            <div class="left-conf-column"><span class="fa fa-calendar-plus-o"></span></div>
-            <div class="middle-column">
-              <span style="margin-right: 12px;">
-                <a href="" class="blue-link">Add to my calendar</a>
-              </span>
-            </div>
-            <div class="cleared"></div>
-          </div>
           <div>
             <span id="pushdown-span" style="margin-top:6rem;"></span>
             <button type="button" class="button-with-icon-inline" id="reschedule">
@@ -129,7 +121,7 @@
            <img src="/qrcode" style="max-height: 100px; margin: 20px">
           </div>
           <button type="button" class="button-with-icon">
-            <span class="fa fa-mobile"></span>&nbsp;Add to Passbook
+            <span class="fa fa-calendar-plus-o"></span>&nbsp;Add to calendar
           </button>
         </div>
        </div>
@@ -159,9 +151,23 @@
     </div>
   </div>
 <script type="text/javascript">
-    document.getElementById("reschedule").onclick = function () {
-        location.href = "/slotpicker.html?resch=true";
-    };
+  function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+  $(window).bind("load", function() {
+      var rescheduled = getParameterByName("resch");
+      if("true"==rescheduled){
+        document.getElementById("res-confirmed").textContent="Your appointment was rescheduled";
+      }
+  });
+
+  document.getElementById("reschedule").onclick = function () {
+      location.href = "/slotpicker.html?resch=true";
+  };
 </script>
 
 <!-- End Email Content-->

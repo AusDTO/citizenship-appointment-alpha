@@ -69,7 +69,8 @@
       <button type="button" class="button-cta" id="confirm-button">Confirm</button>
       <script type="text/javascript">
           document.getElementById("confirm-button").onclick = function () {
-              location.href = "/confirmation.html";
+            var reschedule = getParameterByName("resch");
+            location.href = "/confirmation.html"+(reschedule == "true"?"?resch=true":"");
           };
       </script>
     </span>
@@ -556,6 +557,13 @@
 <script>moj.Modules.DateSlider.init();</script>
 
 <script>
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
 $(function() {
   $('.SlotPicker-input').hide();
   $('tr.CalRow-slots').hide();
