@@ -105,6 +105,7 @@
         self.selectDay($(this));
         self.highlightDate($(this));
         self.$timeSlots.addClass('is-active');
+        self.hideSlotChoices();
       });
 
       this.$_el.on('click', 'button.BookingCalendar-nav--next', function(e) {
@@ -372,6 +373,10 @@
       // $("html, body").animate({
       //     scrollTop: $('.SlotPicker-choices').offset().top
       // }, 800);
+    },
+
+    hideSlotChoices: function() {
+      $('.SlotPicker-choices').hide();
     },
 
     checkSlot: function(el) {
