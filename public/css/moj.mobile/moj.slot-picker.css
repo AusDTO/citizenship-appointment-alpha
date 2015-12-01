@@ -245,7 +245,7 @@ button.BookingCalendar-nav--next {
   overflow: hidden;
   float: left;
   box-sizing: border-box;
-  min-width: 120px;
+  min-width: 8rem;
   margin-right: 0.5em;
   margin-bottom: 0.5em;
   text-align: center;
