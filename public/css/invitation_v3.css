@@ -104,12 +104,16 @@ h4.documents-table {
 }
 
 table.documents-table {
-	width: 100%;
+	border-spacing: 1rem;
+  border-collapse: separate;
 }
 
 .documents-table td {
-	padding: 0.5rem;
+	padding: 1rem;
+	text-align: center;
 	vertical-align: middle;
+	width: 15rem;
+	height: 12rem;
   border: 1px solid #D7D7D7;
 	margin-bottom: 1rem;
 }
@@ -119,15 +123,9 @@ table.documents-table {
 	margin: 0;
 }
 
-.docs img {
-	width: 3rem;
-	padding-right: 0.5rem;
-}
-
-.docs td {
-	width: auto;
-	padding: 0.5rem;
-	border: 0;
+.documents-table img {
+	width: 4.5rem;
+	margin: 1rem;
 }
 
 span.test-prep-buttons .button {
@@ -144,5 +142,7 @@ span.test-prep-buttons .button:hover {
 	}
   .documents-table td {
 		height: auto;
+		width: 100%;
+    display: block;
   }
 }
