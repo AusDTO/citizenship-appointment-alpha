@@ -28,9 +28,9 @@
 </script>
 
 <script type="text/html" id="SlotPicker-tmplTimeSlot">
+  <input class="SlotPicker-slot" type="checkbox" value="{{ slot }}" id="slot-{{ slot }}">
   <label class="SlotPicker-label" for="slot-{{ slot }}">
-    <strong class="SlotPicker-time">{{ time }}</strong>
-    <input class="SlotPicker-slot" type="checkbox" value="{{ slot }}" id="slot-{{ slot }}">
+    <strong class="SlotPicker-time">{{ time }}</strong>  
   </label>
 </script>
 
@@ -49,7 +49,7 @@
 <script type="text/html" id="BookingCalendar-tmplDate">
   <td class="{{ klass }}">
     <div class="BookingCalendar-content">
-      <a class="BookingCalendar-dateLink" data-date="{{ date }}" href="#date-{{ date }}">
+      <a class="BookingCalendar-dateLink"  {{ disabled }} data-date="{{ date }}" href="#date-{{ date }}">
         {{#newMonth}}
           <span class="BookingCalendar-tag" id="month-{{ monthIso }}">{{ monthShort }}</span>
         {{/newMonth}}

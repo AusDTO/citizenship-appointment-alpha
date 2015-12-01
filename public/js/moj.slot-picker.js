@@ -69,9 +69,15 @@
         self.processSlots();
         self.activateNextOption();
         self.showSlotChoices();
-        // self.disableCheckboxes(self.limitReached());
         self.togglePromoteHelp();
       });
+
+      this.$_el.on('keydown', '.SlotPicker-slot', function (e){
+            if(e.keyCode == 13){
+              $(this).trigger('click')
+            }
+        }
+      );
 
       this.$_el.on('click', '.SlotPicker-icon--promote', function(e) {
         e.preventDefault();
@@ -311,7 +317,7 @@
     },
 
     populateUiSlots: function(index, checkbox) {
-      var label = checkbox.closest('.SlotPicker-label'),
+      var label = $("label[for='"+checkbox.attr('id')+"']"),
           day = label.siblings('.SlotPicker-dayTitle').text(),
           time = label.find('.SlotPicker-time').text(),
           duration = label.find('.SlotPicker-duration').text(),
@@ -334,7 +340,7 @@
       for (i = 0; i < slots.length; i++) {
         $slotEl = $('.SlotPicker-slot[value=' + slots[i] + ']', this.$_el);
 
-        this.highlightSlot($slotEl.closest('label'));
+        this.highlightSlot($("label[for='"+$slotEl.attr('id')+"']"));
         this.populateSlotInputs(i, $slotEl.val());
         this.populateUiSlots(i, $slotEl);
       }
@@ -345,12 +351,6 @@
 
     limitReached: function() {
       return $('.SlotPicker-slot:checked', this.$_el).length >= this.settings.optionLimit;
-    },
-
-    disableCheckboxes: function(disable) {
-      $('.SlotPicker-slot', this.$_el).not(':checked')
-        .prop('disabled', disable)
-        .closest('label')[disable ? 'addClass' : 'removeClass']('is-disabled');
     },
 
     splitDateAndSlot: function(str) {
@@ -506,6 +506,7 @@
           day: curDate.getDate(),
           available: displayAvailable,
           today: curIso === todayIso,
+          disabled: moj.Helpers.dateBookable(curDate, this.settings.bookableDates) ? '' : 'tabindex=-12',
           newMonth: curDate.getDate() === 1,
           monthIso: curIso.substr(0, 7),
           monthShort: this.settings.months[curDate.getMonth()].substr(0,3),

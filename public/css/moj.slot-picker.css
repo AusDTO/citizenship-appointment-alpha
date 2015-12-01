@@ -191,6 +191,11 @@ button.BookingCalendar-nav--next:hover,
 button.BookingCalendar-nav--prev:hover {
   background-color: #efefef; }
 
+  button.BookingCalendar-nav--next:focus,
+button.BookingCalendar-nav--prev:focus {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
 button.BookingCalendar-nav--prev {
   margin-left: 1rem; }
 
@@ -264,6 +269,11 @@ button.BookingCalendar-nav--next {
   text-decoration: none;
   background: #DCEEFF;
 }
+
+.SlotPicker-slot:focus + label {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
 
   @media (max-width: 640px) {
     .SlotPicker-label {
