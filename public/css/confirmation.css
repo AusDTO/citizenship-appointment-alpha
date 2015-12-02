@@ -2,7 +2,7 @@
 
 .res-confirmed{
   display: block;
-  margin-top: 3rem;
+  margin-top: 2rem;
   font-family:OpenSans-Bold;
   font-size:36px;
   color:#000000;
@@ -77,8 +77,8 @@
     font-style: normal;
 }
 
-.blue-outer {
-  background-color: #0062b9;
+.grey-outer {
+	background-color: #E8E8E8;
 }
 
 .inner {
@@ -132,14 +132,23 @@
 }
 
 .button-with-icon-inline{
-    /*margin-top: 1rem;
-    margin-bottom: 0rem;
-    min-width: 143px;*/
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  background:#FEFEFE;
+  border:1px solid rgba(123,158,186,0.19);
+  box-shadow:0px 1px 2px 0px rgba(0,0,0,0.50);
+  min-width:143px;
 
+  font-family:OpenSans;
+  font-size:16px;
+  color:#232D35;
+  line-height:22px;
+  text-transform: none;
+  letter-spacing: 0rem;
     /*padding: 0px;*/
-    background:#232D35;
+    /*background:#232D35;
     font-family: 'OpenSans-Light';
-    color:#FFFFFF;
+    color:#FFFFFF;*/
 }
 
 .large-image {

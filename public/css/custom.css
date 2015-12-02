@@ -227,12 +227,12 @@ button:hover {
 }
 
 .step-info{
-  font-family:OpenSans;
-  font-size:24px;
+  font-family:'OpenSans-Light';
+  font-size: 1.5em;
   color:#232D35;
   letter-spacing:0.05px;
   line-height:30px;
-  margin-top: 2rem
+  margin: 2rem 0;
 }
 
 .gov-au-footer{
