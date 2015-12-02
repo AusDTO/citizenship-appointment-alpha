@@ -15,7 +15,7 @@
 .BookingCalendar-mask {
   position: relative;
   overflow: hidden;
-  height: 535px;
+  height: 525px;
   margin-bottom: 2rem;
 }
 
@@ -175,8 +175,10 @@ ul.BookingCalendar-legend {
   display: none; }
 
 .BookingCalendar-nav.is-active {
-  padding: 0 1.5rem;
-  display: block; }
+  margin: 0.5rem 0 0 0;
+  padding: 0rem;
+  display: block;
+}
 
 button.BookingCalendar-nav--next,
 button.BookingCalendar-nav--prev {
@@ -186,15 +188,19 @@ button.BookingCalendar-nav--prev {
   text-decoration: none;
 
   background-color: #ffffff;
-  color: #535353;
+  color: #333333;
   text-transform: capitalize;
-  font-style: normal;
+  font-weight: 700;
   font-size: 1em;
+  border: 0;
 }
 
 button.BookingCalendar-nav--next:hover,
 button.BookingCalendar-nav--prev:hover {
-  background-color: #efefef; }
+  color: #1658d4;
+  text-decoration: underline;
+  /*background-color: #efefef;*/
+}
 
   button.BookingCalendar-nav--next:focus,
 button.BookingCalendar-nav--prev:focus {
@@ -310,7 +316,7 @@ button.BookingCalendar-nav--next {
       display: inline; } }
 
 .SlotPicker-choices ul {
-  border-top: 1px solid #F2F2F2;
+  border-top: 2px solid #232D35;
   zoom: 1;
   text-align: center;
   margin: 0 10px 0 10px;
@@ -347,16 +353,6 @@ button.BookingCalendar-nav--next {
 }
 .SlotPicker-choices ul li.is-clicked .SlotPicker-prompt {
   display: block;
-}
-
-/*.SlotPicker-choices ul li.is-chosen {
-  padding: 0 80px;
-}*/
-
-@media (max-width: 640px) {
-  .SlotPicker-choices ul li.is-chosen {
-    padding: 0 55px;
-  }
 }
 
 .SlotPicker-choices ul li.is-chosen p {
@@ -470,16 +466,31 @@ button.BookingCalendar-nav--next {
     padding: 0;
     margin: 0;
   }
-  
+
+  table.office-details {
+    margin-bottom: 0.5rem;
+  }
+
   .office-details td {
     border: 0;
+    padding: 0 4rem 1rem 0;
   }
-@media (min-width: 640px) {
-  .DateSlider {
+
+  th.abbr {
+    position:relative;
+  }
+
+  .abbr:after{
+    content: attr(data-state);
     display: none;
   }
 
-  table.BookingCalendar-dates thead.mobile {
+  .selected-date-time {
+    display: inline;
+  }
+
+@media (min-width: 640px) {
+  .DateSlider {
     display: none;
   }
 
@@ -493,15 +504,30 @@ button.BookingCalendar-nav--next {
     display: block;
   }
 
+  span.selected-date-time {
+    padding-bottom: 1rem;
+    display: block;
+  }
+
+ .BookingCalendar-nav--next.button-desc,
+ .BookingCalendar-nav--prev.button-desc  {
+   display: none;
+ }
+
+  .abbr:after{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#fff;
+    display:block;
+  }
+
   .office-details td {
 		width: 100%;
     display: block;
     border: 0;
-    padding: 0.5rem 0;
-  }
-
-  table.BookingCalendar-dates thead.desktop {
-    display: none;
   }
 
   .SlotPicker-label {
@@ -524,7 +550,7 @@ button.BookingCalendar-nav--next {
 
   .BookingCalendar-mask {
     overflow: scroll;
-    height: 235px;
+    height: 225px;
   }
 
   .BookingCalendar-content {

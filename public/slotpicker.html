@@ -53,7 +53,6 @@
         {{#newMonth}}
           <span class="BookingCalendar-tag" id="month-{{ monthIso }}">{{ monthShort }}</span>
         {{/newMonth}}
-        <!-- <p class="BookingCalendar-weekday">{{ weekday }}</p> -->
         <p class="BookingCalendar-day">{{ day }}</p>
         <p class="BookingCalendar-available">{{ available }}</p>
       </a>
@@ -63,13 +62,16 @@
 
 <script type="text/html" id="SlotPicker-tmplChoice">
   <li>
-    <span class="SlotPicker-date"></span>,
-    <span class="SlotPicker-time"></span>
-    <span class="SlotPicker-choices confirm-button">
-      <button type="button" class="button-cta" id="confirm-button">Confirm</button>
-      <script type="text/javascript">
-          
-      </script>
+    <span class="selected-date-time">
+      <span class="SlotPicker-date"></span>,
+    </span>
+    <span class="selected-date-time">
+      <span class="SlotPicker-time"></span>
+    </span>
+    <span class="selected-date-time">
+      <span class="SlotPicker-choices confirm-button">
+        <button type="button" class="button-cta" id="confirm-button">Confirm</button>
+      </span>
     </span>
   </li>
 </script>
@@ -96,9 +98,9 @@
   </div>
 </div>
 
-<div class="container">
-  <p style="margin-top: 3rem; font-size: 1.3em;">Step 2 of 3</p>
-  <h1>Select date and time</h1>
+<div class="container" style="border-bottom: 2px solid #232D35; margin-bottom: 1rem;">
+  <p style="margin: 2rem 0; font-size: 1.3em;">Step 2 of 3</p>
+  <h1 style="margin: 0; margin-bottom: 2rem;">Select date and time</h1>
   <table class="office-details">
     <tr>
       <td>
@@ -118,7 +120,6 @@
     <span class="word-location">Current appointment:</span>
     &nbsp;<span class="currentApptTime">Thursday 26th November, at 13:20 </span>
   </p>
-  <hr style="padding: 0;">
 </div>
 
 <div class="SlotPicker" data-today="2015-11-26">
@@ -152,7 +153,7 @@
 
       <div class="BookingCalendar-header">
         <button type="button" class="BookingCalendar-nav BookingCalendar-nav--prev">
-          <span class="BookingCalendar-nav--prev fa fa-angle-left"></span>
+          <span class="BookingCalendar-nav--prev fa fa-angle-left" style="padding-right: 0.5rem; font-size: 2rem; font-weight: 700;"></span>
           <span class="BookingCalendar-nav--prev button-desc"></span>
         </button>
 
@@ -160,31 +161,20 @@
 
         <button type="button" class="BookingCalendar-nav BookingCalendar-nav--next">
           <span class="BookingCalendar-nav--next button-desc"></span>
-          <span class="BookingCalendar-nav--next fa fa-angle-right"></span>
+          <span class="BookingCalendar-nav--next fa fa-angle-right" style="padding-left: 0.5rem; font-size: 2rem; font-weight: 700;"></span>
         </button>
       </div>
 
       <table class="BookingCalendar-dates">
-        <thead class="desktop">
+        <thead>
           <tr>
-            <th>Mon</th>
-            <th>Tue</th>
-            <th>Wed</th>
-            <th>Thu</th>
-            <th>Fri</th>
-            <th>Sat</th>
-            <th>Sun</th>
-          </tr>
-        </thead>
-        <thead class="mobile">
-          <tr>
-            <th>M</th>
-            <th>T</th>
-            <th>W</th>
-            <th>T</th>
-            <th>F</th>
-            <th>S</th>
-            <th>S</th>
+            <th class="abbr" data-state="M">Mon</th>
+            <th class="abbr" data-state="T">Tue</th>
+            <th class="abbr" data-state="W">Wed</th>
+            <th class="abbr" data-state="T">Thu</th>
+            <th class="abbr" data-state="F">Fri</th>
+            <th class="abbr" data-state="S">Sat</th>
+            <th class="abbr" data-state="S">Sun</th>
           </tr>
         </thead>
       </table>

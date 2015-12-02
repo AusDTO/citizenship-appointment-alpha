@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', 'Arial';
+  font-family: 'OpenSans-Light';
   font-weight: 400;
   font-style: normal;
   font-size: 1.4em;
@@ -68,7 +68,12 @@ table {
       margin-top: 2rem;
       margin-bottom: 6rem;
   }
+
   img#clientId-image { width: 100%; }
+
+  .button-cta {
+    width: 100%;
+  }
 }
 
 @media (min-width: 550px) {
@@ -97,7 +102,7 @@ table {
   border-top: 1px solid #e5e5e5;
   padding-top: 1.5rem;
   margin-top: 2rem;
-  font-family: 'Open Sans', 'Arial';
+  font-family: 'OpenSans-Light';
     font-weight: 700;
     font-style: normal;
     font-size: 16px;
@@ -110,20 +115,21 @@ label {
 }
 
 .button-cta, input[type="submit"].button-cta {
-  background-color: #0178C6;
-  color: white;
-  border: 0;
-  text-transform: capitalize;
-  padding: 0 1rem;
-  margin: 1rem 0;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.4em;
+  background:#232D35;
+	min-width: 12.5rem;
+	height: 4.5rem;
+	font-family: 'OpenSans-Bold';
+	font-size:1.6em;
+	color:#FFFFFF;
+	letter-spacing:0.18px;
+	line-height: 22px;
+	text-align: center;
+	text-transform: none;
 }
 
 .button-cta:hover, input[type="submit"].button-cta:hover {
-  background-color: #3393d1;
-  color: white;
+  background-color: #efefef;
+	color:#000000;
 }
 
 button:hover {
@@ -178,7 +184,7 @@ button:hover {
 }
 
 .form-fields {
-  font-family:'Open Sans', 'Arial';
+  font-family: 'OpenSans-Light';
   font-weight:400;
   font-style:normal;
   font-size:14px;
@@ -188,7 +194,7 @@ button:hover {
 }
 
 .currentApptTime {
-    font-family:'Open Sans', 'Arial';
+    font-family: 'OpenSans-Light';
     font-weight:700;
     font-style:normal;
     font-size:14px;
