@@ -3,6 +3,19 @@
 .res-confirmed{
   display: block;
   margin-top: 3rem;
+  font-family:OpenSans-Bold;
+  font-size:36px;
+  color:#000000;
+  line-height:40px;
+}
+
+.sub-res-confirmed {
+  font-family:OpenSans-Bold;
+  font-size:16px;
+  color:#000000;
+  letter-spacing:0.15px;
+  line-height:24px;
+  text-align:left;
 }
 
 .print-button{
@@ -105,9 +118,17 @@
 .button-with-icon{
     margin-top: 1rem;
     margin-bottom: 0rem;
-    width: 100%;
-    padding: 0px;
-    min-width: 143px;
+    background:#FEFEFE;
+    border:1px solid rgba(123,158,186,0.19);
+    box-shadow:0px 1px 2px 0px rgba(0,0,0,0.50);
+    min-width:143px;
+
+    font-family:OpenSans;
+    font-size:16px;
+    color:#232D35;
+    line-height:22px;
+    text-transform: none;
+    letter-spacing: 0rem;
 }
 
 .button-with-icon-inline{
@@ -123,29 +144,46 @@
 }
 
 .div-top-border {
-   border-top: 1px solid #e5e5e5; 
-   padding-top: 2rem; 
-   padding-bottom: 1rem;
+  border-top :2px solid #232D35;
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+  text-decoration: none;
+
+  font-family:OpenSans-Bold;
+  font-size:24px;
+  color:#000000;
+  letter-spacing:0.15px;
+  line-height:30px;
 }
 
 .email-sms-header{
-  font-family:'Open Sans', 'Arial';
-  font-weight:700;
-  font-style:normal;
-  font-size:16px;
   text-decoration:none;
-  color:#333333;
+  font-family:OpenSans-Bold;
+  font-size:24px;
+  color:#000000;
+  letter-spacing:0.15px;
+  line-height:30px;
 }
 
 @media (max-width: 815px) {
   #pushdown-span {
       display: none;
   }
+
+  .email-sms-div {
+     width: 100%; 
+     padding: 1rem;
+  }
 }
 
 @media (min-width: 815px) {
   #pushdown-span {
       display: block;
+  }
+
+  .email-sms-div {
+     width: 70%; 
+     padding: 2rem;
   }
 }
 
@@ -159,4 +197,27 @@
   .desktop-margin{
      margin-left: 3rem;
    }
+}
+
+.grey-background {
+  background:#F0F3F5;
+  border:1px solid rgba(227,230,232,0.20);
+  box-shadow:0px 1px 2px 0px rgba(0,0,0,0.50);
+}
+
+
+.book-button {
+  background:#232D35;
+  font-family:OpenSans-Bold;
+  font-size:16px;
+  color:#FFFFFF;
+  letter-spacing:0.18px;
+  line-height:22px;
+  text-align:right;
+  text-transform: none;
+}
+
+.book-button:focus, .book-button:hover {
+  background-color: #efefef;
+  color:#000000;
 }

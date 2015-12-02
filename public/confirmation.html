@@ -18,115 +18,130 @@
 </head>
 <body>
 
-<div class="u-full-width gov-au-header">
+<div class="u-full-width gov-au-header" style="background-color: #E8E8E8;">
   <div class="container" style="height: 7rem; padding: 0.5rem 0;">
     <a href="/">
-      <img alt="Australian Government" src="images/Gov-Logo-Wht.png" style="width: 247px; height: 60px;">
+      <img alt="Australian Government" src="images/Gov-Logo-Blk.png" style="width: 247px; height: 60px;">
       <!-- <img alt="Australian Government" src="images/dibp-black-on-transparent-392x60.png" style="max-width: 100%; max-height: 100%;"> -->
     </a>
   </div>
 </div>
 
 <div class="container">
-  <p class="service-message">
-    This is a new service. If you need any help with using it, please <a href="" class="black-link">contact us</a>
+  <p class="step-info" style="margin-bottom: 0px">
+    Step 3 of 3
+  </p>
+  <p align=right>
+    <a href="" class="blue-link">Close this window</a>
   </p>
   <div class="row">
     <div class="eight columns">
 
       <h1 class="res-confirmed">
-        <span class="fa fa-check-circle"></span>&nbsp;<span id="res-confirmed">Your appointment is confirmed</span>
+        <span id="res-confirmed">Your appointment is confirmed</span>
       </h1>
-      <p class="disclaimer desktop-margin" style="font-size: 1.5em">
+      <h2 class="sub-res-confirmed">
         We have sent this confirmation to your email address.
-      </p>
-
+      </h2>
       <div class="column-layout" style="margin-top: 4rem;">
-        <div class="left-conf-column"><span class="fa fa-clock-o"></span></div>
+        <div class="left-conf-column"><span class="fa fa-map-marker"></span></div>
         <div class="middle-column">
-          <span class="appointment-time-confirmed">
-             Thursday 26th November, at 13:20
-          </span>
+          <a href="" style="margin-right: 12px;" class="blue-link">
+            2 Lonsdale Street, Melbourne VIC 3000
+          </a>
         </div>
         <div class="cleared"></div>
       </div>
       <div class="column-layout">
-        <div class="left-conf-column"><span class="fa fa-map-marker"></span></div>
+        <div class="left-conf-column"><span class="fa fa-clock-o"></span></div>
         <div class="middle-column">
-          <span style="margin-right: 12px;">
-            2 Lonsdale Street, Melbourne VIC 3000
-          </span>
+             Thursday 26th November, 1:20 PM
         </div>
         <div class="cleared"></div>
       </div>
-
-    </div>
-    <div class="three columns" style="padding:10px">
-      <div class="qr-container">
-       <img src="/qrcode" style="max-height: 100px; margin: 20px">
-      </div>
+      <button type="button" class="button-with-icon" style="margin-right:1rem">
+        <span class="fa fa-plus"></span>&nbsp;Add to my calendar&nbsp;<i class="fa fa-caret-down"></i>
+      </button>
       <button type="button" class="button-with-icon" id="print-page">
         <span class="fa fa-print"></span>&nbsp;Print this page
       </button>
-      <button type="button" class="button-with-icon">
-        <span class="fa fa-calendar-plus-o"></span>&nbsp;Add to calendar
-      </button>
+     
+
+    </div>
+    <div class="four columns">
+      <p style="padding-bottom: 0px;margin-bottom: 0px;">
+        <span style="font-family: Code39AzaleaFont; font-size: 5rem; ">*81687116621*</span>
+        <br/>
+      <span style="font-style: italic;">
+          For faster check-in, scan this barcode at the reception on your arrival
+          </span>
+      </p>
+    </div>
+  </div>
+  <div class="div-top-border"></div>
+
+ <div class="row grey-background">
+    <div class="columns email-sms-div">
+      <p class="email-sms-header">
+        Set up SMS reminder
+      </p>
+      <p>
+        We will send you a reminder 24 hrs prior your appointment.
+      </p>
+      <div class="row">
+        <div class="nine columns">
+          <input type="text" style="width:100%" placeholder="Your mobile number"/>
+        </div>
+        <div class="two columns">
+          <button type="button" class="book-button">Set up</button>
+        </div>
+      </div>
     </div>
   </div>
 
- <div class="row div-top-border" style="margin-top:1rem">
-    <div class="columns" style="width: 30%; max-width: 80px">
-      <img class="large-image" src="/images/Email-Copy.png" alt="email copy"/>
-    </div>
-    <div class="columns" style="width: 70%;">
+ <div class="row grey-background" style="margin-top:1rem">
+    <div class="columns email-sms-div">
       <p class="email-sms-header">
         Send this confirmation to another email address
       </p>
       <div class="row">
-        <div class="ten columns">
+        <div class="nine columns">
           <input type="text" style="width:100%" placeholder="Email address"/>
         </div>
         <div class="two columns">
-          <button type="button" class="send-button" id="email-send">Send</button>
+          <button type="button" class="book-button" id="email-send">Send</button>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="row div-top-border">
-    <div class="columns" style="width: 30%; max-width: 80px">
-      <img class="large-image" src="/images/Sms-Reminder.png" alt="sms reminder"/>
-    </div>
-    <div class="columns" style="width: 70%;">
-      <p class="email-sms-header">
-        Set up SMS reminder
-      </p>
-      <div class="row">
-        <div class="ten columns">
-          <input type="text" style="width:100%" placeholder="Your mobile number"/>
-        </div>
-        <div class="two columns">
-          <button type="button" class="send-button">Add</button>
-        </div>
-      </div>
-      <p class="disclaimer">
-        We will send you a reminder 24 hrs prior your appointment.
-      </p>
-    </div>
-  </div>
+ 
 
-  <h2 style="border-top: 1px solid #e5e5e5; padding-top: 2rem;">Prepare for your appointment</h2>
+  <h2 class="div-top-border">Prepare for your appointment</h2>
   <ul class="close-dots">
-    <li>Collect all the <a href="#" class="blue-link">required documents</a></li>
+    <li>Collect all originals of the <a href="#" class="blue-link">required documents</a></li>
+    <li>Translate non-english documents</li>
     <li>Study for the <a href="#" class="blue-link">citizenship test</a></li>
-    <li>Arrive 5 mins prior your appointment</li>
-    <li>Scan your confirmation barcode or enter your Client ID at the reception kiosk</li>
   </ul>
 
-  <h2 style="border-top: 1px solid #e5e5e5; padding-top: 2rem;">Changes to your circumstances</h2>
-  <p>
-    It is important that you tell us about any changes to your circumstances including your name, contact details, address or children included on this application as soon as possible. To advise the department of any changes in circumstance please contact the Citizenship Information Line on 131 880 between 8.30 am and 4.30 pm Monday to Friday.
-  </p>
+  <h2 class="div-top-border">When you arrive</h2>
+  <ul class="close-dots">
+    <li>Please allow enough <a href="" class="blue-link">travel time</a>to arrive at least 5 mins prior to your appointment.</li>
+    <li>Take the escalator to <u>Level 4</u> at 2 Lonsale St, Melbourne VIC 3000. If you need special assistance, please <a href="" class="blue-link">let us know</a></li>
+    <li>Collect a ticket at the Citizenship kiosk by entering your Client ID or scaninng the barcode on top of this page.</li>
+    <li>Wait until your number is called at the assigned counter.</li>
+  </ul> 
+<div class="div-top-border"></div>
+</div>
+
+
+<div class="u-full-width gov-au-footer">
+  <div class="container" style="padding: 0.5rem 0;">
+    <a href="/">
+      <img alt="Australian Government" src="images/coat-of-arms-white.png" style="height: 92px;">
+      <!-- <img alt="Australian Government" src="images/dibp-black-on-transparent-392x60.png" style="max-width: 100%; max-height: 100%;"> -->
+    </a>
+  </div>
 </div>
 
 <script type="text/javascript">
