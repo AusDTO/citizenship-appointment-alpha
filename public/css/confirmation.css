@@ -63,18 +63,18 @@
 }
 
 .send-button{
-    background-color: #878787;
-    color: white;
-    text-transform: capitalize;
-    padding: 0 15px;
-
-    width: 100%;
-    min-width: 74px;
-
-    font-family: Helvetica, Helvetica;
-    font-weight: 400;
+    /*background-color: #878787;*/
+    /*color: white;*/
+    background:#232D35;
+  	font-family: 'OpenSans-Bold';
+  	font-size: 1.4em;
+  	color:#FFFFFF;
+  	letter-spacing:0.18px;
+  	line-height:22px;
+  	text-align:center;
+  	text-transform: none;
+    /*font-weight: 400;*/
     font-style: normal;
-    font-size: 16px;
 }
 
 .blue-outer {
@@ -87,7 +87,7 @@
 }
 
 .inner ul, .inner p, .inner div {
-  font-family: 'Open Sans', 'Arial';
+  font-family: 'OpenSans-Light';
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
@@ -111,7 +111,7 @@
 
 .qr-container {
     border: 1px solid #c1c1c1;
-    margin-top:2rem;
+    /*margin-top:2rem;*/
     min-width: 143px;
 }
 
@@ -132,9 +132,14 @@
 }
 
 .button-with-icon-inline{
-    margin-top: 1rem;
+    /*margin-top: 1rem;
     margin-bottom: 0rem;
-    min-width: 143px;
+    min-width: 143px;*/
+
+    /*padding: 0px;*/
+    background:#232D35;
+    font-family: 'OpenSans-Light';
+    color:#FFFFFF;
 }
 
 .large-image {
@@ -190,6 +195,14 @@
 @media (max-width: 550px) {
   .desktop-margin{
      margin-left: 0rem;
+   }
+
+   .button-with-icon, .button-with-icon-inline {
+     width: 100%;
+   }
+
+   .inner {
+     padding: 25px 0;
    }
 }
 
