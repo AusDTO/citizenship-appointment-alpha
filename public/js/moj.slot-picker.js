@@ -123,6 +123,20 @@
         // scroll - top of DateSlider
         // self.confirmVisibility($('.DateSlider').first(), 'top');
       });
+
+      this.$_el.on('click', '#confirm-button', function () {
+          var reschedule = getParameterByName("resch");
+           $.ajax({
+              url: "http://localhost:8000/bookNextAppointment",
+              type: 'GET',
+              success: function(res) {
+                  console.log(res);
+              },
+              error: function(res){
+              }
+          });
+          location.href = "/confirmation.html"+(reschedule == "true"?"?resch=true":"");
+        });
     },
 
     renderElements: function() {
@@ -715,3 +729,4 @@ $(window).bind("load", function() {
         document.getElementById("currentAppDet").style.display = 'block';
     }
 });
+
