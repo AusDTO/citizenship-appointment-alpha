@@ -243,7 +243,7 @@ button:hover {
 .gov-au-footer a{
   text-decoration: underline;
   font-family:OpenSans;
-  font-size:14px;
+  font-size:1rem;
   color:#FFFFFF;
   letter-spacing:0.15px;
   line-height:19px;
@@ -263,6 +263,7 @@ button:hover {
     position: absolute;
     bottom: 0.5rem;
     right: 0;
+    margin-left: 110px;
 }
 
 .gov-au-footer img {
