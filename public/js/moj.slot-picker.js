@@ -548,20 +548,14 @@
     },
 
     displayTime: function(time) {
-      var hrs = parseInt(time.substr(0, 2)),
+      var hours = parseInt(time.substr(0, 2)),
           mins = time.substr(2),
-          out = hrs;
+          ampm = hours >= 12 ? 'PM' : 'AM';
 
-      if (hrs === 0) {
-        out = 12;
-      }
+          hours = hours % 12;
+          hours = hours ? hours : 12;
 
-      if (parseInt(mins)) {
-        out+= ':' + mins;
-      } else {
-        out+=':00'
-      }
-      return out;
+      return hours + ':' + mins + ' ' + ampm;
     },
 
     duration: function(start, end) {
@@ -727,4 +721,3 @@ $(window).bind("load", function() {
         document.getElementById("currentAppDet").style.display = 'block';
     }
 });
-
