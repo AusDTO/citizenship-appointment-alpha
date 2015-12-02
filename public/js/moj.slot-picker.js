@@ -510,8 +510,6 @@
           displayAvailable = timeSlots.length + ' available';
         } else if (curIso > to) {
           displayAvailable = 'No slots yet';
-        } else {
-          displayAvailable = '0 available';
         }
 
         var className = moj.Helpers.dateBookable(curDate, this.settings.bookableDates) ? 'BookingCalendar-date--bookable' : 'BookingCalendar-date--unavailable';
