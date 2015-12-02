@@ -164,7 +164,7 @@ button:hover {
 }
 
 .u-full-width.gov-au-header {
-    background-color: #0062b9;
+    background-color: #E8E8E8;
     padding: 1rem 0 1rem 1rem;
 }
 
@@ -232,4 +232,33 @@ button:hover {
 .gov-au-footer{
   background:#222C35;
   margin-top:2rem;
+}
+
+.gov-au-footer a{
+  text-decoration: underline;
+  font-family:OpenSans;
+  font-size:14px;
+  color:#FFFFFF;
+  letter-spacing:0.15px;
+  line-height:19px;
+  text-align:left;
+  margin-right: 19px;
+}
+
+.gov-au-footer a:hover, .gov-au-footer a:focus{
+  color:#0078C6;
+}
+
+.gov-au-footer.container {
+    position: relative;
+}
+
+.gov-au-footer p {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0;
+}
+
+.gov-au-footer img {
+    float:left;
 }
