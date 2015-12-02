@@ -15,8 +15,8 @@ td {
 	color:#333333;
 }
 
-.blue-outer {
-	background-color: #0062b9;
+.grey-outer {
+	background-color: #E8E8E8;;
 }
 
 .inner {
@@ -26,36 +26,41 @@ td {
 
 
 .disclaimer{
-	font-style:italic !important;
+	font-family:OpenSansLight-Italic;
 }
 
-.text p {
-	font-size:14px;
-	line-height:normal;
-	font-family:'Open Sans', 'Arial';
-	font-weight:400;
-	font-style:normal;
-	font-size:14px;
+.grey-outer .inner {
 	text-decoration:none;
-	color:#333333;
 	margin-bottom: 1rem;
+
+	font-family:OpenSans-Light;
+	font-size:16px;
+	color:#000000;
+	letter-spacing:0.15px;
+	line-height:normal;
+	text-align:left;
 }
 
 .appointment-time-confirmed {
-  text-transform: capitalize;
-  font-weight: bold;
+  	text-transform: capitalize;
+	font-family:OpenSans-Bold;
+	font-size:16px;
+	color:#000000;
+	letter-spacing:0.14px;
+	line-height:22px;
 }
 
 .section-header {
-	border-top: 1px solid #e5e5e5;
-	padding-top: 1.5rem;
-	margin-top: 2rem;
-	font-family: 'Open Sans', 'Arial';
-    font-weight: 700;
-    font-style: normal;
-    font-size: 16px;
+	border-top :2px solid #232D35;
+	padding-top: 2.5rem;
+	margin-top: 2.5rem;
     text-decoration: none;
-    color: #333333;
+
+    font-family:OpenSans-Bold;
+	font-size:24px;
+	color:#000000;
+	letter-spacing:0.15px;
+	line-height:30px;
 }
 
 .text ul {
@@ -107,7 +112,7 @@ table.documents-table {
 	width: 100%;
 }
 
-.documents-table td {
+.documents-table td, div.documents-table {
 	padding: 0.5rem;
 	vertical-align: middle;
   border: 1px solid #D7D7D7;
@@ -119,7 +124,7 @@ table.documents-table {
 	margin: 0;
 }
 
-.docs img {
+.docs img, div.documents-table img {
 	width: 3rem;
 	padding-right: 0.5rem;
 }
@@ -132,10 +137,15 @@ table.documents-table {
 
 span.test-prep-buttons .button {
 	text-decoration: none;
+	text-transform: none;
+	font-size: 16px;
+    background-color: #000000;
+    color: white;
 }
 
-span.test-prep-buttons .button:hover {
+span.test-prep-buttons .button:hover, span.test-prep-buttons .button:focus {
 	background-color: #efefef;
+	color:#000000;
 }
 
 @media (max-width: 640px) {
@@ -145,4 +155,22 @@ span.test-prep-buttons .button:hover {
   .documents-table td {
 		height: auto;
   }
+}
+
+.book-button {
+	background:#232D35;
+	min-width:127px;
+	height:48px;
+	font-family:OpenSans-Bold;
+	font-size:16px;
+	color:#FFFFFF;
+	letter-spacing:0.18px;
+	line-height:22px;
+	text-align:right;
+	text-transform: none;
+}
+
+.book-button:focus, .book-button:hover {
+	background-color: #efefef;
+	color:#000000;
 }

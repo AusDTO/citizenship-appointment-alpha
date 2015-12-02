@@ -66,9 +66,9 @@
 
 <!-- Begin Email Content-->
 
-<div class="blue-outer">
+<div class="grey-outer">
   <p style="text-align: left; padding: 1rem 1rem 0 1rem;">
-     <img src="/images/Gov-Logo-Wht.png" style="height: 60px" alt="Department of Immigration and Border Protection">
+     <img src="/images/Gov-Logo-Blk.png" style="height: 60px" alt="Department of Immigration and Border Protection">
   </p>
 
   <div class="inner">
@@ -78,11 +78,6 @@
       <p>Dear John Smith,</p>
       <p>
         I am writing in reference to your application for Australian citizenship. We would like to invite you to attend your citizenship appointment and test.
-      </p>
-
-
-      <p style="margin-top: 2rem; margin-bottom: 2rem;">
-        Please book your appointment via our online booking system.
       </p>
       <div class="row">
         <div class="column-layout" style="margin-top: 3rem;">
@@ -101,7 +96,9 @@
         <div class="column-layout">
           <div class="left-column">&nbsp;</div>
           <div class="middle-column">
-            <button type="button" class="button-cta" id="book-button">Book now</button>
+            <button type="button" class="book-button" id="book-button">Book now 
+              &nbsp;<span class="fa fa-angle-right" style="font-weight: bold; font-size:1.5em"></span>
+            </button>
             <script type="text/javascript">
                 document.getElementById("book-button").onclick = function () {
                     location.href = "/start.html?id=81687116621";
@@ -118,22 +115,29 @@
 
       <h2 class="section-header">Important notes about booking your citizenship appointment</h2>
       <ul>
-        <li>Please select the soonest available appointment that suits you.
-        <li>Appointments run for approximately 2 hours.
-        <li>You are required to schedule an appointment within 2 weeks of receiving this information.
-        <li>You can schedule your appointment a maximum of 3 times.
-        <li>You can reschedule your appointment up to 24hrs prior to your appointment. If you do not attend 2 appointments in total, a decision may be made on your application.
+        <li>
+          Please select the soonest available appointment that suits you.
+        </li>
+        <li>
+          Appointments run for approximately 2 hours.
+        </li>
+        <li>
+          You are required to schedule an appointment within 2 weeks of receiving this information.
+        </li>
+        <li>
+          You can reschedule your appointment up to 3 times and only 36hrs prior to your  appointment. If you do not attend 2 appointments in total, a decision may be made on  your application.
+        </li>
       </ul>
 
       <!-- End Important Information -->
 
       <!-- Begin Document Checklist -->
 
-      <h2 class="section-header">You <u>must</u> bring the following documents with you</h2>
+      <h2 class="section-header">You <u>must</u> bring the following original documents or you may be unable to sit your citizenship test</h2>
       <h4 class="documents-table">Evidence of when you first arrived in Australia and your present country of citizenship</h4>
       <table class="documents-table">
         <tr>
-          <td>
+          <td style="width: 45%">
             <table class="docs">
               <tr>
                 <td><img alt="Passport" src="images/passport.png"></td>
@@ -141,9 +145,10 @@
               </tr>
             </table>
           </td>
-        </tr>
-        <tr>
-          <td>
+          <td style="border-top: 0px; border-bottom:0px; width: 5%; text-align: center">
+            OR
+          </td>
+          <td style="width: 50%">
             <table class="docs">
               <tr>
                 <td><img alt="Visa" src="images/visa.png"></td>
@@ -156,6 +161,16 @@
 
       <h4 class="documents-table">Evidence of your identity</h4>
       <table class="documents-table">
+        <tr>
+          <td>
+            <table class="docs">
+              <tr>
+                <td><img alt="Birth" src="images/id-verified.png"></td>
+                <td><span>Birth certificate</span></td>
+              </tr>
+            </table>
+            </td>
+        </tr>
         <tr>
           <td>
             <table class="docs">
@@ -178,18 +193,22 @@
         </tr>
       </table>
 
-      <h4 class="documents-table">Evidence of your date of birth, birth name and any changes of name</h4>
+      <h4 class="documents-table">If you have applied online</h4>
       <table class="documents-table">
         <tr>
           <td>
             <table class="docs">
               <tr>
-                <td><img alt="Birth" src="images/id-verified.png"></td>
-                <td><span>Birth certificate</span></td>
+                <td><img alt="Identity" src="images/file.png"></td>
+                <td><span><a href="https://www.border.gov.au/Forms/Documents/1195.pdf" target="_blank"><font class="blue-link">Form 1195 - Identity declaration</font></a></br><font class="disclaimer">Bring the original form which you completed and attached to your online application.</font></span></td>
               </tr>
             </table>
           </td>
         </tr>
+      </table>
+
+      <h4 class="documents-table">If applicable, please bring</h4>
+      <table class="documents-table">
         <tr>
           <td>
             <table class="docs">
@@ -210,10 +229,6 @@
             </table>
           </td>
         </tr>
-      </table>
-
-      <h4 class="documents-table">Evidence of good character (if applicable)</h4>
-      <table class="documents-table">
         <tr>
           <td>
             <table class="docs">
@@ -226,19 +241,6 @@
         </tr>
       </table>
 
-      <h4 class="documents-table">Evidence of your identity in the community (if applied online)</h4>
-      <table class="documents-table">
-        <tr>
-          <td>
-            <table class="docs">
-              <tr>
-                <td><img alt="Identity" src="images/file.png"></td>
-                <td><span><a href="https://www.border.gov.au/Forms/Documents/1195.pdf" target="_blank"><font class="blue-link">Form 1195 - Identity declaration</font></a></br><font class="disclaimer">Bring the original form which you completed and attached to your online application.</font></span></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
 
       <!-- End Document Checklist -->
 
@@ -262,7 +264,7 @@
             <table class="docs">
               <tr>
                 <td><img alt="Passport" src="images/passport.png"></td>
-                <td><span>A Passport or travel document used to enter Australia (if not on your passport)</span></td>
+                <td><span>A Passport or travel document used to enter Australia, if not on your passport</span></td>
               </tr>
             </table>
           </td>
@@ -295,18 +297,42 @@
           </td>
         </tr>
       </table>
+      <h4 class="documents-table">If you have applied online</h4>
+      <table class="documents-table">
+        <tr>
+          <td>
+            <table class="docs">
+              <tr>
+                <td><img alt="Identity" src="images/file.png"></td>
+                <td><span><a href="https://www.border.gov.au/Forms/Documents/1195.pdf" target="_blank"><font class="blue-link">Form 1195 - Identity declaration</font></a></br><font class="disclaimer">Bring the original form which you completed and attached to your online application.</font></span></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <p class="disclaimer" style="margin-top:2rem">
+        If you have included children in your application they are not required to attend this appointment. There are no childcare facilities so you will need to make alternative childcare arrangements for your children.
+      </p>
 
       <!-- End Children Document Checklist -->
+
+      <h2 class="section-header">Translating your documents</h2>
+      <p>
+        Documents in languages other than English must be accompanied by an English translation. If you are in Australia when applying, use translators accredited by the National Accreditation Authority of Translators and Interpreters (NAATI). For more information see <a href="www.naati.com.au" class="blue-link">www.naati.com.au</a>.      
+      </p>
+      <p>
+        If you are outside Australia when applying, the English translation must be completed by a qualified translator and must be endorsed by the translator with their full name, address, telephone number, and details of their qualifications and experience in the language being translated. Contact the <a href="" class="blue-link">Australian diplomatic mission</a> in the country that issued the documents for advice on acceptable translators and who can certify your original documents.
+      </p>
 
       <!-- Begin Test Information -->
 
       <h2 class="section-header">How to prepare for the test</h2>
       <p>
-        <a href="http://www.border.gov.au/Trav/Citi/Lear/Citizenship-test/Australian-citizenship-test-resource" class="blue-link" target="_blank">Australian Citizenship: Our Common Bond</a> has all the information you need to help you pass the citizenship test.
+        You will then have 45 minutes to complete the test which consists of 20 multiple choice questions. <a href="http://www.border.gov.au/Trav/Citi/Lear/Citizenship-test/Australian-citizenship-test-resource" class="blue-link" target="_blank">Australian Citizenship: Our Common Bond</a> has all the information you need to help you pass the citizenship test.
       </p>
       <span class="test-prep-buttons">
         <a href="http://www.border.gov.au/Citizenship/Documents/our-common-bond-2014.pdf" target="_blank" class="button">
-          <span class="fa fa-download" style="padding-right: 1rem;"></span>Download (6.5MB PDF)
+          <span class="fa fa-file-pdf-o" style="padding-right: 1rem;"></span>Download (6.5MB PDF)
         </a>
         &nbsp;&nbsp;
         <a href="http://www.border.gov.au/Trav/Citi/Lear/Citizenship-test/Australian-citizenship-test-resource" target="_blank" class="button">
@@ -314,22 +340,30 @@
         </a>
         &nbsp;&nbsp;
         <a href="http://www.border.gov.au/Trav/Citi/Lear/Citizenship-test/Australian-citizenship-test-resource" target="_blank" class="button">
-          <span class="fa fa-check-circle-o" style="padding-right: 1rem;"></span>Practice
+          <span class="fa fa-check-square-o" style="padding-right: 1rem;"></span>Practice
         </a>
       </span>
 
       <!-- End Test Information -->
-
-      <hr>
-      <p style="margin-top: 2rem; margin-bottom: 2rem;">
-        Please book your appointment via our online booking system.
+      <h2 class="section-header">Changes to your circumstances</h2>
+      <p>
+        It is important that you tell us about any changes to your circumstances including your name, contact details, address or children included on this application as soon as possible. Use <a href="" class="blue-link">Form 929 Change of address and/or passport details</a>
       </p>
-      <button type="button" class="button-cta" id="book-button2">Book now</button>
-      <script type="text/javascript">
-          document.getElementById("book-button2").onclick = function () {
-              location.href = "/start.html?id=81687116621";
-          };
-      </script>
+      <h2 class="section-header">Contact us</h2>
+      <p>
+        Citizenship Information Line on 131 880 between 8.30am - 4.30pm Monday to Friday. Details on contacting our office outside of Australia are on our website at <a href="https://www.border.gov.au/about/contact/offices-locations" class="blue-link">https://www.border.gov.au/about/contact/offices-locations</a>
+      </p>
+
+      <p style="margin-top:3rem">
+        <button type="button" class="book-button" id="book-button2">Book now 
+              &nbsp;<span class="fa fa-angle-right" style="font-weight: bold; font-size:1.5em"></span>
+            </button>
+            <script type="text/javascript">
+                document.getElementById("book-button2").onclick = function () {
+                    location.href = "/start.html?id=81687116621";
+                };
+            </script>
+      </p>
       <br/>
       <p>
         Yours sincerely
