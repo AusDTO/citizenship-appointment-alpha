@@ -48,7 +48,9 @@ table.BookingCalendar-dates tbody td {
 
 table.BookingCalendar-dates .BookingCalendar-date--unavailable {
   pointer-events: none;
-  cursor: default; }
+  cursor: default;
+  /*background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1JyBoZWlnaHQ9JzUnPgogIDxyZWN0IHdpZHRoPSc1JyBoZWlnaHQ9JzUnIGZpbGw9J3doaXRlJy8+CiAgPHBhdGggZD0nTTAgNUw1IDBaTTYgNEw0IDZaTS0xIDFMMSAtMVonIHN0cm9rZT0nIzg4OCcgc3Ryb2tlLXdpZHRoPScxJy8+Cjwvc3ZnPg==');*/
+}
 
 table.BookingCalendar-dates .BookingCalendar-date--past {
   border: 0;
@@ -114,7 +116,8 @@ p.BookingCalendar-available {
 
 .BookingCalendar-content {
   position: relative;
-  min-height: 10rem; }
+  height: 10rem;
+}
 
 .BookingCalendar-tag {
   position: absolute;
@@ -274,21 +277,11 @@ button.BookingCalendar-nav--next {
   outline: -webkit-focus-ring-color auto 5px;
 }
 
-
-  @media (max-width: 640px) {
-    .SlotPicker-label {
-      width: 100%;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      background-position: 7px 3px; }
-      .SlotPicker-label.is-active {
-        color: white;
-        border-color: #0178C6;
-        background-color: #0178C6; } }
   .SlotPicker-label.is-active {
     color: white;
     border-color: #0178C6;
-    background-color: #0178C6; } }
+    background-color: #0178C6;
+  }
 .SlotPicker-label.is-active {
   color: white;
   border-color: #0178C6;
@@ -478,6 +471,11 @@ button.BookingCalendar-nav--next {
   .DateSlider {
     display: none;
   }
+
+  table.BookingCalendar-dates thead.mobile {
+    display: none;
+  }
+
   .BookingCalendar {
     display: block;
   }
@@ -485,12 +483,45 @@ button.BookingCalendar-nav--next {
 
 @media (max-width: 640px) {
   .BookingCalendar {
-    display: none;
-  }
-  .DateSlider {
     display: block;
   }
-  img#clientId-image { width: 100%; }
+
+  table.BookingCalendar-dates thead.desktop {
+    display: none;
+  }
+
+  table.BookingCalendar-dates .BookingCalendar-date--unavailable {
+    border: 0;
+  }
+
+  .SlotPicker-label {
+    min-width: 9rem;
+  }
+
+  p.BookingCalendar-available {
+    display: none;
+  }
+
+  p.BookingCalendar-day {
+    padding: 0;
+  }
+
+  .BookingCalendar-tag {
+    font-size: 0.4em;
+    font-weight: 700;
+    min-width: 100%;
+  }
+
+  .BookingCalendar-mask {
+    overflow: scroll;
+    height: 235px;
+  }
+
+  .BookingCalendar-content {
+    max-height: 4rem;
+  }
+
+  .DateSlider {
+    display: none;
+  }
 }
-
-
