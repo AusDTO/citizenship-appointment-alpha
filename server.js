@@ -39,6 +39,30 @@ app.get('/googlecalendar', function(req, res) {
   res.redirect('http://www.google.com/calendar/event?' + calendar_event);
 });
 
+app.get('/yahoocalendar', function(req, res) {
+  var calendar_event = querystring.stringify({
+    'v':'60',
+    'DUR': '0200',
+    'TITLE': 'Citizenship Appointment',
+    'ST': '20151204T130000',
+    'in_loc': '2 Lonsdale Street, Melbourne VIC 3000, Australia',
+    'DESC': 'Australian Citizenship Appointment\nplease bring all the required documents and make sure you are prepared to sit the test'
+  });
+  res.redirect('http://calendar.yahoo.com/?' + calendar_event);
+});
+
+app.get('/outlookonline', function(req, res) {
+  var calendar_event = querystring.stringify({
+    'rru': 'addevent',
+    'summary': 'Citizenship Appointment',
+    'dtstart': '20151204T130000',
+    'dtend': '20151204T150000',
+    'location': '2 Lonsdale Street, Melbourne VIC 3000, Australia',
+    'description': 'Australian Citizenship Appointment\nplease bring all the required documents and make sure you are prepared to sit the test',
+  });
+  res.redirect('http://calendar.live.com/calendar/calendar.aspx?' + calendar_event);
+});
+
 app.get('/qrcode', function(req, res) {
   var code = qr.image(
     "Welcome to our awesome Alpha! Your client id is: 9281112121",
