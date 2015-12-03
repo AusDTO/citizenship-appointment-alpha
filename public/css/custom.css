@@ -57,6 +57,12 @@ h6 { font-size: 1.1rem; line-height: 1.9;  }
   h6 { font-size: 1.1rem; }
 
   img#clientId-image { max-width: 640px; }
+
+  .gov-au-footer {
+    padding: 0;
+    position: fixed;
+  }
+
 }
 
 table {
@@ -64,9 +70,26 @@ table {
 }
 
 @media (max-width: 550px) {
+
+  span.selected-date-time {
+    /*padding-bottom: 1rem;*/
+    display: block;
+  }
+
+  .gov-au-footer {
+    background:#222C35;
+    margin-top:2rem;
+    padding: 8rem 0 2rem 0 !important;
+  }
+
   .header {
       margin-top: 2rem;
       margin-bottom: 6rem;
+  }
+
+  .gov-au-footer p {
+    margin-bottom: 0;
+    line-height: 2em;
   }
 
   img#clientId-image { width: 100%; }
@@ -142,6 +165,7 @@ button:hover {
 }
 
 @media (max-width: 550px) {
+
   .left-input-column {
         float: left;
         width: 80px;
@@ -235,9 +259,12 @@ button:hover {
   margin: 2rem 0;
 }
 
-.gov-au-footer{
+.gov-au-footer {
   background:#222C35;
   margin-top:2rem;
+  padding: 0;
+  position: fixed;
+  bottom: 0;
 }
 
 .gov-au-footer a{
@@ -266,6 +293,10 @@ button:hover {
     margin-left: 110px;
 }
 
-.gov-au-footer img {
+/*.gov-au-footer img {
     float:left;
+}*/
+
+.selected-date-time {
+  display: inline;
 }
