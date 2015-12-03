@@ -57,12 +57,6 @@ h6 { font-size: 1.1rem; line-height: 1.9;  }
   h6 { font-size: 1.1rem; }
 
   img#clientId-image { max-width: 640px; }
-
-  .gov-au-footer {
-    padding: 0;
-    position: fixed;
-  }
-
 }
 
 table {
@@ -263,8 +257,6 @@ button:hover {
   background:#222C35;
   margin-top:2rem;
   padding: 0;
-  position: fixed;
-  bottom: 0;
 }
 
 .gov-au-footer a{
