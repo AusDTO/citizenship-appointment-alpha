@@ -241,9 +241,9 @@ button:hover {
 }
 
 .gov-au-footer a{
-  text-decoration: underline;
-  font-family:OpenSans;
-  font-size:1rem;
+  text-decoration: none;
+  font-size: 16px;
+  font-family:'OpenSans-Light';
   color:#FFFFFF;
   letter-spacing:0.15px;
   line-height:19px;
