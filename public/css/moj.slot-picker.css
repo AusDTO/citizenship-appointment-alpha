@@ -36,7 +36,7 @@ table.BookingCalendar-dates th {
   border: 0;
   padding: 0;
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 table.BookingCalendar-dates tbody td {
@@ -134,7 +134,9 @@ p.BookingCalendar-available {
   background: #9A9B9C; }
 
 .BookingCalendar-tag--today {
-  background: #2b8cc4; }
+  padding: 0 0.5em;
+  background: #0178C6;
+}
 
 ul.BookingCalendar-legend {
   overflow: hidden;
@@ -175,7 +177,7 @@ ul.BookingCalendar-legend {
   display: none; }
 
 .BookingCalendar-nav.is-active {
-  margin: 0.5rem 0 0 0;
+  /*margin: 0.5rem 0 0 0;*/
   padding: 0rem;
   display: block;
 }
@@ -502,6 +504,10 @@ button.BookingCalendar-nav--next {
 @media (max-width: 640px) {
   .BookingCalendar {
     display: block;
+  }
+
+  .BookingCalendar-tag--today {
+    padding: 0;
   }
 
   span.selected-date-time {
