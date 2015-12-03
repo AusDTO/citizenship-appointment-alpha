@@ -1,0 +1,28 @@
+{
+	"availability": {
+		"2015-12-04": {
+			"calendar_id": 184,
+			"vacant_slots": 3,
+			"working_from": 540,
+			"working_to": 960
+		},
+		"2015-12-07": {
+			"calendar_id": 185,
+			"vacant_slots": 7,
+			"working_from": 540,
+			"working_to": 960
+		},
+		"2015-12-08": {
+			"calendar_id": 186,
+			"vacant_slots": 1,
+			"working_from": 540,
+			"working_to": 960
+		},
+		"2015-12-11": {
+			"calendar_id": 189,
+			"vacant_slots": 4,
+			"working_from": 540,
+			"working_to": 960
+		}
+	}
+}
