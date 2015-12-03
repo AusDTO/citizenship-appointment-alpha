@@ -61,9 +61,18 @@
         </div>
         <div class="cleared"></div>
       </div>
-      <button type="button" class="button-with-icon" style="margin-right:1rem">
-        <span class="fa fa-plus"></span>&nbsp;Add to my calendar&nbsp;<i class="fa fa-caret-down"></i>
-      </button>
+      <div class="dropdown">
+        <button type="button" class="button-with-icon" style="margin-right:1rem">
+          <span class="fa fa-plus"></span>&nbsp;Add to my calendar&nbsp;<i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="add-to-calendar-menu">
+            <li><a href="#home"><i class="fa fa-apple"></i>&nbsp;Apple Calendar</a></li>
+            <li><a href="/googlecalendar" target="blank"><i class="fa fa-google"></i>&nbsp;Google</a></li>
+            <li><a href="#contact"><i class="fa fa-windows"></i>&nbsp;Outlook</a></li>
+            <li><a href="#contact"><i class="fa fa-windows"></i>&nbsp;Outlook.com</a></li>
+            <li><a href="#contact"><i class="fa fa-yahoo"></i>&nbsp;Yahoo</a></li>
+        </ul>
+      </div>
       <button type="button" class="button-with-icon" id="print-page">
         <span class="fa fa-print"></span>&nbsp;Print this page
       </button>

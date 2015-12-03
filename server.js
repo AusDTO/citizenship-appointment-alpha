@@ -30,10 +30,10 @@ app.get('/googlecalendar', function(req, res) {
   var calendar_event = querystring.stringify({
     'action': 'TEMPLATE',
     'text': 'Citizenship Appointment',
-    'dates': '20151126T132000/20151126T140000',
+    'dates': '20151204T130000/20151204T150000',
     'czt': 'Australia/Melbourne',
     'location': '2 Lonsdale Street, Melbourne VIC 3000, Australia',
-    'details': 'Line 1\nLine2',
+    'details': 'Australian Citizenship Appointment\nplease bring all the required documents and make sure you are prepared to sit the test',
     'trp': 'false'
   });
   res.redirect('http://www.google.com/calendar/event?' + calendar_event);

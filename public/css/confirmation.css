@@ -243,3 +243,41 @@
   background-color: #efefef;
   color:#000000;
 }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .add-to-calendar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    display: none;
+    list-style: none;
+    width: 95%;
+    padding: 0;
+    background-color: white;
+    border: 1px solid #d7d8de;
+}
+
+.dropdown .add-to-calendar-menu i{
+    margin-right: 5px;
+  }
+
+.dropdown:hover .add-to-calendar-menu {
+    display: block;
+}
+
+.dropdown a {
+    display: block;
+    padding: 0.2em 0.8em;
+    text-decoration: none;
+    background: #ffffff;
+    color: #333333;
+}
+
+.dropdown a:hover {
+    background: #BBBBBB;
+}
